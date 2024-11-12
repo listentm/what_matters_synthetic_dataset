@@ -1,0 +1,280 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+.pdm.toml
+.pdm-python
+.pdm-build/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+lys/Miniconda3-latest-Linux-x86_64.sh
+miniconda3/pkgs/mkl-2021.4.0-h06a4308_640.conda
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node
+miniconda3/pkgs/cache/47929eba.json
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/extensions/ms-vscode.vscode-js-profile-table/ThirdPartyNotices.txt
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node_modules/@vscode/ripgrep/bin/rg
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node_modules/@vscode/tree-sitter-wasm/wasm/tree-sitter-typescript.wasm
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/node_modules/@vscode/vsce-sign/bin/vsce-sign
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/server-main.js
+.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/workbench/api/node/extensionHostProcess.js
+.vscode-server/code-e8653663e8840adaf45af01eab5c627a5af81807
+.vscode-server/data/CachedExtensionVSIXs/github.copilot-1.245.0
+.vscode-server/data/CachedExtensionVSIXs/github.copilot-chat-0.22.2
+.vscode-server/data/CachedExtensionVSIXs/ms-python.debugpy-2024.12.0-linux-x64
+.vscode-server/data/CachedExtensionVSIXs/ms-python.python-2024.18.1-linux-x64
+.vscode-server/data/CachedExtensionVSIXs/ms-python.vscode-pylance-2024.11.1
+.vscode-server/data/User/workspaceStorage/3499be25c9c12f93fecf29fc6f28e767/GitHub.copilot-chat/workspaceEmbeddingsCache-text-embedding-3-small512.json
+.vscode-server/data/User/workspaceStorage/dbad0b96640bf8920d011a84d5edae4c-1/GitHub.copilot-chat/workspaceEmbeddingsCache-text-embedding-3-small512.json
+.vscode-server/extensions/github.copilot-chat-0.22.2/ThirdPartyNotices.txt
+.vscode-server/extensions/ms-python.debugpy-2024.12.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.c
+.vscode-server/extensions/ms-python.debugpy-2024.12.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_frame_evaluator.c
+.vscode-server/extensions/ms-python.debugpy-2024.12.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.c
+.vscode-server/extensions/ms-python.python-2024.18.1-linux-x64/out/client/extension.js
+.vscode-server/extensions/ms-python.python-2024.18.1-linux-x64/out/client/extension.js.map.disabled
+.vscode-server/extensions/ms-python.python-2024.18.1-linux-x64/out/client/node_modules/unicode/category/Lo.js
+.vscode-server/extensions/ms-python.python-2024.18.1-linux-x64/python-env-tools/bin/pet
+.vscode-server/extensions/ms-python.python-2024.18.1-linux-x64/python_files/get-pip.py
+lys/LLM_benchmark_eval/AutoBencher/helm/helm-frontend/src/assets/heim-logo.png
+lys/LLM_benchmark_eval/AutoBencher/helm/src/helm/benchmark/static_build/assets/heim-logo-3e5e3aa4.png
+lys/LLM_benchmark_eval/AutoBencher/helm/src/helm/tokenizers/yalm_tokenizer_data/voc_100b.sp
+lys/langchain/cookbook/Multi_modal_RAG.ipynb
+lys/langchain/cookbook/img-to_img-search_CLIP_ChromaDB.ipynb
+lys/langchain/cookbook/visual_RAG_vdms.ipynb
+lys/langchain/docs/cassettes/MultiQueryRetriever_994d6c74.msgpack.zlib
+lys/langchain/docs/cassettes/multimodal_inputs_9ca1040c.msgpack.zlib
+lys/langchain/docs/cassettes/multimodal_inputs_ec680b6b.msgpack.zlib
+lys/langchain/docs/cassettes/multimodal_prompts_02744b06.msgpack.zlib
+lys/langchain/docs/cassettes/multimodal_prompts_0d9fd81a-b7f0-445a-8e3d-cfc2d31fdd59.msgpack.zlib
+lys/langchain/docs/cassettes/multimodal_prompts_513abe00.msgpack.zlib
+lys/langchain/docs/cassettes/parent_document_retriever_2b107935.msgpack.zlib
+lys/langchain/docs/cassettes/parent_document_retriever_fe16e620.msgpack.zlib
+lys/langchain/docs/cassettes/pdf_qa_9.msgpack.zlib
+lys/langchain/docs/cassettes/semantic-chunker_01b8ffc0.msgpack.zlib
+lys/langchain/docs/cassettes/semantic-chunker_295ec095.msgpack.zlib
+lys/langchain/docs/cassettes/semantic-chunker_59a40364.msgpack.zlib
+lys/langchain/docs/cassettes/semantic-chunker_e9f393d316ce1f6c.msgpack.zlib
+lys/langchain/docs/cassettes/semantic-chunker_f311e67e.msgpack.zlib
+lys/langchain/docs/cassettes/sql_large_db_ea50abce-545a-4dc3-8795-8d364f7d142a.msgpack.zlib
+lys/langchain/docs/cassettes/sql_qa_36.msgpack.zlib
+lys/langchain/docs/docs/example_data/nke-10k-2023.pdf
+lys/langchain/docs/docs/how_to/document_loader_pdf.ipynb
+lys/langchain/docs/docs/integrations/document_loaders/example_data/fake-email.msg
+lys/langchain/docs/docs/integrations/document_loaders/example_data/layout-parser-paper.pdf
+lys/langchain/docs/docs/integrations/document_loaders/image_captions.ipynb
+lys/langchain/docs/docs/integrations/text_embedding/open_clip.ipynb
+lys/langchain/docs/docs/integrations/tools/google_imagen.ipynb
+lys/langchain/docs/docs/integrations/tools/nvidia_riva.ipynb
+lys/langchain/docs/static/img/langchain_stack.png
+lys/langchain/libs/community/tests/examples/hello.msg
+lys/langchain/libs/community/tests/examples/layout-parser-paper.pdf
+lys/langchain/libs/community/tests/examples/multi-page-forms-sample-2-page.pdf
+lys/langchain/libs/community/tests/integration_tests/examples/hello.msg
+lys/langchain/libs/community/tests/integration_tests/examples/layout-parser-paper.pdf
+lys/langchain/libs/community/tests/integration_tests/examples/multi-page-forms-sample-2-page.pdf
+lys/langchain/libs/community/tests/unit_tests/document_loaders/sample_documents/layout-parser-paper.pdf
+lys/langchain/libs/langchain/tests/integration_tests/examples/hello.msg
+lys/langchain/libs/langchain/tests/integration_tests/examples/layout-parser-paper.pdf
+lys/langchain/libs/langchain/tests/integration_tests/examples/multi-page-forms-sample-2-page.pdf
+miniconda3/_conda
+miniconda3/bin/nghttpx
+miniconda3/bin/pcre2_jit_test
+miniconda3/bin/pcre2test
+miniconda3/bin/python3.12
+miniconda3/bin/sqlite3
+miniconda3/bin/x86_64-conda-linux-gnu-ld
+miniconda3/envs/liyisen_env/bin/python3.9
+miniconda3/envs/liyisen_env/bin/sqlite3
+miniconda3/envs/liyisen_env/bin/x86_64-conda-linux-gnu-ld
+miniconda3/envs/yanglingfeng_env/bin/python3.10
+miniconda3/envs/yanglingfeng_env/bin/sqlite3
+miniconda3/envs/yanglingfeng_env/bin/x86_64-conda-linux-gnu-ld
+miniconda3/pkgs/cache/2ce54b42.json
+miniconda3/pkgs/cache/2ce54b42.solv
+miniconda3/pkgs/cache/3e39a7aa.json
+miniconda3/pkgs/cache/47929eba.solv
+miniconda3/pkgs/cache/4ea078d6.json
+miniconda3/pkgs/cache/4ea078d6.solv
+miniconda3/pkgs/conda-24.9.2-py312h06a4308_0.conda
+miniconda3/pkgs/cryptography-43.0.0-py312hdda0065_0.conda
+miniconda3/pkgs/icu-73.1-h6a678d5_0.conda
+miniconda3/pkgs/intel-openmp-2021.4.0-h06a4308_3561.conda
+miniconda3/pkgs/krb5-1.20.1-h143b758_1.conda
+miniconda3/pkgs/ld_impl_linux-64-2.40-h12ee557_0/bin/x86_64-conda-linux-gnu-ld
+miniconda3/pkgs/libgcc-ng-11.2.0-h1234567_1.conda
+miniconda3/pkgs/libmamba-1.5.8-hfe524e5_3.conda
+miniconda3/pkgs/libnghttp2-1.57.0-h2d74bed_0/bin/nghttpx
+miniconda3/pkgs/libstdcxx-ng-11.2.0-h1234567_1.conda
+miniconda3/pkgs/numpy-base-1.24.3-py39h31eccc5_0.conda
+miniconda3/pkgs/openssl-1.1.1w-h7f8727e_0.conda
+miniconda3/pkgs/openssl-3.0.15-h5eee18b_0.conda
+miniconda3/pkgs/pcre2-10.42-hebb0a14_1.conda
+miniconda3/pkgs/pcre2-10.42-hebb0a14_1/bin/pcre2_jit_test
+miniconda3/pkgs/pcre2-10.42-hebb0a14_1/bin/pcre2test
+miniconda3/pkgs/pip-24.2-py310h06a4308_0.conda
+miniconda3/pkgs/pip-24.2-py312h06a4308_0.conda
+miniconda3/pkgs/pip-24.2-py39h06a4308_0.conda
+miniconda3/pkgs/python-3.10.15-he870216_1.conda
+miniconda3/pkgs/python-3.10.15-he870216_1/bin/python3.10
+miniconda3/pkgs/python-3.12.7-h5148396_0.conda
+miniconda3/pkgs/python-3.12.7-h5148396_0/bin/python3.12
+miniconda3/pkgs/python-3.9.0-hdb3f193_2.conda
+miniconda3/pkgs/python-3.9.0-hdb3f193_2/bin/python3.9
+miniconda3/pkgs/setuptools-75.1.0-py310h06a4308_0.conda
+miniconda3/pkgs/setuptools-75.1.0-py312h06a4308_0.conda
+miniconda3/pkgs/setuptools-75.1.0-py39h06a4308_0.conda
+miniconda3/pkgs/sqlite-3.45.3-h5eee18b_0.conda
+miniconda3/pkgs/sqlite-3.45.3-h5eee18b_0/bin/sqlite3
+miniconda3/pkgs/tk-8.6.14-h39e8969_0.conda
