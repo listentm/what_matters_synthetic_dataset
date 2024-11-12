@@ -1,0 +1,243 @@
+commit b18a4dd6c9fadde8a598ff77783a0474d42a9bc7
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Oct 18 10:09:43 2021 -0400
+
+    Simplify skip selector
+
+commit 3e7eb36cac5feda1a0d340b9d0f148fb1741a9ff
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Oct 18 10:06:41 2021 -0400
+
+    Reset the build number to 0
+
+commit 541ed193d248fb5ac4f1c37440089e6b6dd20ec9
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Oct 18 10:04:31 2021 -0400
+
+    Updating version and hash for v1.3.1
+
+commit b83315d851897df7962466b60b23f63638f96c00
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Thu Apr 22 19:53:55 2021 -0400
+
+    Mkl 2021 rebuild (#2)
+    
+    * Updating build for MKL 2021 and numpy pinning format.
+    
+    * Bumping version number for rebuild against numpy-base 1.16.
+    
+    * Restoring Python 3.6 builds.
+
+commit ddfcf28c432858823fdf778476aabbd60c0b1c8b
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Fri Feb 26 18:23:05 2021 +0000
+
+    DOR update to 1.3.0
+
+commit d77ae32697a23e340762868510c221fc685b6fa3
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Thu Feb 18 19:15:41 2021 +0000
+
+    DOR update to 1.2.1
+
+commit 1e9ff4ca4ba24a2eb4942c0ae5686ef5d9f1c464
+Author: anaconda-pkg-build <anaconda-pkg-build@anaconda.com>
+Date:   Fri Sep 18 15:52:11 2020 +0000
+
+    DOR update to 1.2.0
+
+commit b96bbf0440f6aa439b242a4475a823aa88e52ee6
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Wed Jun 17 11:01:25 2020 -0500
+
+    1.1.0
+
+commit 700961b5eb149ae6772334022c9203504e6d2924
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Wed Nov 6 16:07:17 2019 -0600
+
+    1.0.15
+
+commit b0b6439b56cfae1e968d0ff3cd41c64e5da4bf28
+Author: Forrest Waters <fwaters@0609.local>
+Date:   Thu Aug 15 14:46:21 2019 -0500
+
+    bump to version 1.0.14
+
+commit f6eb663d22c3c9055c61ad522952e9f4480a7fab
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Jan 17 09:55:18 2019 -0600
+
+    1.0.10
+
+commit 1c0dc8cf4f10e0d8e79138e9c5e7156cb13039a4
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Thu Sep 27 13:41:29 2018 -0500
+
+    mkl_fft 1.0.6
+
+commit 295ff35146a81d41915371b32440d35fc8b2d808
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Tue Sep 4 12:09:05 2018 -0500
+
+    replace numpy hard pin with variant
+
+commit f111a660fa8f7c5dae35f50f4ad65204549cee27
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Fri Jul 27 08:59:28 2018 -0500
+
+    add patch for py27 compat (ModuleNotFoundError)
+
+commit 63703c30483625b49829f78a516539707384a555
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Fri Jul 27 08:58:27 2018 -0500
+
+    remove build.sh/bld.bat in favor of meta.yaml script
+
+commit 244ab5b70c651eb561aef284a362c488f90f47dd
+Author: Ray Donnelly <mingw.android@gmail.com>
+Date:   Fri Jul 6 21:47:20 2018 +0000
+
+    Use {{PYTHON}}
+
+commit 1622b967deeb7c26c5b5899bc00dd417d1f9d154
+Author: Ray Donnelly <mingw.android@gmail.com>
+Date:   Tue Jul 3 09:10:18 2018 -0400
+
+    Not for PPC
+
+commit b9420d7c5edd93357a9fd4fadb8fddbc73ee38fe
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Apr 26 15:31:11 2018 -0500
+
+    1.0.2; switch to numpy-devel to break cycle
+
+commit 8ef1a5418c481cca79dcc099c7262c9d9b38f314
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Fri Feb 23 10:27:42 2018 -0600
+
+    tarball src; numpy backcompat to 1.11; simplify build scripts
+
+commit cbc7f8bbead8b4fc910a8d54c1fd2f6f23297a63
+Author: Stuart Archibald <stuart.archibald@googlemail.com>
+Date:   Thu Feb 22 12:10:36 2018 +0000
+
+    Initial cut of mkl_fft recipe.
+    
+    As title.
+
+commit 4f5256e1399a6d239bb728aea0710b0a35ec4141
+Merge: 94695b9 f3b8677
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Mon Jul 23 23:39:22 2018 -0500
+
+    Merge pull request #7 from oleksandr-pavlyk/v1.0.4
+    
+    updating source 1.0.4
+
+commit f3b86774e0f8fe61224b268474faf7288a9ef8c7
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Mon Jul 23 16:11:01 2018 -0500
+
+    updating source 1.0.4
+
+commit 94695b9c5b7d9c28bff37d6291ba407595fdc930
+Merge: 61a7861 d09f913
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu Jul 19 19:58:48 2018 -0500
+
+    Merge pull request #5 from conda-forge/v1.0.3
+    
+    updating sources to v1.0.3 tag, updated sha256
+
+commit d09f913febe4c9375beaf3b29c99e43d5ab94a05
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Thu Jul 19 10:29:04 2018 -0500
+
+    updating sources to v1.0.3 tag, updated sha256
+
+commit 61a7861edc21bdcb8d550e18f768efbfa022360a
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Fri Apr 20 14:46:45 2018 -0500
+
+    MAINT: update version
+    
+    Cleaned recipe to use source tar-ball from GitHub, while providing sha256 checksum.
+    Updated version of the package to 1.0.2
+    Provided description entry in the about section of the recipe.
+
+commit b4db7b3655e1a7bcc6fb10ad5438bfc68814f69a
+Merge: e8dff07 b2b88a2
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Tue Mar 13 16:07:31 2018 -0500
+
+    Merge pull request #2 from jakirkham-feedstocks/use_macos_109
+    
+    Use macOS 10.9
+
+commit b2b88a2cdd8f81cfa0529764cde28b61d909e7c6
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Mar 13 02:21:00 2018 -0400
+
+    Bump build number to 1
+    
+    Now that the `MACOSX_DEPLOYMENT_TARGET` has been relaxed to 10.9.
+    Rebuild so that binaries can be generated that work on macOS 10.9+
+    instead of macOS 10.10+.
+
+commit d72bd365a4fbd43da4f849977cc3538d4f4c4f76
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Mar 13 02:20:59 2018 -0400
+
+    Skip explicitly setting MACOSX_DEPLOYMENT_TARGET
+    
+    As we already set the `MACOSX_DEPLOYMENT_TARGET` globally before the
+    recipe build begins and `conda-build` respects that setting, there is no
+    need to set it internally in the recipe. We also target a slightly older
+    macOS version (10.9) to cover more users. Given this, drop the explicit
+    setting from the recipe so that it can use our global setting for
+    `MACOSX_DEPLOYMENT_TARGET`.
+
+commit 4690735020265b1bbb6c61b97bdf5d3aa5434ead
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Mar 13 02:20:35 2018 -0400
+
+    MNT: Re-rendered with conda-smithy 2.4.5
+
+commit e8dff07fc73585d814196c6f0701c5ae86d51e51
+Merge: c1b8de1 4001193
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu Nov 16 14:12:58 2017 -0600
+
+    Merge pull request #1 from jakirkham-feedstocks/fix_license_metadata
+    
+    Fix license metadata
+
+commit 400119387a7db682b263d115bbe599f0438199d5
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Thu Nov 16 00:47:10 2017 -0500
+
+    MNT: Re-rendered with conda-smithy 2.4.3
+    
+    Now that the license metadata has been updated, re-render to propagate
+    this change to the rest of the feedstock (namely the README).
+
+commit 25b9018630076f9bac521fa7c01b1ff9f7bfdbf7
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Thu Nov 16 00:43:22 2017 -0500
+
+    Specify license version
+    
+    Include the number of clauses of the BSD license used by this package.
+
+commit c1b8de19bff79d587792a9c952a1343d31ecf3e5
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Wed Nov 15 18:27:33 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 7c96c95ee3a486fd48a78896e9d270efc09eb70c
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Wed Nov 15 18:25:39 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.4.3.

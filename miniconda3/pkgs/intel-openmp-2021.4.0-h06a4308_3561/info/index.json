@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "h06a4308_3561",
+  "build_number": 3561,
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [],
+  "license": "LicenseRef-ProprietaryIntel",
+  "license_family": "Proprietary",
+  "name": "intel-openmp",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1634546760713,
+  "version": "2021.4.0"
+}

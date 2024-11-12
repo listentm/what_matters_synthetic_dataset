@@ -1,0 +1,19 @@
+default_install_hook_types: [pre-push]
+default_stages: [push]
+repos:
+- repo: local
+  hooks:
+    - id: run-pre-commit-python
+      name: Python pre-commit
+      entry: ./pre-commit.sh
+      language: script
+      pass_filenames: false
+      require_serial: true
+      types_or: [python]
+    - id: run-pre-commit-frontend
+      name: Frontend pre-commit
+      entry: ./pre-commit-frontend.sh
+      language: script
+      pass_filenames: false
+      require_serial: true
+      types_or: [javascript, jsx, ts, tsx]

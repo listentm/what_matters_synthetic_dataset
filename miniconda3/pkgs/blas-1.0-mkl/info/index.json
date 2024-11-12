@@ -1,0 +1,11 @@
+{
+  "arch": "x86_64",
+  "build": "mkl",
+  "build_number": 1,
+  "depends": [],
+  "name": "blas",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1528122042945,
+  "version": "1.0"
+}

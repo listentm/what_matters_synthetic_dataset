@@ -1,0 +1,10 @@
+git reset #清空暂存区
+
+./skip_large_file.sh
+git add .
+git commit -m "备注"
+git push origin new-branch
+
+git branch
+git log
+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

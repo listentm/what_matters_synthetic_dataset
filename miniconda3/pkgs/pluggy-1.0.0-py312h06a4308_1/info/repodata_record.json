@@ -1,0 +1,19 @@
+{
+  "build": "py312h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "pluggy-1.0.0-py312h06a4308_1.conda",
+  "license": "MIT",
+  "md5": "65e3925b7c284b6a111d8971cac0d0c7",
+  "name": "pluggy",
+  "sha256": "ad31193be6df50b1d6eab007513f9c52c1881c58b5167053776d3a515a1dba0f",
+  "size": 31768,
+  "subdir": "linux-64",
+  "timestamp": 1698805515000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pluggy-1.0.0-py312h06a4308_1.conda",
+  "version": "1.0.0"
+}

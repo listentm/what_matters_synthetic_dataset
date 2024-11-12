@@ -1,0 +1,56 @@
+# This file created by conda-build 3.21.5
+# meta.yaml template originally from:
+# /tmp/build/80754af9/rsync-recipes/libev-4.33-on-linux_64, last modified Sat May 29 05:28:47 2021
+# ------------------------------------------------
+
+package:
+  name: libev
+  version: '4.33'
+source:
+  fn: libev-4.33.tar.gz
+  sha256: 507eb7b8d1015fbec5b935f34ebed15bf346bed04a11ab82b8eee848c4205aea
+  url: http://dist.schmorp.de/libev/Attic/libev-4.33.tar.gz
+build:
+  number: '1'
+  run_exports:
+    - libev >=4.33,<4.34.0a0
+  string: h7f8727e_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.35.1 h27ae35d_9
+    - binutils_linux-64 2.35.1 h454624a_30
+    - gcc_impl_linux-64 7.5.0 h7105cf2_17
+    - gcc_linux-64 7.5.0 h8f34230_30
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libgcc-devel_linux-64 7.5.0 hbbeae57_17
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - libtool 2.4.6 h7b6447c_1005
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+  run:
+    - libgcc-ng >=7.5.0
+about:
+  home: http://software.schmorp.de/pkg/libev.html
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: A full-featured and high-performance event loop that is loosely modeled
+    after libevent, but without its limitations and bugs.
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - carlodri
+    - petercable
+    - wolfv

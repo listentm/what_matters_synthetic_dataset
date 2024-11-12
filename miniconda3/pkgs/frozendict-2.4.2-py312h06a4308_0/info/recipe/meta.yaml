@@ -1,0 +1,76 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Mon Apr 15 15:27:07 2024
+# ------------------------------------------------
+
+package:
+  name: frozendict
+  version: 2.4.2
+source:
+  fn: frozendict-2.4.2.tar.gz
+  sha256: 741779e1d1a2e6bb2c623f78423bd5d14aad35dc0c57e6ccc89e54eaab5f1b8a
+  url: https://pypi.org/packages/source/f/frozendict/frozendict-2.4.2.tar.gz
+build:
+  number: '0'
+  script: python -m pip install . --no-deps --no-build-isolation -v
+  script_env:
+    - FROZENDICT_PURE_PY=1
+  string: py312h06a4308_0
+requirements:
+  build: []
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_5
+    - ca-certificates 2024.3.11 h06a4308_0
+    - expat 2.5.0 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.13 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.2 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.2.2 py312h06a4308_0
+    - sqlite 3.41.2 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+    - pytest -v test
+  imports:
+    - frozendict
+  requires:
+    - pip
+    - pytest
+  source_files:
+    - test
+about:
+  description: frozendict is a simple immutable dictionary. It's fast as dict, and
+    sometimes faster!
+  dev_url: https://github.com/Marco-Sulla/python-frozendict
+  doc_url: https://github.com/Marco-Sulla/python-frozendict
+  home: https://github.com/Marco-Sulla/python-frozendict
+  license: LGPL-3.0-only
+  license_family: LGPL
+  license_file: LICENSE.txt
+  summary: An immutable dictionary
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: b6619ab7-aca3-4bbe-b9cf-7a39f32e1ad8
+  recipe-maintainers:
+    - Marco-Sulla
+    - ltalirz
+  remote_url: git@github.com:AnacondaRecipes/frozendict-feedstock.git
+  sha: 5db9edb14d67c968539db5bba840f7ecbd7fc5d4

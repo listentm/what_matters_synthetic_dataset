@@ -1,0 +1,3 @@
+/home/liyisen/miniconda3
+/home/liyisen/miniconda3/envs/liyisen_env
+/home/liyisen/miniconda3/envs/yanglingfeng_env

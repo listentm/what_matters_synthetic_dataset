@@ -1,0 +1,88 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /tmp/build/80754af9/rsync-recipes/mkl-service-2.4.0-python_3.9-on-linux_64, last modified Tue Jul 13 13:42:18 2021
+# ------------------------------------------------
+
+package:
+  name: mkl-service
+  version: 2.4.0
+source:
+  sha256: 7c515b7a1442c58b81c027fd13d188b28283df7c4d7df615e0c2f7618eb4a69c
+  url: https://github.com/IntelPython/mkl-service/archive/v2.4.0.post0.tar.gz
+build:
+  ignore_run_exports:
+    - blas
+    - mkl-service
+  number: '0'
+  string: py39h7f8727e_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.35.1 h27ae35d_9
+    - binutils_linux-64 2.35.1 h454624a_30
+    - gcc_impl_linux-64 7.5.0 h7105cf2_17
+    - gcc_linux-64 7.5.0 h8f34230_30
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libgcc-devel_linux-64 7.5.0 hbbeae57_17
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 4.5 1_gnu
+    - blas 1.0 mkl
+    - ca-certificates 2021.7.5 h06a4308_1
+    - certifi 2021.5.30 py39h06a4308_0
+    - cython 0.29.23 py39h2531618_0
+    - intel-openmp 2021.2.0 h06a4308_610
+    - ld_impl_linux-64 2.35.1 h7274673_9
+    - libffi 3.3 he6710b0_2
+    - libgcc-ng 9.3.0 h5101ec6_17
+    - libgomp 9.3.0 h5101ec6_17
+    - libstdcxx-ng 9.3.0 hd4cf53a_17
+    - mkl 2021.2.0 h06a4308_296
+    - mkl-devel 2021.2.0 h66538d2_296
+    - mkl-include 2021.2.0 h06a4308_296
+    - ncurses 6.2 he6710b0_1
+    - openssl 1.1.1k h27cfd23_0
+    - python 3.9.5 h12debd9_4
+    - readline 8.1 h27cfd23_0
+    - setuptools 52.0.0 py39h06a4308_0
+    - sqlite 3.36.0 hc218d9a_0
+    - tk 8.6.10 hbc83047_0
+    - tzdata 2021a h52ac0ba_0
+    - xz 5.2.5 h7b6447c_0
+    - zlib 1.2.11 h7b6447c_3
+  run:
+    - libgcc-ng >=7.5.0
+    - mkl >=2021.2.0,<2022.0a0
+    - python >=3.9,<3.10.0a0
+    - six
+test:
+  commands:
+    - nosetests -v tests
+  imports:
+    - mkl
+  requires:
+    - nose
+  source_files:
+    - tests
+about:
+  description: Intel(R) Math Kernel Library (Intel(R) MKL) support functions are subdivided
+    into the following groups according to their purpose, such as Version Information
+    Threading Control Timing Memory Management Conditional Numerical Reproducibility
+    Control Miscellaneous
+  home: http://github.com/IntelPython/mkl-service
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Python hooks for Intel(R) Math Kernel Library runtime control settings.
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - oleksandr-pavlyk

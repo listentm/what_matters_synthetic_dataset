@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64",
+  "build": "py312hdda0065_0",
+  "build_number": 0,
+  "constrains": [
+    "bcrypt >=3.1.5"
+  ],
+  "depends": [
+    "cffi >=1.12",
+    "libgcc-ng",
+    "openssl >=3.0.14,<4.0a0",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "Apache-2.0 OR BSD-3-Clause",
+  "license_family": "OTHER",
+  "name": "cryptography",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1724940661036,
+  "version": "43.0.0"
+}

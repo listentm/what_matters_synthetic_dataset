@@ -1,0 +1,103 @@
+# This file created by conda-build 24.1.2
+# ------------------------------------------------
+
+package:
+  name: yaml-cpp
+  version: 0.8.0
+source:
+  sha256: fbe74bbdcee21d656715688706da3c8becfd946d92cd44705cc6098bb23b3a16
+  url: https://github.com/jbeder/yaml-cpp/archive/refs/tags/0.8.0.tar.gz
+build:
+  number: 1
+  run_exports:
+    - yaml-cpp >=0.8.0,<0.9.0a0
+  string: h6a678d5_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h5eee18b_5
+    - c-ares 1.19.1 h5eee18b_0
+    - ca-certificates 2024.3.11 h06a4308_0
+    - cmake 3.26.4 h96355d8_0
+    - expat 2.6.2 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - krb5 1.20.1 h143b758_1
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libcurl 8.5.0 h251f7ec_0
+    - libedit 3.1.20230828 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.57.0 h2d74bed_0
+    - libssh2 1.10.0 hdbd6064_2
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - libuv 1.44.2 h5eee18b_0
+    - lz4-c 1.9.4 h6a678d5_0
+    - ncurses 6.4 h6a678d5_0
+    - ninja 1.10.2 h06a4308_5
+    - ninja-base 1.10.2 hd09550d_5
+    - openssl 3.0.13 h7f8727e_0
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - rhash 1.4.3 hdbd6064_0
+    - sqlite 3.45.3 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+    - zstd 1.5.5 hc292b87_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+  run:
+    - libgcc-ng >=11.2.0
+    - libstdcxx-ng >=11.2.0
+test:
+  commands:
+    - test -f $PREFIX/lib/libyaml-cpp.so
+    - test/test.sh
+  files:
+    - test
+  requires:
+    - cmake
+    - gcc_linux-64 11.2.0.*
+    - gxx_linux-64 11.2.0.*
+    - ninja
+about:
+  description: yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2
+    spec.
+  dev_url: https://github.com/jbeder/yaml-cpp
+  doc_url: https://github.com/jbeder/yaml-cpp.wiki.git
+  home: https://github.com/jbeder/yaml-cpp
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2 spec.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: aed687d7-947c-4862-ab0e-a5cdc7114d6d
+  recipe-maintainers:
+    - allanleal
+    - marcelotrevisani
+    - seanyen
+    - tadeu
+    - wolfv
+  remote_url: git@github.com:AnacondaRecipes/yaml-cpp-feedstock.git
+  sha: beb9361a150f2a91c77bd0504cd052f49b0e3ad7

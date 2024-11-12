@@ -1,0 +1,66 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on three criteria: (1) aligned with history, (2) likely to obtain the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. and (3) salient and cover important topics.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, additional_requirement. 
+Make sure the categories are similar to wikipedia categories. 
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}, 
+{"id": "2", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+Please start with iteration 1.Here are the category candidates to select from (delimited by ||): 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Thank you for providing the task. Since this is the first iteration, we don't have historical performance data about the candidate categories, so I will select historical categories based on their general difficulty and relevance.
+
+I will choose categories that are grounded in historical events and topics but not highly specialized. The lesser-known or distinctly specialized fields within history are likely to garner lower accuracy rates due to their intricate details and lower common knowledge. This approach should help achieve the target accuracy levels of 0.1–0.3. Here's my plan:
+
+1. **Assessment of Difficulty and Relevance**: 
+   - Select broad and known historical categories.
+   - Avoid highly technical or very niche topics.
+   - Consider categories that could be interpreted in a straightforward manner, making the questions either clearly right or wrong.
+
+2. **Additional Requirement Framing**:
+   - Set an additional requirement for each category to control and modulate the difficulty of questions.
+
+Let's do it:
+
+## Candidate Categories List (Separated by ||)
+- Ancient Civilizations || American Presidents || European Feudalism || Key Philosophical Movements || Notable Scientific Discoveries || Greek Mythology || The Renaissance || Second World War || Industrial Age || Modern Political Thought || Ancient Philosophers || Famous World Leaders
+
+## Selection:
+Taking the plan into account, I will select the ones that are broad enough but not excessively broad or narrow, as follows:
+
+```json
+[
+{"id": "1", "category": "Ancient Civilizations", "parent_category": "History", "additional_requirement": "focus on major civilizations and their key impacts"},
+{"id": "2", "category": "American Presidents", "parent_category": "History", "additional_requirement": "focus on major decisions and impactful events during their terms"},
+{"id": "3", "category": "European Feudalism", "parent_category": "History", "additional_requirement": "major feudal lords and their influences"},
+{"id": "4", "category": "Key Philosophical Movements", "parent_category": "History", "additional_requirement": "key figures and defining ideologies"},
+{"id": "5", "category": "Greek Mythology", "parent_category": "History", "additional_requirement": "major myths and their cultural significance"},
+{"id": "6", "category": "The Renaissance", "parent_category": "History", "additional_requirement": "key artists and innovations"},
+{"id": "7", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles and turning points"},
+{"id": "8", "category": "Industrial Age", "parent_category": "History", "additional_requirement": "key technological advances and their societal impacts"},
+{"id": "9", "category": "Modern Political Thought", "parent_category": "History", "additional_requirement": "central theories and their advocates"},
+{"id": "10", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}
+]
+```
+
+TERMINATE

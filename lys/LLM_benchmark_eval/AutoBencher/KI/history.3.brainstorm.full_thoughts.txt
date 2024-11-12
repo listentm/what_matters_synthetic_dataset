@@ -1,0 +1,72 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to come up with a list of categories for knowledge intensive questions that achieve the target accuracy of 0.1--0.3.
+The categories should be diverse and cover important topics, under the theme of history. 
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+Constructing the categories is like building a tree structure of history, and (category, parent_category) is like specifying a node and its parent. We should select the most precise parent category, for example if you are trying to expand the category "second world war" to make it more specific by adding the node "famous battles in second world war", you should specify the parent category as "second world war" instead of "history".
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, additional_requirement. 
+Make sure the categories are similar to wikipedia categories. 
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}, 
+{"id": "2", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+For iteration 1, you can start with a wide variety of categories for us to build upon later. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+1. Think about breadth. Brainstorm questions with different categories to have broader coverage. Coming up with new categories that can are likely to achieve the target accuracy level.
+2. For example, If you find the model now lacks categories of 0.3 -- 0.5 accuracy, you should come up with more categories that would yield accuracy in that range, by either reducing the difficulty of questions that achieve lower accuracy (via subcategory or via additional requirement), or increasing the difficulty of questions that achieve higher accuracy.
+3. DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Second World War || Second World War [major battles and turning points], accuracy: 0.952 || 20 out of 21
+category: Greek Mythology || Greek Mythology [major myths and their cultural significance], accuracy: 0.769 || 30 out of 39
+category: American Presidents || American Presidents [focus on major decisions and impactful events during their terms], accuracy: 0.733 || 22 out of 30
+category: 20th century || 20th century [pivotal political events], accuracy: 0.914 || 32 out of 35
+category: List of recessions in the United States || List of recessions in the United States [focus on causes and consequences], accuracy: 1.0 || 13 out of 13
+category: Financial crisis || Financial crisis [major global crises and their impacts], accuracy: 0.694 || 25 out of 36
+category: History of communication || History of communication [major milestones and shifts in mediums], accuracy: 0.676 || 23 out of 34
+category: Economic depression || Economic depression [focus on the Great Depression and its global effects], accuracy: 0.6 || 6 out of 10
+Please start with iteration 3.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Given the results from the last iteration, it's clear that we need to adjust our strategy to include more diverse categories in the realm of history to attempt reaching the target accuracy level of 0.1--0.3. The categories provided thus far have achieved relatively high accuracy, indicating that either the questions were not challenging enough or they align too closely with well-documented or commonly known facts.
+
+Here's a planned approach to introduce new categories that might lower accuracy due to their inherent complexity, specificity, or obscurity, thus potentially achieving our target accuracy level:
+
+1. **Incorporate lesser-known historical events or periods** that are not commonly covered in standard educational materials or popular media. This may include specific regions during a narrow time frame.
+
+2. **Introduce categories that require interpretative answers** rather than factual recitation. History is not just about events; it's also about the interpretation of those events, their implications, and their long-term effects.
+
+3. **Focus on cross-disciplinary historical impacts**, such as how historical events influenced art, science, or philosophy. This requires not just knowledge of the event but understanding its broader implications.
+
+Here is a list of new categories following the specified format:
+
+```json 
+[
+{"id": "1", "category": "Postcolonial African Politics", "parent_category": "History", "additional_requirement": "focus on political transitions and conflicts post-independence"},
+{"id": "2", "category": "Silk Road Trade Dynamics", "parent_category": "History", "additional_requirement": "explore the economic and cultural exchanges"},
+{"id": "3", "category": "Pre-Columbian Civilizations", "parent_category": "History", "additional_requirement": "only major civilizations and their unique achievements"},
+{"id": "4", "category": "History of the Scientific Revolution", "parent_category": "History", "additional_requirement": "key figures and paradigm shifts"},
+{"id": "5", "category": "Industrial Revolution in Non-Western Societies", "parent_category": "History", "additional_requirement": "focus on the adaptation and impact outside the western world"},
+{"id": "6", "category": "Feminist Movements Globally", "parent_category": "History", "additional_requirement": "major movements and their impacts on societal change"},
+{"id": "7", "category": "The Spread of World Religions", "parent_category": "History", "additional_requirement": "major religions and their global influence through history"},
+{"id": "8", "category": "Cold War Espionage", "parent_category": "History", "additional_requirement": "focus on lesser-known operations and their impact"},
+{"id": "9", "category": "Decolonization Processes", "parent_category": "History", "additional_requirement": "specific countries and the international influences involved"},
+{"id": "10", "category": "Art Movements and Historical Events", "parent_category": "History", "additional_requirement": "how major events influenced art movements"}
+]
+```
+
+This selection of categories aims to diversify the knowledge base required to formulate and answer questions accurately, pushing the boundaries of commonly known historical facts. It also incorporates the need for interpretative skills, not just memorization, which could help in achieving the desired accuracy level. 
+
+TERMINATE

@@ -1,0 +1,86 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Wed Mar 20 20:04:25 2024
+# ------------------------------------------------
+
+package:
+  name: anaconda-anon-usage
+  version: 0.4.4
+source:
+  sha256: 7c771b42a7c377d9c872929da986926869c433839ad5d3a793d02b9ee340b24c
+  url: https://github.com/anaconda/anaconda-anon-usage/archive/refs/tags/0.4.4.tar.gz
+build:
+  number: '100'
+  script_env:
+    - NEED_SCRIPTS=no
+  string: py312hfc0e8ea_100
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_5
+    - ca-certificates 2024.3.11 h06a4308_0
+    - expat 2.5.0 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.13 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.2 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.2.2 py312h06a4308_0
+    - sqlite 3.41.2 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - python >=3.12,<3.13.0a0
+  run_constrained:
+    - conda >=23.7
+test:
+  commands:
+    - export ANACONDA_ANON_USAGE_DEBUG=1
+    - export PYTHONUNBUFFERED=1
+    - conda create -n testchild1 --yes
+    - conda create -n testchild2 --yes
+    - conda info
+    - conda info --envs
+    - pytest -v tests/unit
+    - python tests/integration/test_config.py
+  imports:
+    - anaconda_anon_usage
+  requires:
+    - conda >=23.7
+    - pytest
+    - pytest-cov
+  source_files:
+    - tests
+about:
+  description: 'This package augments the request header data that conda delivers
+
+    to package servers during index and package requests. Specifically,
+
+    three randomly generated tokens are appended to the "user agent"
+
+    that Conda already sends with each request.
+
+    '
+  dev_url: https://github.com/anaconda/anaconda-anon-usage/
+  doc_url: https://github.com/anaconda/anaconda-anon-usage/
+  home: https://github.com/anaconda/anaconda-anon-usage
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: basic anonymous telemetry for conda clients
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 526acf64-680e-4d4f-acfa-80949a8e3c9d
+  remote_url: git@github.com:AnacondaRecipes/anaconda-anon-usage-feedstock.git
+  sha: 239c2caf958cbd960bda3cd623a0f8f7fa9d2b66

@@ -1,0 +1,52 @@
+{% set version = "1.3.1" %}
+
+package:
+    name: mkl_fft
+    version: {{ version }}
+
+source:
+    url: https://github.com/IntelPython/mkl_fft/archive/v{{version}}.tar.gz
+    sha256: 9039d301deb4c381b961a4c9cc889aa0e7e1dba04d1685c988ef36b2e2a66067
+
+build:
+  number: 0
+  skip: True  # [not x86]
+  script: {{PYTHON}} setup.py build install --single-version-externally-managed --record=record.txt
+
+requirements:
+    build:
+      - {{ compiler('c') }}
+      - {{ compiler('cxx') }}
+    host:
+      - python
+      - setuptools
+      - mkl-devel  {{ mkl }}
+      - cython
+      - numpy-base  {{ numpy }}
+    run:
+      - python
+      - numpy >={{ numpy }},<2.0a0
+
+test:
+    commands:
+      - nosetests -v mkl_fft
+    requires:
+      - nose
+    imports:
+      - mkl_fft
+      - mkl_fft._numpy_fft
+      - mkl_fft._scipy_fft
+
+about:
+    home: http://github.com/IntelPython/mkl_fft
+    license: BSD 3-Clause
+    license_file: LICENSE.txt
+    description:
+        NumPy-based implementation of Fast Fourier Transform using Intel (R) Math Kernel Library.
+        Supports in-place and out-of-place, 1D and ND complex FFT on arrays of single and double precision
+        with arbitrary memory layout, so long as array strides are multiples of its itemsize.
+    summary: NumPy-based implementation of Fast Fourier Transform using Intel (R) Math Kernel Library.
+
+extra:
+  recipe-maintainers:
+     - oleksandr-pavlyk

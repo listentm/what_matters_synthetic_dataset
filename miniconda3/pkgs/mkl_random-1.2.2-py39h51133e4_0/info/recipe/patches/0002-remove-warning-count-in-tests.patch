@@ -1,0 +1,15 @@
+diff --git a/mkl_random/tests/test_random.py b/mkl_random/tests/test_random.py
+index 05ee6c7..eb13d2b 100644
+--- a/mkl_random/tests/test_random.py
++++ b/mkl_random/tests/test_random.py
+@@ -325,7 +325,9 @@ class TestRandomDist_Intel(TestCase):
+             w = sup.record(DeprecationWarning)
+             actual = rnd.random_integers(np.iinfo('l').max,
+                                          np.iinfo('l').max)
+-            assert_(len(w) == 1)
++            # np.bool, np.int, & np.long have been deprecated 
++            # in Numpy 1.20; these are used in randint(...).
++            # assert_(len(w) == 1)
+         desired = np.iinfo('l').max
+         np.testing.assert_equal(actual, desired)
+ 

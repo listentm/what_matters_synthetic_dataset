@@ -1,0 +1,65 @@
+{
+  "paths": [
+    {
+      "_path": "lib/libiomp5.so",
+      "path_type": "hardlink",
+      "sha256": "1b715c7feba2dbd327b4cb73ab138039629f657bfc57451d16628a0961d02828",
+      "size_in_bytes": 2472833
+    },
+    {
+      "_path": "lib/libiomp5_db.so",
+      "path_type": "hardlink",
+      "sha256": "e94f8b5d924fe1e5a72cc7845715b57524aa62aed167f4889367ebe18122db9c",
+      "size_in_bytes": 623861
+    },
+    {
+      "_path": "lib/libiompstubs5.so",
+      "path_type": "hardlink",
+      "sha256": "10bccc34af0fa628576e968a5f137434e885d093ade651e966870df9e4300f96",
+      "size_in_bytes": 204968
+    },
+    {
+      "_path": "lib/libomp-fallback-cstring.o",
+      "path_type": "hardlink",
+      "sha256": "28ad0029c837c44bd5ae049e171191040079de20aca30182c1439fccd60688de",
+      "size_in_bytes": 9464
+    },
+    {
+      "_path": "lib/libomp-fallback-cstring.spv",
+      "path_type": "hardlink",
+      "sha256": "e595abaadd926dbfb726267ec81b833fcd41f93bf3002d1853219be2898fa0db",
+      "size_in_bytes": 348
+    },
+    {
+      "_path": "lib/libomptarget.rtl.level0.so",
+      "path_type": "hardlink",
+      "sha256": "a1fc135e5edc2057e115ca75927f5fc0836a691cc134fa9dae9980d301724c1e",
+      "size_in_bytes": 8979288
+    },
+    {
+      "_path": "lib/libomptarget.rtl.opencl.so",
+      "path_type": "hardlink",
+      "sha256": "8f5b3dcd20841004e91b88a00ae992c197178534a0719c529087d3b65dccaee1",
+      "size_in_bytes": 8986352
+    },
+    {
+      "_path": "lib/libomptarget.rtl.x86_64.so",
+      "path_type": "hardlink",
+      "sha256": "9b32699c968a6381d53b13111e9d7c593b1887e5c176ff5d95aa0feab81d3b15",
+      "size_in_bytes": 8638256
+    },
+    {
+      "_path": "lib/libomptarget.so",
+      "path_type": "hardlink",
+      "sha256": "d254ec4cdc9ab77910afc9fc9450971a147bfb1be5ea7f46c5d8a6367101367f",
+      "size_in_bytes": 601120
+    },
+    {
+      "_path": "licensing/compiler/openmp/third-party-programs.txt",
+      "path_type": "hardlink",
+      "sha256": "753301db61ffc9b486e9d3e8c6758ffc5db6679ea0cee32c4935b9e1a2d56bc5",
+      "size_in_bytes": 31156
+    }
+  ],
+  "paths_version": 1
+}

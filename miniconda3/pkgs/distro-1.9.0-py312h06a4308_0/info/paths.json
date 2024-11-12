@@ -1,0 +1,109 @@
+{
+  "paths": [
+    {
+      "_path": "bin/distro",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/distro_1714488253808/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+      "sha256": "b7809f9b8dc495a27c98b090e63ec5c77c48f697b3b73068caefdf6aa2a29a6d",
+      "size_in_bytes": 466
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+      "size_in_bytes": 11325
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "31632ab2de5591131091b3397bdcdf797718579d85a75186f06839dd0c09e81d",
+      "size_in_bytes": 6791
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "bc1d2d94f6739d30c4ce1a566dadba9d7262de9fd03dca61ea45a2fc8a99c7e4",
+      "size_in_bytes": 1258
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "c903798389a0e00c9b4639208bef72cb889010589b1909a5cfbf0f8a4e4eafe0",
+      "size_in_bytes": 92
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "c15f044bdf28759892a85c21cad9485b5e1beda74470ea5aa9487b5d61681eba",
+      "size_in_bytes": 66
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/entry_points.txt",
+      "path_type": "hardlink",
+      "sha256": "dce6e3a9031b875c5e410c2c5ad81b7c33433030fe11b8204753a3ff3f2cf617",
+      "size_in_bytes": 46
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro-1.9.0.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "8a475efd5fd711d481a9a19de6d12b88dff0cd81cb8135ffcd5b65b062c7bf04",
+      "size_in_bytes": 7
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "d9f1e317e49f80fbe3c8d67588787fc23a96751fd8a393831f0642d232c13e17",
+      "size_in_bytes": 981
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/__main__.py",
+      "path_type": "hardlink",
+      "sha256": "6eef5ddd389fa0a72264572a441bb2815dc64ae4e19d50ff9b620ae1ccfde95b",
+      "size_in_bytes": 64
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/__pycache__/__init__.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "e2b041aa52b3077e12361f8dbe61717c169edcfa1285b187d23c0cf1bcba1d0f",
+      "size_in_bytes": 914
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/__pycache__/__main__.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "352658da5863448c5f8573099f4ec2ed4d01e96d6d522cf70a935d29f966bd44",
+      "size_in_bytes": 246
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/__pycache__/distro.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "eb302cde61cca62c53f8c3061217c8bc2ffcca657139b4c8e40c372ec639e8a1",
+      "size_in_bytes": 53799
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/distro.py",
+      "path_type": "hardlink",
+      "sha256": "5ea6de7da7008434f8cebfedae76c0d79798f2f74ae064e08609af506ac433fe",
+      "size_in_bytes": 49430
+    },
+    {
+      "_path": "lib/python3.12/site-packages/distro/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    }
+  ],
+  "paths_version": 1
+}

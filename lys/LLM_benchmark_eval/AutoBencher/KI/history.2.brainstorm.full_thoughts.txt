@@ -1,0 +1,62 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to come up with a list of categories for knowledge intensive questions that achieve the target accuracy of 0.1--0.3.
+The categories should be diverse and cover important topics, under the theme of history. 
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+Constructing the categories is like building a tree structure of history, and (category, parent_category) is like specifying a node and its parent. We should select the most precise parent category, for example if you are trying to expand the category "second world war" to make it more specific by adding the node "famous battles in second world war", you should specify the parent category as "second world war" instead of "history".
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, additional_requirement. 
+Make sure the categories are similar to wikipedia categories. 
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}, 
+{"id": "2", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+For iteration 1, you can start with a wide variety of categories for us to build upon later. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+1. Think about breadth. Brainstorm questions with different categories to have broader coverage. Coming up with new categories that can are likely to achieve the target accuracy level.
+2. For example, If you find the model now lacks categories of 0.3 -- 0.5 accuracy, you should come up with more categories that would yield accuracy in that range, by either reducing the difficulty of questions that achieve lower accuracy (via subcategory or via additional requirement), or increasing the difficulty of questions that achieve higher accuracy.
+3. DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Second World War || Second World War [major battles and turning points], accuracy: 0.952 || 20 out of 21
+category: Greek Mythology || Greek Mythology [major myths and their cultural significance], accuracy: 0.769 || 30 out of 39
+category: American Presidents || American Presidents [focus on major decisions and impactful events during their terms], accuracy: 0.733 || 22 out of 30
+Please start with iteration 2.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++For iteration 2, based on the results from the previous evaluations, the categories explored generally had high accuracy, exceeding the target range of 0.1--0.3. This implies that to meet our target accuracy, we should look into categories that are potentially harder or broader, which may result in lower accuracy due to increased difficulty or complexity.
+
+Plan:
+1. Introduce more challenging categories by selecting broader subjects within the theme of history or by specifying less prominent aspects within a given subject.
+2. Introduce complexity by asking about less well-known events or figures within large historical categories.
+3. Adjust the additional requirements to focus on more complex, detailed, or abstract aspects to potentially increase the difficulty of the questions.
+
+New categories for iteration 2:
+1. Broaden the scope within cultural history with subcategories that focus on artists or movements that are less universally recognized.
+2. Choose topics that inherently involve complexity or ambiguity, such as economic histories or technological developments that can be less straightforward.
+3. Apply additional requirements that guide question askers to focus on the minutiae or controversial aspects of subjects that could challenge the model’s ability to reach clear conclusions.
+
+Here are the new categories:
+
+```json
+[
+    {"id": "4", "category": "Medieval Art and Architecture", "parent_category": "History", "additional_requirement": "focus on less renowned artworks and buildings"},
+    {"id": "5", "category": "Economic Crises of the 20th Century", "parent_category": "History", "additional_requirement": "cover lesser-known impacts and regions affected"},
+    {"id": "6", "category": "Evolution of Communication Technologies", "parent_category": "History", "additional_requirement": "emphasize early and obscure developments"}
+]
+```
+
+These categories have been chosen to potentially induce a lower accuracy due to their inherent difficulties or requirement to focus on less prominent content, hopefully achieving within the target accuracy range of 0.1--0.3. 
+
+TERMINATE

@@ -1,0 +1,54 @@
+{
+  "build": "h6a678d5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2",
+  "files": [
+    "include/reproc/drain.h",
+    "include/reproc/export.h",
+    "include/reproc/reproc.h",
+    "include/reproc/run.h",
+    "lib/cmake/reproc/reproc-config-version.cmake",
+    "lib/cmake/reproc/reproc-config.cmake",
+    "lib/cmake/reproc/reproc-targets-release.cmake",
+    "lib/cmake/reproc/reproc-targets.cmake",
+    "lib/libreproc.so",
+    "lib/libreproc.so.14",
+    "lib/libreproc.so.14.2.4",
+    "lib/pkgconfig/reproc.pc"
+  ],
+  "fn": "reproc-14.2.4-h6a678d5_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2",
+    "type": 1
+  },
+  "md5": "3c6dbc6c60b3897222d79359343e90fa",
+  "name": "reproc",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/reproc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/reproc_1714680872521/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "f9d9c337f7ab5b33adb32052e8565634c47818fe7878262696085ee25c5e2259",
+        "sha256_in_prefix": "cd215bf765f6edd6188b321a8a99c76becd73ca37a3b847498e4b6a81a59369e",
+        "size_in_bytes": 545
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::reproc==14.2.4=h6a678d5_2[md5=3c6dbc6c60b3897222d79359343e90fa]",
+  "sha256": "3c9233dc26c1e4264966c5b95ab7cb80748153ae1c3de688a503d9f84c888210",
+  "size": 29681,
+  "subdir": "linux-64",
+  "timestamp": 1714680903000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/reproc-14.2.4-h6a678d5_2.conda",
+  "version": "14.2.4"
+}

@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h06a4308_3561",
+  "build_number": 3561,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [],
+  "fn": "intel-openmp-2021.4.0-h06a4308_3561.conda",
+  "license": "LicenseRef-ProprietaryIntel",
+  "license_family": "Proprietary",
+  "md5": "15d9e331499432d8e22935c1d3b5d2a1",
+  "name": "intel-openmp",
+  "platform": "linux",
+  "sha256": "6a2d668a0a33fddbf047f8ef55c29ba5f803ef2c6fed923b7c753a836f4ce002",
+  "size": 4368467,
+  "subdir": "linux-64",
+  "timestamp": 1634546760000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2021.4.0-h06a4308_3561.conda",
+  "version": "2021.4.0"
+}

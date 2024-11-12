@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "py39h14f4228_0",
+  "build_number": 0,
+  "depends": [
+    "blas 1.0 mkl",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "mkl >=2021.4.0,<2022.0a0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "mkl_fft",
+    "mkl_random",
+    "numpy-base 1.24.3 py39h31eccc5_0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "numpy",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1682523253903,
+  "version": "1.24.3"
+}

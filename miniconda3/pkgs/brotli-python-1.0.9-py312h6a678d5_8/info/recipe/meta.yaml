@@ -1,0 +1,112 @@
+# This file created by conda-build 24.1.2
+# ------------------------------------------------
+
+package:
+  name: brotli-python
+  version: 1.0.9
+source:
+  fn: brotli-1.0.9.tar.gz
+  patches:
+    - 0001-Add-separate-options-to-disable-shared-static-librar.patch
+    - 0002-Fix-pkgconfig-rpath.patch
+  sha256: f9e8d81d0405ba66d181529af42a3354f838c939095ff99930da6aa9cdf6fe46
+  url: https://github.com/google/brotli/archive/v1.0.9.tar.gz
+build:
+  number: 8
+  run_exports:
+    - brotli >=1.0.9,<2.0a0
+  string: py312h6a678d5_8
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h5eee18b_5
+    - c-ares 1.19.1 h5eee18b_0
+    - ca-certificates 2024.3.11 h06a4308_0
+    - cmake 3.26.4 h96355d8_0
+    - expat 2.6.2 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - krb5 1.20.1 h143b758_1
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libcurl 8.5.0 h251f7ec_0
+    - libedit 3.1.20230828 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.57.0 h2d74bed_0
+    - libssh2 1.10.0 hdbd6064_2
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - libuv 1.44.2 h5eee18b_0
+    - lz4-c 1.9.4 h6a678d5_0
+    - ncurses 6.4 h6a678d5_0
+    - ninja 1.10.2 h06a4308_5
+    - ninja-base 1.10.2 hd09550d_5
+    - openssl 3.0.13 h7f8727e_0
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - rhash 1.4.3 hdbd6064_0
+    - sqlite 3.41.2 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+    - zstd 1.5.5 hc292b87_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - brotli 1.0.9 h5eee18b_8
+    - bzip2 1.0.8 h5eee18b_5
+    - ca-certificates 2024.3.11 h06a4308_0
+    - expat 2.6.2 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.13 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.2.2 py312h06a4308_0
+    - sqlite 3.41.2 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - libgcc-ng >=11.2.0
+    - libstdcxx-ng >=11.2.0
+    - python >=3.12,<3.13.0a0
+test:
+  imports:
+    - brotli
+about:
+  home: https://github.com/google/brotli
+  license: MIT
+  license_file: LICENSE
+  summary: Brotli compression format
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: ef8ceea0-808e-44fa-b341-b6733161b189
+  recipe-maintainers:
+    - CJ-Wright
+    - wesm
+    - xhochy
+  remote_url: git@github.com:AnacondaRecipes/brotli-feedstock.git
+  sha: ba7f7649d1161e8c386bce5911b643b8a2cca634

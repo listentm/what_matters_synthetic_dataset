@@ -1,0 +1,184 @@
+{% set version = "1.24.3" %}
+
+package:
+  name: numpy_and_numpy_base
+  version: {{ version }}
+
+source:
+  url: https://github.com/numpy/numpy/releases/download/v{{ version }}/numpy-{{ version }}.tar.gz
+  sha256: ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155  
+  patches:
+    - patches/0001-Obtain-and-prefer-custom-gfortran-from-env-variable.patch
+    - patches/0002-intel_mkl-version.patch              # [blas_impl == "mkl"]
+    - patches/0003-intel_init_mkl.patch                 # [blas_impl == "mkl"]
+    - patches/0004-disable-autorun-for-cmd-test.patch   # [win]
+    - patches/0005-array_coercion_fix.patch             # [blas_impl == "mkl" and win]
+    - patches/0006-popcnt_fix.patch                     # [blas_impl == "mkl" and win]
+
+build:
+  number: 0
+  # numpy 1.24.2 no longer supports Python 3.7: https://numpy.org/devdocs/release/1.24.0-notes.html
+  # "This release supports Python versions 3.8-3.11"
+  skip: True  # [(blas_impl == 'openblas' and win)]
+  force_use_keys:
+    - python
+
+requirements:
+  build:
+    - patch     # [not win]
+    - m2-patch  # [win]
+
+outputs:
+  # this one has all the actual contents
+  - name: numpy-base
+    script: install_base.sh   # [unix]
+    script: install_base.bat  # [win]
+    build:
+      entry_points:
+        - f2py = numpy.f2py.f2py2e:main
+      missing_dso_whitelist:  # [s390x]
+        - $RPATH/ld64.so.1    # [s390x]
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - armpl  # [aarch64]
+      host:
+        - python
+        - pip
+        - packaging  # [osx and arm64]
+        - cython >=0.29.30,<3.0
+        - setuptools <60.0.0
+        - wheel >=0.37.0
+        - mkl-devel  {{ mkl }}  # [blas_impl == "mkl"]
+        - openblas-devel {{ openblas }}  # [blas_impl == "openblas"]
+      run:
+        - python
+    # When building out the initial package set for a new Python version / MKL version the
+    # recommendation is to build numpy-base but not numpy, then build
+    # mkl_fft and mkl_random, and then numpy.
+    # If only_build_numpy_base: "yes", build numpy-base only; otherwise build all the outputs.
+    {% if only_build_numpy_base != 'yes' %}
+    test:
+      commands:
+        - test -e $SP_DIR/numpy/distutils/site.cfg     # [unix]
+        - IF NOT EXIST %SP_DIR%\numpy\distutils\site.cfg exit 1  # [win]
+
+  # numpy is a metapackage that may include mkl_fft and mkl_random both of
+  # which require numpy-base to build
+  - name: numpy
+    build:
+      missing_dso_whitelist:  # [s390x]
+        - $RPATH/ld64.so.1    # [s390x]
+    requirements:
+      build:
+        # for runtime alignment
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - armpl  # [aarch64]
+      host:
+        - python
+        - packaging  # [osx and arm64]
+        - cython >=0.29.30,<3.0
+        - setuptools <60.0.0
+        - wheel >=0.37.0
+        # these import blas metapackages to ensure consistency with downstream libs that also use blas
+        - mkl-devel  {{ mkl }}  # [blas_impl == 'mkl']
+        - openblas-devel {{ openblas }}  # [blas_impl == 'openblas']
+      run:
+        - python
+        - {{ pin_subpackage('numpy-base', exact=True) }}
+        # openblas or mkl runtime included with run_exports
+        - mkl_fft  # [blas_impl == 'mkl']
+        - mkl_random # [blas_impl == 'mkl' and (not win or vc>=14)]
+    {% endif %}
+    {% set tests_to_skip = "_not_a_real_test" %}
+    # Arrays are not equal?:
+    # E            x: array(2.236068, dtype=float32)
+    # E            y: array(2.236068, dtype=float32)
+     #{% set tests_to_skip = tests_to_skip + " or test_scalar_coercion_same_as_cast_and_assignment[float32]" %} # [ppc64le]
+     #{% set tests_to_skip = tests_to_skip + " or test_memory_store" %} # [ppc64le]
+     #
+    # any test that uses `sys.executable` has a chance to fail...
+    # this seems to be the related cause: https://github.com/conda/conda/issues/8305
+    # essentially older kernel versions + overlayfs = chance for corruption?
+    {% set tests_to_skip = tests_to_skip + " or test_sdot_bug_8577" %}          # [ppc64le or s390x]
+    {% set tests_to_skip = tests_to_skip + " or test_import_lazy_import" %}     # [ppc64le or s390x]
+    {% set tests_to_skip = tests_to_skip + " or test_full_reimport" %}          # [ppc64le or s390x]
+    {% set tests_to_skip = tests_to_skip + " or test_pep338" %}                 # [ppc64le or s390x]
+    {% set tests_to_skip = tests_to_skip + " or test_no_typing_extensions" %}   # [ppc64le or s390x]
+    # 2022/5/5: E       AssertionError: (131, 1.54987431981169249551435343964035e-09, 4.0035173453529620614007210953362e-19, 'arcsinh')
+    # Flawed test when using MKL
+    # https://github.com/numpy/numpy/issues/16769
+    {% set tests_to_skip = tests_to_skip + " or test_overrides" %}  # [blas_impl == 'mkl']
+    # https://github.com/numpy/numpy/issues/15243
+    {% set tests_to_skip = tests_to_skip + " or test_loss_of_precision" %}  # [s390x or ppc64le]
+    # https://github.com/numpy/numpy/issues/3858 - could be related
+    {% set tests_to_skip = tests_to_skip + " or test_big_arrays" %}  # [s390x]
+
+    #skip simd tests because  -mno-vx option for s390
+    {% set tests_to_skip = tests_to_skip + " or test_features" %}  # [s390x]
+
+
+    # It should be fixed by https://github.com/numpy/numpy/issues/20426
+    # but it still fails on some platforms.
+    {% set tests_to_skip = tests_to_skip + " or test_new_policy" %}   # [s390x or ppc64le or (osx and arm64)]
+    # On osx-arm64: FAILED core/tests/test_limited_api.py::test_limited_api - subprocess.CalledProcessor
+    {% set tests_to_skip = tests_to_skip + " or test_limited_api" %}   # [osx and arm64]
+    # ?
+    {% set tests_to_skip = tests_to_skip + " or test_gcd_overflow" %}  # [s390x]
+    # ?
+    {% set tests_to_skip = tests_to_skip + " or test_herm_cases" %}  # [osx and arm64]
+    {% set tests_to_skip = tests_to_skip + " or test_generalized_herm_cases" %}  # [osx and arm64]
+    # ?
+    {% set tests_to_skip = tests_to_skip + " or test_partial_iteration_cleanup" %}  # [osx or win64]
+
+    test:
+      requires:
+        - pip     # force installation or `test_api_importable` will fail
+        - setuptools <60.0.0
+        - pytest
+        - pytest-cov
+        - pytest-xdist
+        - hypothesis >=6.29.3
+        - pytz >=2021.3
+        - {{ compiler('c') }}  # [not osx]
+        - {{ compiler('cxx') }}  # [not osx]
+        - {{ compiler('fortran') }}  # [not osx]
+        - nomkl  # [x86 and blas_impl != 'mkl']
+        - typing-extensions >=4.2.0
+        - mypy >=0.981
+      commands:
+        - f2py -h
+        - python -c "import numpy; numpy.show_config()"
+        - export OPENBLAS_NUM_THREADS=1  # [unix]
+        - set OPENBLAS_NUM_THREADS=1  # [win]
+        - export CPU_COUNT=4  # [linux and ppc64le]
+        - pytest -vvv --pyargs numpy -k "not ({{ tests_to_skip }})" --durations=0
+      imports:
+        - numpy
+        - numpy.core.multiarray
+        - numpy.core.numeric
+        - numpy.core.umath
+        - numpy.linalg.lapack_lite
+        - numpy.random.mtrand
+
+about:
+  home: https://numpy.org/
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Array processing for numbers, strings, records, and objects.
+  description: |
+    NumPy is the fundamental package needed for scientific computing with Python.
+  doc_url: https://numpy.org/doc/stable/reference/
+  dev_url: https://github.com/numpy/numpy
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - msarahan
+    - pelson
+    - rgommers
+    - ocefpaf
+    - chenghlee 

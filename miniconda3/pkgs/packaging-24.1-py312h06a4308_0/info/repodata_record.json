@@ -1,0 +1,19 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "packaging-24.1-py312h06a4308_0.conda",
+  "license": "Apache-2.0 or BSD-2-Clause",
+  "md5": "756ec42d4f934b642b8476689af2781f",
+  "name": "packaging",
+  "sha256": "962a78d7747a61b60aeb0f65c75abfada1a74480c75cd85d1f4f8b761a38ecb0",
+  "size": 172404,
+  "subdir": "linux-64",
+  "timestamp": 1720101969000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/packaging-24.1-py312h06a4308_0.conda",
+  "version": "24.1"
+}

@@ -1,0 +1,91 @@
+# This file created by conda-build 3.24.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Fri Jun 16 15:56:27 2023
+# ------------------------------------------------
+
+package:
+  name: krb5
+  version: 1.20.1
+source:
+  sha256: ec3861c3bec29aa8da9281953c680edfdab1754d1b1db8761c1d824e4b25496a
+  url: https://github.com/krb5/krb5/archive/krb5-1.20.1-final.tar.gz
+build:
+  ignore_run_exports:
+    - libstdcxx-ng
+    - tk
+  number: '1'
+  run_exports:
+    - krb5 >=1.20.1,<1.21.0a0
+  string: h143b758_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - autoconf 2.71 pl5340h5eee18b_0
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bison 3.7.5 h2531618_1
+    - flex 2.6.4 ha10e3a4_1
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gdbm 1.18 hd4cb3f1_4
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - m4 1.4.18 h4e445db_0
+    - make 4.2.1 h1bed415_1
+    - ncurses 6.4 h6a678d5_0
+    - perl 5.34.0 h5eee18b_2
+    - pkg-config 0.29.2 h1bed415_8
+    - readline 8.2 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - ca-certificates 2023.05.30 h06a4308_0
+    - libedit 3.1.20221030 h5eee18b_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.8 h7f8727e_0
+    - tk 8.6.12 h1ccaba5_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - libedit >=3.1.20221030,<3.2.0a0
+    - libedit >=3.1.20221030,<4.0a0
+    - libgcc-ng >=11.2.0
+    - openssl >=3.0.8,<4.0a0
+test:
+  requires:
+    - python 3.11.*
+about:
+  description: 'Kerberos is a network authentication protocol. It is designed to provide
+    strong authentication for client/server applications by using secret-key cryptography.
+
+    '
+  dev_url: https://kerberos.org/dist/index.html
+  doc_url: https://web.mit.edu/kerberos/krb5-1.20/doc/index.html
+  home: https://web.mit.edu/kerberos/
+  license: MIT
+  license_family: MIT
+  license_file: doc/notice.rst
+  summary: A network authentication protocol.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: cdb34c75-662d-47dc-8e95-470041a739c3
+  recipe-maintainers:
+    - chenghlee
+    - mariusvniekerk
+    - mingwandroid
+    - ocefpaf
+    - pelson
+  remote_url: git@github.com:AnacondaRecipes/krb5-feedstock.git
+  sha: ab05638e4d7f8fb8cec7f7e79a93b43b7461b5d1

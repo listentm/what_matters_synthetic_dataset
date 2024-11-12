@@ -1,0 +1,91 @@
+# This file created by conda-build 3.22.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Thu Jan 26 11:53:19 2023
+# ------------------------------------------------
+
+package:
+  name: ncurses
+  version: '6.4'
+source:
+  fn: ncurses-6.4.tar.gz
+  patches:
+    - fix.patch
+  sha256: 6931283d9ac87c5073f30b6290c4c75f21632bb4fc3603ac8100812bed248159
+  url: https://invisible-mirror.net/archives/ncurses/ncurses-6.4.tar.gz
+build:
+  ignore_run_exports:
+    - libcxx
+    - libstdcxx-ng
+  number: '0'
+  run_exports:
+    - ncurses >=6.4,<7.0a0
+  string: h6a678d5_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libtool 2.4.6 h6a678d5_1009
+    - make 4.2.1 h1bed415_1
+    - patch 2.7.6 h7b6447c_1001
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - pkg-config 0.29.2 h1bed415_8
+  run:
+    - libgcc-ng >=11.2.0
+test:
+  requires:
+    - pkg-config
+about:
+  description: 'The ncurses (new curses) library is a free software
+
+    emulation of curses in System V Release 4.0 (SVr4),
+
+    and more. It uses terminfo format, supports pads and
+
+    color and multiple highlights and forms characters and
+
+    function-key mapping, and has all the other SVr4-curses
+
+    enhancements over BSD curses. SVr4 curses is better
+
+    known today as X/Open Curses
+
+    '
+  dev_url: https://ncurses.scripts.mit.edu/?p=ncurses.git
+  doc_url: https://invisible-island.net/ncurses/NCURSES-Programming-HOWTO.html
+  home: https://invisible-island.net/ncurses/
+  license: MIT AND X11
+  license_family: MIT
+  license_file: COPYING
+  summary: Library for text-based user interfaces
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: bc5bf6c1-302d-4d87-b1e8-3f997b5d22d2
+  recipe-maintainers:
+    - jakirkham
+    - jjhelmus
+  remote_url: git@github.com:AnacondaRecipes/ncurses-feedstock.git
+  sha: 3be0b0a1221bd1a02b7ecd72b2d59fd77c7d1437
+  skip-lints:
+    - build_tools_must_be_in_build
+    - host_section_needs_exact_pinnings

@@ -1,0 +1,81 @@
+# This file created by conda-build 3.28.0
+# meta.yaml template originally from:
+# /work/perseverance-python-buildout/aggregate/truststore-feedstock/recipe, last modified Fri Dec  1 21:39:47 2023
+# ------------------------------------------------
+
+package:
+  name: truststore
+  version: 0.8.0
+source:
+  fn: truststore-0.8.0.tar.gz
+  sha256: c862292f8d136bfcf2a7827a1fd1c1b27944a982741205fb466005673b570df8
+  url: https://github.com/sethmlarson/truststore/archive/refs/tags/v0.8.0.tar.gz
+build:
+  number: '0'
+  script: /work/perseverance-python-buildout/croot/truststore_1701735771625/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  string: py312h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h7b6447c_0
+    - ca-certificates 2023.08.22 h06a4308_0
+    - expat 2.5.0 h6a678d5_0
+    - flit-core 3.9.0 py312h685e810_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.12 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.0 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.0.0 py312h06a4308_0
+    - sqlite 3.41.2 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2023c h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.5 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+    - pytest -v -s -rs --no-flaky-report --max-runs=3 tests/
+  imports:
+    - truststore
+  requires:
+    - aiohttp
+    - flaky
+    - httpx
+    - pip
+    - pyopenssl
+    - pytest
+    - pytest-asyncio
+    - pytest-httpserver
+    - requests
+    - trustme
+    - urllib3
+  source_files:
+    - tests
+about:
+  description: "A library which exposes native system certificate stores (ie \u201C\
+    trust stores\u201D)\nthrough an ssl.SSLContext-like API. This means that Python\
+    \ applications no\nlonger need to rely on certifi as a root certificate store.\n"
+  dev_url: https://github.com/sethmlarson/truststore
+  doc_url: https://truststore.readthedocs.io/
+  home: https://github.com/sethmlarson/truststore
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Verify certificates using native system trust stores
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - wolfv

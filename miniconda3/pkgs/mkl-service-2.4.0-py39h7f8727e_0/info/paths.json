@@ -1,0 +1,53 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.9/site-packages/mkl/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "d9848009d8fb138861e2149b3201d86d172c8eaf63de12b94968b78429d55f59",
+      "size_in_bytes": 2325
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl/__pycache__/__init__.cpython-39.pyc",
+      "path_type": "hardlink",
+      "sha256": "55d9a3612d46847e505ba437abf34b80808d6a39beb0a9d904172a2e0b2db6a5",
+      "size_in_bytes": 1045
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl/_mklinit.cpython-39-x86_64-linux-gnu.so",
+      "path_type": "hardlink",
+      "sha256": "ed3e765deeb41531e2e195616711427f62c60772b332edb8a2ed698c6869d611",
+      "size_in_bytes": 17288
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl/_py_mkl_service.cpython-39-x86_64-linux-gnu.so",
+      "path_type": "hardlink",
+      "sha256": "53c751e2bd094f722ee7e087825d756cf3e8c914c071171dc4c3509aed4bf5a1",
+      "size_in_bytes": 152808
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl_service-2.4.0-py3.9.egg-info/PKG-INFO",
+      "path_type": "hardlink",
+      "sha256": "5e5865af20d6047e73a9a2ecd33f7b4861d06634e707842c8d96be3051ed1036",
+      "size_in_bytes": 1731
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl_service-2.4.0-py3.9.egg-info/SOURCES.txt",
+      "path_type": "hardlink",
+      "sha256": "56e1ea7e48080909a550176a4f8f81f040c6142c21315e4e5923f1b81b4eacfd",
+      "size_in_bytes": 214
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl_service-2.4.0-py3.9.egg-info/dependency_links.txt",
+      "path_type": "hardlink",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_in_bytes": 1
+    },
+    {
+      "_path": "lib/python3.9/site-packages/mkl_service-2.4.0-py3.9.egg-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "b1e92a43fd18113ecb2c73ba36c5d080a0cf18646198ab80356f68bc5b8cd931",
+      "size_in_bytes": 4
+    }
+  ],
+  "paths_version": 1
+}

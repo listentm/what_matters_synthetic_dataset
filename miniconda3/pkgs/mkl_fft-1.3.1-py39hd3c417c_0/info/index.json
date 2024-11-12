@@ -1,0 +1,20 @@
+{
+  "arch": "x86_64",
+  "build": "py39hd3c417c_0",
+  "build_number": 0,
+  "depends": [
+    "blas 1.0 mkl",
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0",
+    "mkl >=2021.3.0,<2022.0a0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "numpy >=1.16,<2.0a0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "license": "BSD 3-Clause",
+  "name": "mkl_fft",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1634566416657,
+  "version": "1.3.1"
+}

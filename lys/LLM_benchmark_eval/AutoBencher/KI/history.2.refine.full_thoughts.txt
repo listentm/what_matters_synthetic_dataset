@@ -1,0 +1,74 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on three criteria: (1) aligned with history, (2) likely to obtain the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. and (3) salient and cover important topics.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, additional_requirement. 
+Make sure the categories are similar to wikipedia categories. 
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}, 
+{"id": "2", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Second World War || Second World War [major battles and turning points], accuracy: 0.952 || 20 out of 21
+category: Greek Mythology || Greek Mythology [major myths and their cultural significance], accuracy: 0.769 || 30 out of 39
+category: American Presidents || American Presidents [focus on major decisions and impactful events during their terms], accuracy: 0.733 || 22 out of 30
+Please start with iteration 2.Here are the category candidates to select from (delimited by ||): Medieval art||Medieval architecture||Tympanum (architecture)||Medieval Scandinavian architecture||Christian art||Treasury of Saint-Denis||Medieval Serbian architecture||Pallava art and architecture||Keystone (architecture)||Hugh de Puiset||List of economic crises||Financial crisis||20th century||List of banking crises||Timeline of the 21st century||List of recessions in the United States||Business cycle||Crisis of the late Middle Ages||The General Crisis||Economic depression||Information and communications technology||International communication||History of communication||Communication||Jesse Russell||Symbolic communication||Emerging technologies||Models of communication||Human communication||Communication theory
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Given the goal of selecting categories likely to achieve a target accuracy of 0.1--0.3, and basing decisions on the history alignment, potential for achieving the target accuracy based on previous iterations, and importance of topics, I will develop a plan and execute the selection process as follows:
+
+### Plan:
+
+1. **Exclude Categories:** First, exclude the categories from the previous iterations that have already been explored, which are:
+   - Second World War
+   - Greek Mythology
+   - American Presidents
+
+2. **Select Relevant History Categories:** Since the focus is on history, I will prioritize categories that are directly related to historical topics over others. 
+
+3. **Consider Difficulty:** Based on the accuracy statistics provided, categories that are too specific or might require intensive specialized knowledge could potentially lower accuracy, aligning with our target.
+
+4. **Estimate Potential Accuracy:** Infer the potential accuracy based on the categorization's generalized or specialized nature. The notion is that overly broad categories might lead to high accuracy, as seen with "Second World War" at 0.952 accuracy, so more specialized, yet not obscure, topics may fit the target accuracy better.
+
+5. **Select Categories:** Aim to select categories with a balance of relevance, potential challenge, and ensure they cover significant, salient historical topics or themes.
+
+### Execution:
+
+Given the instructions and the desired outcome, here are the categories selected from the provided options, crafted to align with the goals:
+
+```json
+[
+{"id": "1", "category": "Medieval architecture", "parent_category": "History", "additional_requirement": "major architectural styles and their significance"},
+{"id": "2", "category": "Christian art", "parent_category": "History", "additional_requirement": "focus on pivotal works from 1000 to 1400 CE"},
+{"id": "3", "category": "Financial crisis", "parent_category": "History", "additional_requirement": "major global crises and their impacts"},
+{"id": "4", "category": "20th century", "parent_category": "History", "additional_requirement": "pivotal political events"},
+{"id": "5", "category": "List of recessions in the United States", "parent_category": "History", "additional_requirement": "focus on causes and consequences"},
+{"id": "6", "category": "Crisis of the late Middle Ages", "parent_category": "History", "additional_requirement": "key factors and resolutions"},
+{"id": "7", "category": "The General Crisis", "parent_category": "History", "additional_requirement": "overview of conflicts and their interconnections"},
+{"id": "8", "category": "Pallava art and architecture", "parent_category": "History", "additional_requirement": "main contributions and sites"},
+{"id": "9", "category": "History of communication", "parent_category": "History", "additional_requirement": "major milestones and shifts in mediums"},
+{"id": "10", "category": "Economic depression", "parent_category": "History", "additional_requirement": "focus on the Great Depression and its global effects"}
+]
+```
+
+Each selected category has an **additional requirement** to ensure the questions involve salient and important topics within each domain, aiming to modulate their difficulty and assist in achieving the desired target accuracy.
+
+TERMINATE

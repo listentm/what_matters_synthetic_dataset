@@ -1,0 +1,19 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "frozendict-2.4.2-py312h06a4308_0.conda",
+  "license": "LGPL-3.0-only",
+  "md5": "76ae0259102a2156cc0e1ff9ada0f2c6",
+  "name": "frozendict",
+  "sha256": "72ea3d917fc925f3a4ef62ce6bdb8facbd086703220dc0e5fb5c69161521d184",
+  "size": 37361,
+  "subdir": "linux-64",
+  "timestamp": 1713194959000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/frozendict-2.4.2-py312h06a4308_0.conda",
+  "version": "2.4.2"
+}

@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "py39h7f8727e_0",
+  "build_number": 0,
+  "depends": [
+    "libgcc-ng >=7.5.0",
+    "mkl >=2021.2.0,<2022.0a0",
+    "python >=3.9,<3.10.0a0",
+    "six"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "mkl-service",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1626176932911,
+  "version": "2.4.0"
+}

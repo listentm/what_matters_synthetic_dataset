@@ -1,0 +1,10 @@
+{
+  "numpy": "1.16",
+  "mkl": "2021",
+  "cxx_compiler_version": "7.5.0",
+  "c_compiler_version": "7.5.0",
+  "c_compiler": "gcc",
+  "target_platform": "linux-64",
+  "channel_targets": "defaults",
+  "cxx_compiler": "gxx"
+}

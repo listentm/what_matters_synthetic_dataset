@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "he6710b0_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.3.0",
+    "libstdcxx-ng >=7.3.0"
+  ],
+  "fn": "libffi-3.3-he6710b0_2.conda",
+  "license": "Custom",
+  "md5": "88a54b8f50e351c650e16f4ee781440c",
+  "name": "libffi",
+  "platform": "linux",
+  "sha256": "2cef7c80db19e83a38b6e02110f0e9828d3ef4045c38791d5b01006c44529093",
+  "size": 51543,
+  "subdir": "linux-64",
+  "timestamp": 1594054267000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.3-he6710b0_2.conda",
+  "version": "3.3"
+}

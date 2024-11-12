@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h06a4308_640",
+  "build_number": 640,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [
+    "intel-openmp 2021.*"
+  ],
+  "fn": "mkl-2021.4.0-h06a4308_640.conda",
+  "license": "LicenseRef-ProprietaryIntel",
+  "license_family": "Proprietary",
+  "md5": "c9eee35aaa371ed39e4d8c0692f0e5bf",
+  "name": "mkl",
+  "platform": "linux",
+  "sha256": "58cb5ed4263f1bc5eadd08824eaedfd80719c6eff4cfa2bcac0f1a39a9aca1e5",
+  "size": 149546539,
+  "subdir": "linux-64",
+  "timestamp": 1634547157000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl-2021.4.0-h06a4308_640.conda",
+  "version": "2021.4.0"
+}

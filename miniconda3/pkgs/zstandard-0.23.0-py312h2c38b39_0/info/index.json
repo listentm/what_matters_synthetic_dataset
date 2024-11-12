@@ -1,0 +1,19 @@
+{
+  "arch": "x86_64",
+  "build": "py312h2c38b39_0",
+  "build_number": 0,
+  "depends": [
+    "cffi >=1.11",
+    "libgcc-ng >=11.2.0",
+    "python >=3.12,<3.13.0a0",
+    "zstd >=1.5.6,<1.5.7.0a0",
+    "zstd >=1.5.6,<1.6.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "zstandard",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1728569286011,
+  "version": "0.23.0"
+}

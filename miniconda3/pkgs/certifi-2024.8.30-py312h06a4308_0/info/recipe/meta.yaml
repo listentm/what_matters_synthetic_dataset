@@ -1,0 +1,83 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Thu Sep  5 15:54:05 2024
+# ------------------------------------------------
+
+package:
+  name: certifi
+  version: 2024.8.30
+source:
+  - folder: certifi
+    sha256: bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9
+    url: https://pypi.io/packages/source/c/certifi/certifi-2024.8.30.tar.gz
+  - folder: pip_wheel
+    sha256: 7ccf472345f20d35bdc9d1841ff5f313260c2c33fe417f48c30ac46cccabf5be
+    url: https://pypi.io/packages/py3/p/pip/pip-23.2.1-py3-none-any.whl
+  - folder: setuptools_wheel
+    sha256: b454a35605876da60632df1a60f736524eb73cc47bbc9f3f1ef1b644de74fd2a
+    url: https://pypi.io/packages/py3/s/setuptools/setuptools-68.2.2-py3-none-any.whl
+build:
+  number: '0'
+  string: py312h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - expat 2.6.3 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.15 h5eee18b_0
+    - python 3.12.4 h5148396_1
+    - readline 8.2 h5eee18b_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.14 h39e8969_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.43.0 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+  imports:
+    - certifi
+  requires:
+    - pip
+about:
+  description: 'Certifi is a curated collection of Root Certificates for validating
+    the
+
+    trustworthiness of SSL certificates while verifying the identity of TLS
+
+    hosts.
+
+    '
+  dev_url: https://github.com/certifi/python-certifi
+  doc_url: https://github.com/certifi/python-certifi/blob/master/README.rst
+  home: https://certifi.io/
+  license: MPL-2.0
+  license_family: Other
+  license_file: certifi/LICENSE
+  summary: Python package for providing Mozilla's CA Bundle.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 6596b2a2-c479-48fc-bc82-108e0b69d0de
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - ocefpaf
+    - pelson
+    - sigmavirus24
+  remote_url: git@github.com:AnacondaRecipes/certifi-feedstock.git
+  sha: 7b42e99cc3589ce2354630986356bc2d3dbc20d2
+  skip-lints:
+    - missing_python_build_tool

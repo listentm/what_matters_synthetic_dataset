@@ -1,0 +1,61 @@
+{
+  "build": "h6a678d5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "reproc 14.2.4 h6a678d5_2"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2",
+  "files": [
+    "include/reproc++/arguments.hpp",
+    "include/reproc++/detail/array.hpp",
+    "include/reproc++/detail/type_traits.hpp",
+    "include/reproc++/drain.hpp",
+    "include/reproc++/env.hpp",
+    "include/reproc++/export.hpp",
+    "include/reproc++/input.hpp",
+    "include/reproc++/reproc.hpp",
+    "include/reproc++/run.hpp",
+    "lib/cmake/reproc++/reproc++-config-version.cmake",
+    "lib/cmake/reproc++/reproc++-config.cmake",
+    "lib/cmake/reproc++/reproc++-targets-release.cmake",
+    "lib/cmake/reproc++/reproc++-targets.cmake",
+    "lib/libreproc++.so",
+    "lib/libreproc++.so.14",
+    "lib/libreproc++.so.14.2.4",
+    "lib/pkgconfig/reproc++.pc"
+  ],
+  "fn": "reproc-cpp-14.2.4-h6a678d5_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2",
+    "type": 1
+  },
+  "md5": "b03aa4903158279f003e7032ab9f5601",
+  "name": "reproc-cpp",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/reproc++.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/reproc_1714680872521/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "fc6da3aa7959395fd9ef40addb7f20becabd1b3cbb62d63c7f6dfd796ece270e",
+        "sha256_in_prefix": "b55b6f96169fd09387aa6dae5008cf4d63be47408604d82eef09b78c5fa3d3ed",
+        "size_in_bytes": 579
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::reproc-cpp==14.2.4=h6a678d5_2[md5=b03aa4903158279f003e7032ab9f5601]",
+  "sha256": "7211f85590295c8dc29622fe02514f081a3a25dcc2dafcc741365ddb5aedee95",
+  "size": 21248,
+  "subdir": "linux-64",
+  "timestamp": 1714680919000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/reproc-cpp-14.2.4-h6a678d5_2.conda",
+  "version": "14.2.4"
+}

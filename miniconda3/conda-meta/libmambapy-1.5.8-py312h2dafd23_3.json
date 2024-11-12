@@ -1,0 +1,53 @@
+{
+  "build": "py312h2dafd23_3",
+  "build_number": 3,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "fmt >=9.1.0,<10.0a0",
+    "libgcc-ng >=11.2.0",
+    "libmamba 1.5.8 hfe524e5_3",
+    "libstdcxx-ng >=11.2.0",
+    "openssl >=3.0.15,<4.0a0",
+    "pybind11-abi 5",
+    "python >=3.12,<3.13.0a0",
+    "yaml-cpp >=0.8.0,<0.9.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_3",
+  "files": [
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/LICENSE",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/METADATA",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/RECORD",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/WHEEL",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/libmambapy-1.5.8.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/libmambapy/__init__.py",
+    "lib/python3.12/site-packages/libmambapy/__init__.pyi",
+    "lib/python3.12/site-packages/libmambapy/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/libmambapy/__pycache__/_version.cpython-312.pyc",
+    "lib/python3.12/site-packages/libmambapy/_version.py",
+    "lib/python3.12/site-packages/libmambapy/bindings.cpython-312-x86_64-linux-gnu.so"
+  ],
+  "fn": "libmambapy-1.5.8-py312h2dafd23_3.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_3",
+    "type": 1
+  },
+  "md5": "e1345dac45e08fef865200a7f57c2429",
+  "name": "libmambapy",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_3.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::libmambapy==1.5.8=py312h2dafd23_3[md5=e1345dac45e08fef865200a7f57c2429]",
+  "sha256": "9de5d67ef3c6a355e57e06d436691e8ef9a6e8e0d15bf47e519778df9835d76d",
+  "size": 341239,
+  "subdir": "linux-64",
+  "timestamp": 1725563938000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libmambapy-1.5.8-py312h2dafd23_3.conda",
+  "version": "1.5.8"
+}

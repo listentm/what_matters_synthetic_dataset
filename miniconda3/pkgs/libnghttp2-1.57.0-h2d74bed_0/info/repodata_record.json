@@ -1,0 +1,26 @@
+{
+  "build": "h2d74bed_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "c-ares >=1.19.1,<2.0a0",
+    "c-ares >=1.7.5",
+    "libev >=4.11",
+    "libev >=4.33,<4.34.0a0",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "openssl >=3.0.11,<4.0a0",
+    "zlib >=1.2.13,<1.3.0a0"
+  ],
+  "fn": "libnghttp2-1.57.0-h2d74bed_0.conda",
+  "license": "MIT",
+  "md5": "674871621300f54e7ffcf93e6e341638",
+  "name": "libnghttp2",
+  "sha256": "d13f2f08acbe413da3f37d225c05c888eb7603b8eea6995e01b6813078dfbc8f",
+  "size": 690359,
+  "subdir": "linux-64",
+  "timestamp": 1697018420000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libnghttp2-1.57.0-h2d74bed_0.conda",
+  "version": "1.57.0"
+}

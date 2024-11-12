@@ -1,0 +1,56 @@
+{
+  "build": "py312hfc0e8ea_100",
+  "build_number": 100,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "conda >=23.7"
+  ],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100",
+  "files": [
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/LICENSE",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/METADATA",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/RECORD",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/WHEEL",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/entry_points.txt",
+    "lib/python3.12/site-packages/anaconda_anon_usage-0.4.4.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__init__.py",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/_version.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/install.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/patch.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/plugin.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/tokens.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/__pycache__/utils.cpython-312.pyc",
+    "lib/python3.12/site-packages/anaconda_anon_usage/_version.py",
+    "lib/python3.12/site-packages/anaconda_anon_usage/patch.py",
+    "lib/python3.12/site-packages/anaconda_anon_usage/plugin.py",
+    "lib/python3.12/site-packages/anaconda_anon_usage/tokens.py",
+    "lib/python3.12/site-packages/anaconda_anon_usage/utils.py"
+  ],
+  "fn": "anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100",
+    "type": 1
+  },
+  "md5": "97f7e102a7075404bbcb7e801b260e3a",
+  "name": "anaconda-anon-usage",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::anaconda-anon-usage==0.4.4=py312hfc0e8ea_100[md5=97f7e102a7075404bbcb7e801b260e3a]",
+  "sha256": "dbcfe6944bb6c94bbebbf096019423506019b41d919191471f16c836d5804d81",
+  "size": 28846,
+  "subdir": "linux-64",
+  "timestamp": 1710966196000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+  "version": "0.4.4"
+}

@@ -1,0 +1,87 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Thu May  2 20:14:25 2024
+# ------------------------------------------------
+
+package:
+  name: reproc
+  version: 14.2.4
+source:
+  - patches: null
+    sha256: 55c780f7faa5c8cabd83ebbb84b68e5e0e09732de70a129f6b3c801e905415dd
+    url: https://github.com/DaanDeMeyer/reproc/archive/v14.2.4.tar.gz
+build:
+  number: '2'
+  run_exports:
+    - reproc >=14.2,<15.0a0
+  string: h6a678d5_2
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h5eee18b_6
+    - c-ares 1.19.1 h5eee18b_0
+    - ca-certificates 2024.3.11 h06a4308_0
+    - cmake 3.26.4 h96355d8_0
+    - expat 2.6.2 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - krb5 1.20.1 h143b758_1
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libcurl 8.5.0 h251f7ec_0
+    - libedit 3.1.20230828 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.57.0 h2d74bed_0
+    - libssh2 1.10.0 hdbd6064_3
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - libuv 1.44.2 h5eee18b_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.4 h6a678d5_0
+    - ninja 1.10.2 h06a4308_5
+    - ninja-base 1.10.2 hd09550d_5
+    - openssl 3.0.13 h7f8727e_1
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - rhash 1.4.3 hdbd6064_0
+    - sqlite 3.45.3 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+    - zstd 1.5.5 hc292b87_1
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+  run:
+    - libgcc-ng >=11.2.0
+about:
+  dev_url: https://github.com/DaanDeMeyer/reproc
+  doc_src_url: https://github.com/DaanDeMeyer/reproc
+  doc_url: https://github.com/DaanDeMeyer/reproc#reproc
+  home: https://github.com/DaanDeMeyer/reproc
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: reproc (Redirected Process) is a cross-platform C/C++ library that simplifies
+    starting, stopping and communicating with external programs.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 490c5e6a-87fb-432b-9995-5b558405c6ef
+  recipe-maintainers:
+    - DaanDeMeyer
+    - wolfv
+  remote_url: git@github.com:AnacondaRecipes/reproc-feedstock.git
+  sha: 39002db99a2955d830945b69264da997a7bf10aa

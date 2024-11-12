@@ -1,0 +1,64 @@
+{
+  "build": "hdb19cb5_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1",
+  "files": [
+    "include/fmt/args.h",
+    "include/fmt/chrono.h",
+    "include/fmt/color.h",
+    "include/fmt/compile.h",
+    "include/fmt/core.h",
+    "include/fmt/format-inl.h",
+    "include/fmt/format.h",
+    "include/fmt/os.h",
+    "include/fmt/ostream.h",
+    "include/fmt/printf.h",
+    "include/fmt/ranges.h",
+    "include/fmt/std.h",
+    "include/fmt/xchar.h",
+    "lib/cmake/fmt/fmt-config-version.cmake",
+    "lib/cmake/fmt/fmt-config.cmake",
+    "lib/cmake/fmt/fmt-targets-release.cmake",
+    "lib/cmake/fmt/fmt-targets.cmake",
+    "lib/libfmt.so",
+    "lib/libfmt.so.9",
+    "lib/libfmt.so.9.1.0",
+    "lib/pkgconfig/fmt.pc"
+  ],
+  "fn": "fmt-9.1.0-hdb19cb5_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1",
+    "type": 1
+  },
+  "md5": "4f12930203ff2d84df5d287af9b29858",
+  "name": "fmt",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/fmt.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/fmt_1714483211264/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "12e5fc6b315d2df8c202c93b97f9c278fbd907c213da2ac6b08126e400ed0c2c",
+        "sha256_in_prefix": "91a7c56b0f0ae661b0d825edb0c3419db92a67b7fa3e36f94f7d1c13eb2752c1",
+        "size_in_bytes": 702
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::fmt==9.1.0=hdb19cb5_1[md5=4f12930203ff2d84df5d287af9b29858]",
+  "sha256": "b2698ce365f852942f350cd8870272e6b780b8827db3fcc6874ef2d18996b242",
+  "size": 199925,
+  "subdir": "linux-64",
+  "timestamp": 1714483342000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/fmt-9.1.0-hdb19cb5_1.conda",
+  "version": "9.1.0"
+}

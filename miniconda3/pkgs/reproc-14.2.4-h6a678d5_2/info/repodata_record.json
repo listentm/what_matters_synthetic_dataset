@@ -1,0 +1,19 @@
+{
+  "build": "h6a678d5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "reproc-14.2.4-h6a678d5_2.conda",
+  "license": "MIT",
+  "md5": "3c6dbc6c60b3897222d79359343e90fa",
+  "name": "reproc",
+  "sha256": "3c9233dc26c1e4264966c5b95ab7cb80748153ae1c3de688a503d9f84c888210",
+  "size": 29681,
+  "subdir": "linux-64",
+  "timestamp": 1714680903000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/reproc-14.2.4-h6a678d5_2.conda",
+  "version": "14.2.4"
+}

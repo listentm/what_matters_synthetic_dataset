@@ -1,0 +1,20 @@
+{
+  "build": "hdb19cb5_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "fn": "fmt-9.1.0-hdb19cb5_1.conda",
+  "license": "MIT",
+  "md5": "4f12930203ff2d84df5d287af9b29858",
+  "name": "fmt",
+  "sha256": "b2698ce365f852942f350cd8870272e6b780b8827db3fcc6874ef2d18996b242",
+  "size": 199925,
+  "subdir": "linux-64",
+  "timestamp": 1714483342000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/fmt-9.1.0-hdb19cb5_1.conda",
+  "version": "9.1.0"
+}

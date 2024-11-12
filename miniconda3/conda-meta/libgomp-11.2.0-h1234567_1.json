@@ -1,0 +1,35 @@
+{
+  "build": "h1234567_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "_libgcc_mutex 0.1 main"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/libgomp-11.2.0-h1234567_1",
+  "files": [
+    "lib/libgomp.so",
+    "lib/libgomp.so.1.0.0",
+    "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy"
+  ],
+  "fn": "libgomp-11.2.0-h1234567_1.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/libgomp-11.2.0-h1234567_1",
+    "type": 1
+  },
+  "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+  "name": "libgomp",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/libgomp-11.2.0-h1234567_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::libgomp==11.2.0=h1234567_1[md5=b372c0eea9b60732fdae4b817a63c8cd]",
+  "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90",
+  "size": 485145,
+  "subdir": "linux-64",
+  "timestamp": 1654090775000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda",
+  "version": "11.2.0"
+}

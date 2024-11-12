@@ -1,0 +1,26 @@
+{
+  "build": "hfab0078_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "libgcc-ng >=11.2.0",
+    "libxml2 >=2.13.1,<2.14.0a0",
+    "lz4-c >=1.9.4,<1.10.0a0",
+    "openssl >=3.0.14,<4.0a0",
+    "xz >=5.4.6,<6.0a0",
+    "zlib >=1.2.13,<1.3.0a0",
+    "zstd >=1.5.2,<1.6.0a0"
+  ],
+  "fn": "libarchive-3.7.4-hfab0078_0.conda",
+  "license": "BSD-2-Clause",
+  "md5": "fcc6a63f95a80a5d2ff9d3e208e9a638",
+  "name": "libarchive",
+  "sha256": "b68d731b63f951ead049b1cb8d8aa227c6df45145209e7fc02b12a1a97c7610c",
+  "size": 941649,
+  "subdir": "linux-64",
+  "timestamp": 1724172663000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libarchive-3.7.4-hfab0078_0.conda",
+  "version": "3.7.4"
+}

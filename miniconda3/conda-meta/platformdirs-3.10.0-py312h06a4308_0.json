@@ -1,0 +1,56 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0",
+  "files": [
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/METADATA",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/RECORD",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/WHEEL",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/platformdirs-3.10.0.dist-info/licenses/LICENSE",
+    "lib/python3.12/site-packages/platformdirs/__init__.py",
+    "lib/python3.12/site-packages/platformdirs/__main__.py",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/__main__.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/android.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/api.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/macos.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/unix.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/version.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/__pycache__/windows.cpython-312.pyc",
+    "lib/python3.12/site-packages/platformdirs/android.py",
+    "lib/python3.12/site-packages/platformdirs/api.py",
+    "lib/python3.12/site-packages/platformdirs/macos.py",
+    "lib/python3.12/site-packages/platformdirs/py.typed",
+    "lib/python3.12/site-packages/platformdirs/unix.py",
+    "lib/python3.12/site-packages/platformdirs/version.py",
+    "lib/python3.12/site-packages/platformdirs/windows.py"
+  ],
+  "fn": "platformdirs-3.10.0-py312h06a4308_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0",
+    "type": 1
+  },
+  "md5": "39dc9eb538e73250dadcdec7a8ed6595",
+  "name": "platformdirs",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::platformdirs==3.10.0=py312h06a4308_0[md5=39dc9eb538e73250dadcdec7a8ed6595]",
+  "sha256": "60b9f2dd52e8d08921a8c1b1dc149e48132c9faf4cd55a0876feb7752f9331b1",
+  "size": 37282,
+  "subdir": "linux-64",
+  "timestamp": 1701732612000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/platformdirs-3.10.0-py312h06a4308_0.conda",
+  "version": "3.10.0"
+}

@@ -1,0 +1,84 @@
+{
+  "build": "h251f7ec_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "krb5 >=1.20.1,<1.21.0a0",
+    "libgcc-ng >=11.2.0",
+    "libnghttp2 >=1.57.0",
+    "libnghttp2 >=1.57.0,<2.0a0",
+    "libssh2 >=1.10.0",
+    "libssh2 >=1.10.0,<2.0a0",
+    "openssl >=3.0.14,<4.0a0",
+    "zlib >=1.2.13,<1.3.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/libcurl-8.9.1-h251f7ec_0",
+  "files": [
+    "bin/curl-config",
+    "include/curl/curl.h",
+    "include/curl/curlver.h",
+    "include/curl/easy.h",
+    "include/curl/header.h",
+    "include/curl/mprintf.h",
+    "include/curl/multi.h",
+    "include/curl/options.h",
+    "include/curl/stdcheaders.h",
+    "include/curl/system.h",
+    "include/curl/typecheck-gcc.h",
+    "include/curl/urlapi.h",
+    "include/curl/websockets.h",
+    "lib/libcurl.so",
+    "lib/libcurl.so.4",
+    "lib/libcurl.so.4.8.0",
+    "lib/pkgconfig/libcurl.pc"
+  ],
+  "fn": "libcurl-8.9.1-h251f7ec_0.conda",
+  "license": "curl",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/libcurl-8.9.1-h251f7ec_0",
+    "type": 1
+  },
+  "md5": "8133d8f19e8136a10f9f81180026c859",
+  "name": "libcurl",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/libcurl-8.9.1-h251f7ec_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/curl-config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/curl_split_recipe_1725033251817/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "959a8b67ce03c1db339bd4f12122ba01f1d69d4bd8df532c72f8c7024fac9c95",
+        "sha256_in_prefix": "417afcb7354bde3aa5a7caa8655ef65d0c3cdc901313da246537d49bc2f2942b",
+        "size_in_bytes": 12875
+      },
+      {
+        "_path": "lib/libcurl.so.4.8.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/curl_split_recipe_1725033251817/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "939d873d02d6eb327ff7411547b78e8dfc03a3cc9d896901557732060d07d64f",
+        "sha256_in_prefix": "2365f4733717dc6964c59f6cc99012cd892d562ac6bcd64cc9f457048e8cdb87",
+        "size_in_bytes": 923056
+      },
+      {
+        "_path": "lib/pkgconfig/libcurl.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/curl_split_recipe_1725033251817/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "fa463a7a93033a9e3da84f5cd1fa9d439b43c00774df922cb1f0aa159502121e",
+        "sha256_in_prefix": "b0110c4c77fcf76012ae31c5dd9e17cea8922ca28d4e4ec1d48fabe7d49d4bdc",
+        "size_in_bytes": 2239
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::libcurl==8.9.1=h251f7ec_0[md5=8133d8f19e8136a10f9f81180026c859]",
+  "sha256": "a6a4fc8c679a72b7a033bddee4d0d18e7f4a94e4faf1c104c4621c62f82f99f4",
+  "size": 449797,
+  "subdir": "linux-64",
+  "timestamp": 1725033936000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libcurl-8.9.1-h251f7ec_0.conda",
+  "version": "8.9.1"
+}

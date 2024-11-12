@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "h06a4308_640",
+  "build_number": 640,
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [
+    "intel-openmp 2021.*"
+  ],
+  "license": "LicenseRef-ProprietaryIntel",
+  "license_family": "Proprietary",
+  "name": "mkl",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1634547157986,
+  "version": "2021.4.0"
+}

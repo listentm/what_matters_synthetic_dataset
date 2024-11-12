@@ -1,0 +1,45 @@
+{
+  "build": "py312h5eee18b_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1",
+  "files": [
+    "lib/python3.12/site-packages/__pycache__/test_pycosat.cpython-312.pyc",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/AUTHORS.md",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/LICENSE",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/METADATA",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/RECORD",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/WHEEL",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/pycosat-0.6.6.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/pycosat.cpython-312-x86_64-linux-gnu.so",
+    "lib/python3.12/site-packages/test_pycosat.py"
+  ],
+  "fn": "pycosat-0.6.6-py312h5eee18b_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1",
+    "type": 1
+  },
+  "md5": "4ccf6371e1ccb1ccbecac26ab4fd1607",
+  "name": "pycosat",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::pycosat==0.6.6=py312h5eee18b_1[md5=4ccf6371e1ccb1ccbecac26ab4fd1607]",
+  "sha256": "c2c1b20aef8c6346a29a8fc898cee5cc12b397a06229c98e056177c6fdbad72b",
+  "size": 92282,
+  "subdir": "linux-64",
+  "timestamp": 1714510745000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pycosat-0.6.6-py312h5eee18b_1.conda",
+  "version": "0.6.6"
+}

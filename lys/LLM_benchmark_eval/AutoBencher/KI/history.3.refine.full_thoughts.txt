@@ -1,0 +1,84 @@
+You are a helpful AI assistant.
+Solve tasks using your reasoning and language skills.
+Solve the task step by step if you need to. If a plan is not provided, explain your plan first. Be clear which step uses code, and which step uses your language skill.
+Reply "TERMINATE" in the end when everything is done.
+ Your goal is to select from a list of categories for knowledge intensive questions so that the selected subset are likely to achieve the target accuracy of 0.1--0.3.
+The categories should be selected based on three criteria: (1) aligned with history, (2) likely to obtain the target accuracy of 0.1--0.3, you can judge this based on the accuracy statistics from previous iterations. and (3) salient and cover important topics.
+You can also specify some additional requirements for each category. This additional requirement will be passed to the question asker, and this helps with controlling the contents of the question and modulate their difficulties. For example, "only ask about major events in the paragraph, and avoid niched events". That way, you should only ask questions about major events in the paragraph, which is one way to make the questions easier.
+
+Output Formatting: 
+Each category should be a dictionary with the following keys: id, category, parent_category, additional_requirement. 
+Make sure the categories are similar to wikipedia categories. 
+The categories should be exactly in the following format (a list of dictionaries): 
+```json 
+[
+{"id": "1", "category": "Ancient Philosophers", "parent_category": "History", "additional_requirement": "only ask about famous people and their ideologies"}, 
+{"id": "2", "category": "Second World War", "parent_category": "History", "additional_requirement": "major battles"}, 
+...
+]
+``` 
+Do not use python code block. 
+Make sure that you generate a valid json block (surrounded by ```json [...] ```). Surrounded by the [] brackets.
+
+
+Iteration: 
+The goal is to find a set of categories that with accuracy close to the target accuracy level of 0.1--0.3. 
+
+At every iteration, you are given a list of categories that you have already explored and their respective accuracy. Also, you are given a larger set of candidate categories for this iteration, and you should use the information from previous iterations to select the top 10 categories from the list, that are most likely to achieve the target accuracy level, while still being relevant and salient. 
+In later iterations you should receive as input the categories that you have already explored and their respective accuracy. You should
+DO NOT REPEAT any of the categories that you have already explored.
+In the following, we summarize the evaluation results by each category in this agent iteration. 
+ We will report the accuracy for each category, and list the questions that are answered correctly and incorrectly. 
+category: Second World War || Second World War [major battles and turning points], accuracy: 0.952 || 20 out of 21
+category: Greek Mythology || Greek Mythology [major myths and their cultural significance], accuracy: 0.769 || 30 out of 39
+category: American Presidents || American Presidents [focus on major decisions and impactful events during their terms], accuracy: 0.733 || 22 out of 30
+category: 20th century || 20th century [pivotal political events], accuracy: 0.914 || 32 out of 35
+category: List of recessions in the United States || List of recessions in the United States [focus on causes and consequences], accuracy: 1.0 || 13 out of 13
+category: Financial crisis || Financial crisis [major global crises and their impacts], accuracy: 0.694 || 25 out of 36
+category: History of communication || History of communication [major milestones and shifts in mediums], accuracy: 0.676 || 23 out of 34
+category: Economic depression || Economic depression [focus on the Great Depression and its global effects], accuracy: 0.6 || 6 out of 10
+Please start with iteration 3.Here are the category candidates to select from (delimited by ||): Postcolonialism||Postcolonial Africa||Postcolonial literature||Africa||Postcolonial international relations||Postcolonial feminism||African literature||Postcolonial Age||Colonial Africa||Subaltern (postcolonialism)||Silk Road||Belt and Road Initiative||Trade route||Amber Road||Darknet market||Core countries||List of projects of the Belt and Road Initiative||Dark web||Yangqin||Pax Sinica||List of pre-Columbian cultures||Pre-Columbian era||Pre-Columbian art||Pre-Columbian Peru||Pre-Columbian cuisine||Andean civilizations||Prehistory||Pre-Columbian Ecuador||History of Mexico||South America||Scientific Revolution||The Structure of Scientific Revolutions||History of scientific method||Timeline of the history of the scientific method||Industrial Revolution||Information Age||History of evolutionary thought||Science||Iranian revolution||Science in the Age of Enlightenment||Industrial society||Second Industrial Revolution||Industrial Revolution||Industrial Revolution in the United States||Western world||Information Age||Western culture||Agrarian society||Information society||Great Divergence||Feminist movements and ideologies||Feminist movement||History of feminism||Gender-critical feminism||Men's movement||Anti-globalization movement||Ecofeminism||List of social movements||Feminism of the 99%||Feminism||Major religious groups||World religions||Growth of religion||History of religion in China||Spread of Islam||Abrahamic religions||History of religion||Religion in Africa||Traditional African religions||Ganesha in world religions||Cold War espionage||Culture during the Cold War||Outline of the Cold War||History of espionage||Soviet espionage in the United States||The Billion Dollar Spy||Espionage||Perseus (spy)||Venona project||Industrial espionage||Decolonization||Indigenous decolonization||Decolonization in Ukraine||Ralph Bunche||Decolonisation of Africa||Decolonization of knowledge||Data decolonization||Positive Action campaign||Rif War||On the Condemnation and Prohibition of Propaganda of Russian Imperial Policy in Ukraine and the Decolonization of Toponymy||History||Postmodern art||Realism (art movement)||Art history||Outline of history||Dance||List of historical classifications||Democracy movements of China||History painting||LGBTQ movements
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Firstly, we analyze the accuracies of the previously selected categories from iterations 1 and 2. The target accuracy range is 0.1-0.3, and the backgrounds on these categories are primarily in history, indicating the desired domain for our selection.
+
+Here’s a summary of the previous accuracies:
+- Second World War: 0.952 
+- Greek Mythology: 0.769 
+- American Presidents: 0.733 
+- 20th Century: 0.914
+- List of Recessions in the United States: 1.0 
+- Financial Crisis: 0.694 
+- History of Communication: 0.676
+- Economic Depression: 0.6 
+
+The problem with the categories chosen previously is that they mostly have higher accuracies than the target range of 0.1-0.3. This indicates that the questions asked may have been too easy or widely recognizable.
+
+For this iteration, let’s aim to select categories that:
+1. Are also historically aligned.
+2. Have a potential for lower accuracies and can be modulated using additional requirements for more difficulty.
+3. Cover important and broad historical topics that remain salient.
+
+**Selection Plan:**
+1. Prioritize categories that are specific yet conceivably challenging.
+2. Opportune for additional requirements to increase difficulty.
+3. Ensure the selected categories vary enough to avoid too easy or directly factual topics.
+
+Based on these considerations, here is the proposed selection with additional requirements aimed at lowering the accuracy:
+
+```json
+[
+{"id": "9", "category": "Pre-Columbian era", "parent_category": "History", "additional_requirement": "focus on lesser-known civilizations and cultural aspects"},
+{"id": "10", "category": "Industrial Revolution in the United States", "parent_category": "History", "additional_requirement": "technological developments not widely talked about"},
+{"id": "11", "category": "History of espionage", "parent_category": "History", "additional_requirement": "only obscure cases and lesser-known spies"},
+{"id": "12", "category": "Postcolonial Africa", "parent_category": "History", "additional_requirement": "focus on political changes in lesser known regions post-independence"},
+{"id": "13", "category": "Pre-Columbian Peru", "parent_category": "History", "additional_requirement": "details about daily life and traditions aside from major empires like the Inca"},
+{"id": "14", "category": "The Structure of Scientific Revolutions", "parent_category": "History", "additional_requirement": "deep dive into less accepted theories before mainstream acceptance"},
+{"id": "15", "category": "Iranian revolution", "parent_category": "History", "additional_requirement": "involve the socio-political background leading up to the revolution"},
+{"id": "16", "category": "Spread of Islam", "parent_category": "History", "additional_requirement": "concentrate on early expansions and lesser-known figures"},
+{"id": "17", "category": "History of feminism", "parent_category": "History", "additional_requirement": "focus on early lesser-known activists and movements"},
+{"id": "18", "category": "Decolonisation of Africa", "parent_category": "History", "additional_requirement": "highlight the varied indigenous movements and turnaround strategies"}
+]
+```
+
+This selection of the categories offers a diversity of topics from different periods and locations in history, each tailored with additional requirements to possibly achieve the desired lower accuracy rates by focusing on narrower and less widely known aspects. 
+
+TERMINATE

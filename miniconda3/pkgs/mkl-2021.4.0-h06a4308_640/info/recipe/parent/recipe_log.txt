@@ -1,0 +1,286 @@
+commit 46b8a79f3b5c91b910bde143331e7514b964c4f3
+Merge: 43f4316 1b37a8b
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Thu Jul 15 16:08:10 2021 -0400
+
+    Merge pull request #12 from AnacondaRecipes/release-2021.3.0
+    
+    Release 2021.3.0
+
+commit 1b37a8bf9fc5371981519a72b454a7aa69be7157
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Wed Jul 14 13:56:18 2021 -0400
+
+    Fixing license pathing for MacOS
+
+commit 769f44ff00d2ef0220be26eafa222644726bece4
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Jul 12 13:53:30 2021 -0400
+
+    Additional missing_dso_whitelist items.
+
+commit cd932097d9b480de5a4888b46933c842feb94b17
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Jul 12 13:37:05 2021 -0400
+
+    Updating version & build numbers for 2021.3.0 release.
+
+commit 43f4316b1a4b85457b04423786b7377cb61ba9fe
+Merge: 29e2382 1a6a7b3
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Mon Jul 12 10:08:06 2021 -0400
+
+    Merge pull request #11 from AnacondaRecipes/release-2021.2.0
+    
+    Release 2021.2.0 for MKL and 2021.2.2 for DAL
+
+commit 1a6a7b32fa326998ba20d394104f6913680b18d7
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Apr 26 11:04:14 2021 -0400
+
+    Updating license path for dal-devel.
+
+commit a2dbb5edd72a04f494aa2f14b3a284025ab94dc0
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Mon Apr 26 10:33:44 2021 -0400
+
+    License files are included via the meta.yaml directly.
+
+commit 486859dad8aaaddb5bfb2629c71f9903cfbba139
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Fri Apr 23 11:17:20 2021 -0400
+
+    Apply suggestions from code review
+    
+    Leveraging the suggestions as a starting place for the license and description updates. Clean-up and testing to follow.
+    
+    Co-authored-by: Nikolay Petrov <nikolay.a.petrov@intel.com>
+
+commit bb6f6c0311b8e3cc1f894ca75bbd2d9fc7cc61e1
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Thu Apr 22 12:20:38 2021 -0400
+
+    Cleaning up recipe comments.
+
+commit 3bfc99dc70d934d26bf070965e0c53a39d4d7ab9
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Thu Apr 22 12:15:53 2021 -0400
+
+    Adding note around mkl-service export for mkl-devel.
+
+commit b46704a7e8e029ba3f8c30e9120629bb4dec8716
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Thu Apr 15 20:28:39 2021 -0400
+
+    Update for MKL 2021.2.0 & DAL 2021.2.2
+
+commit 29e2382afc8c70a57dc0a5ba9d38a91e3b3a1923
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Wed Aug 26 06:21:26 2020 +0200
+
+    Update rpath dependencies
+
+commit be5dff615d623f3e97a9709040e98577790cb306
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Mon Aug 24 16:06:45 2020 +0200
+
+    Synchronize with cf
+
+commit e09746f9d7268b2ed66716cf299ce38e6c53b697
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Mon Aug 24 14:46:20 2020 +0200
+
+    Update to version 2020.2
+
+commit cdfc729ae4ef867ad5037ae110e76045e7133ca5
+Author: Angela Gloyna <angela.gloyna@gmail.com>
+Date:   Mon May 11 12:25:51 2020 -0500
+
+    update intel_repack to 2020.1
+
+commit 3b9655e84d53137a828df44e740a3b5783b0260d
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Wed Feb 5 16:47:36 2020 -0600
+
+    update to 2020.0
+
+commit 18d237992a0be0a60c1de728bb1a005d5594be5f
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Wed Sep 18 16:11:00 2019 -0500
+
+    whitelist more libraries
+
+commit be366e634ac4d5df9c977cf80b6d22998a92d9ff
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Tue Sep 17 14:38:01 2019 -0500
+
+    update to 2019.5, whitelist win missing libs
+
+commit e699b12667a39674c46254f4cbb37f40830eb62e
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Tue May 7 21:00:21 2019 -0400
+
+    add more DSO whitelist stuff for DAAL
+
+commit 7c3c9f56d113a2f56a57d7a6e31433acb36a2784
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Tue May 7 15:47:15 2019 -0400
+
+    add DAAL repacking
+
+commit 09a161cfdaeca0db05f4e190d8d69083c61fea7b
+Merge: eef5cbe 1160e18
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Fri Mar 15 09:04:49 2019 -0500
+
+    Merge pull request #6 from jjhelmus/2019.3
+    
+    Update to 2019.3
+
+commit 1160e180429a029c3422b948971cf9cb284984b1
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Fri Mar 15 08:26:39 2019 -0500
+
+    2019.3
+
+commit eef5cbef5034ca2ce37c16d76531912879a65abc
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Dec 13 17:22:38 2018 -0600
+
+    fix quoting in site.cfg on windows.  Bump mkl-devel build number
+
+commit 467e9d72a282e324b031b48438301572e38f811f
+Merge: fa69faa 5ccdb89
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Mon Nov 19 15:31:12 2018 -0600
+
+    Merge pull request #5 from soapy1/sync-mkl-devel-buildnum
+    
+    Sync up mkl-devel build number
+
+commit 5ccdb895fa5affe1936cd87b0e4f2295e441d014
+Author: soapy1 <scastellarin@anaconda.com>
+Date:   Mon Nov 19 15:01:05 2018 -0600
+
+    Sync up mkl-devel build number
+
+commit fa69faa97d3e013e5dce3316036c73c3aab677ca
+Merge: 5e87b41 bd27d1c
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Mon Nov 19 14:53:01 2018 -0600
+
+    Merge pull request #4 from soapy1/missing-dso-whitelist
+    
+    Add missing dso to whitelist
+
+commit bd27d1c09ec390aa9efe285baf10d007662ec550
+Author: soapy1 <scastellarin@anaconda.com>
+Date:   Mon Nov 19 14:50:52 2018 -0600
+
+    Add missing dso to whitelist
+
+commit 5e87b41607596e2a7bc6ba5597f0798049ec1444
+Merge: 71b3757 f578613
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Mon Nov 19 13:16:56 2018 -0600
+
+    Merge pull request #3 from soapy1/no-upper-bound
+    
+    Don't pin mkl subpackage max_pin
+
+commit f57861326ceb90ed38010b4d7a778cc0029f17ac
+Author: soapy1 <scastellarin@anaconda.com>
+Date:   Mon Nov 19 13:04:10 2018 -0600
+
+    Don't pin mkl subpackage max_pin
+
+commit 71b3757ff7ddd2e612dccf4a59a54c63f84c1e7c
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Oct 11 13:58:10 2018 -0500
+
+    fix -devel package missing win .lib files (moved by intel from mkl to mkl-devel)
+
+commit b22b59ca6d255c2be05a1351ba907f3441118337
+Author: Ray Donnelly <mingw.android@gmail.com>
+Date:   Mon Sep 24 02:40:24 2018 +0100
+
+    intel_repack: Add a sha1
+
+commit 9beaac2405cc35dc23cc737c8251610432d099fa
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Sep 20 08:33:09 2018 -0500
+
+    chmod license file (was ro)
+
+commit 6406f560cf5bb96a1b6ef68fe48f75b48abe5b66
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Sep 13 08:51:13 2018 -0500
+
+    update to 2019.0, fix license copy issue
+
+commit f21fe2680fc1722b4d5053bde2095801e0bbbe47
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Aug 23 08:43:43 2018 -0500
+
+    add blas metapkg dep to -devel pkg for mutex.  No rebuild needed (hotfix applied)
+
+commit f552939b6cc6fe396ae4986ae6f532abc9ee29a4
+Author: Ray Donnelly <mingw.android@gmail.com>
+Date:   Thu Jun 28 20:43:55 2018 +0100
+
+    Update to 2018.0.3
+
+commit a083c9395e470680f03a59e14f4ad394cd42f782
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Fri May 11 08:23:48 2018 -0500
+
+    whitelist system libs because we don't use a compiler here
+
+commit aa805c4532d1c5a36b7a5b86e015f56d1e900ab8
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu May 10 16:51:14 2018 -0500
+
+    add blas metapackage to replace features as mutex
+
+commit bb243aaac627d4ee2d2e060d0d3fba2bb242cd1b
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Mar 22 11:16:41 2018 -0500
+
+    update to 2018.0.2 release
+
+commit e5e9a514684d7e8032def767e4fd1e2f539b83cf
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Thu Jan 25 11:14:05 2018 -0600
+
+    fix uname detection logic on windows
+    
+    This was breaking mkl-devel specifically, generating incorrect site.cfg files.
+    We made a one-off split of this recipe just for mkl-devel, to avoid need to
+    update mkl package also.  This is for historical reasons - previous mkl
+    packages were built with conda 3.0.x, and their hashes would change under
+    conda-build 3.1.x+.  This commit is here to be used for the next MKL update,
+    2018.0.2.
+
+commit 7841532a625ec8322fd18ffd6e134d626581569c
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Wed Nov 22 15:36:53 2017 -0600
+
+    fix extra mac compensation with 2018.0.1
+
+commit 75aa8dcc0a40ec19a5d680f2c5ff5915170045cb
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Tue Nov 21 13:14:27 2017 -0600
+
+    2018.0.1 release
+
+commit 308e4dd03e4794895dd14e55ec591a405a244626
+Author: Michael Sarahan <msarahan@gmail.com>
+Date:   Wed Oct 25 14:59:55 2017 -0500
+
+    add 2018.0.0 repackaging recipe
+
+commit 73f8c545360e16acac95de45671c7278e5bc6d1a
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Wed Oct 25 14:54:18 2017 -0500
+
+    Initial commit

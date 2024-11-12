@@ -1,0 +1,12 @@
+{
+  "blas_impl": "mkl",
+  "mkl": "2021.*",
+  "target_platform": "linux-64",
+  "c_compiler": "gcc",
+  "cxx_compiler": "gxx",
+  "c_compiler_version": "11.2.0",
+  "numpy": "1.16",
+  "cxx_compiler_version": "11.2.0",
+  "only_build_numpy_base": "no",
+  "channel_targets": "defaults"
+}

@@ -1,0 +1,19 @@
+{
+  "build": "h7f8727e_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0"
+  ],
+  "fn": "libev-4.33-h7f8727e_1.conda",
+  "license": "BSD-2-Clause",
+  "md5": "5065620db4393fb549f30114a33897d1",
+  "name": "libev",
+  "sha256": "75f04cf201848d58df127caf9f316f71e1103b28e00b5add9b0c8025e52d7569",
+  "size": 114011,
+  "subdir": "linux-64",
+  "timestamp": 1632891483000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libev-4.33-h7f8727e_1.conda",
+  "version": "4.33"
+}

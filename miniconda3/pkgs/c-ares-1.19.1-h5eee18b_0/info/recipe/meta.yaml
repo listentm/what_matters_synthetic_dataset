@@ -1,0 +1,83 @@
+# This file created by conda-build 3.24.0
+# ------------------------------------------------
+
+package:
+  name: c-ares
+  version: 1.19.1
+source:
+  sha256: 321700399b72ed0e037d0074c629e7741f6b2ec2dda92956abe3e9671d3e268e
+  url: https://c-ares.org/download/c-ares-1.19.1.tar.gz
+build:
+  number: 0
+  run_exports:
+    - c-ares >=1.19.1,<2.0a0
+  string: h5eee18b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h7b6447c_0
+    - ca-certificates 2023.05.30 h06a4308_0
+    - cmake-no-system 3.25.3 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - ninja 1.10.2 h06a4308_5
+    - ninja-base 1.10.2 hd09550d_5
+    - openssl 3.0.10 h7f8727e_2
+    - python 3.11.4 h955ad1f_0
+    - readline 8.2 h5eee18b_0
+    - sqlite 3.41.2 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2023c h04d1e81_0
+    - xz 5.4.2 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+  run:
+    - libgcc-ng >=11.2.0
+  run_constraint:
+    - c-ares-static <0a0
+test:
+  commands:
+    - test -f ${PREFIX}/include/ares.h
+    - test -f ${PREFIX}/lib/libcares${SHLIB_EXT}
+    - test ! -f ${PREFIX}/lib/libcares.a
+    - test ! -f ${PREFIX}/lib/libcares_static.a
+about:
+  description: 'c-ares is a C library for asynchronous DNS requests (including name
+    resolves).
+
+    '
+  dev_url: https://github.com/c-ares/c-ares
+  doc_url: https://c-ares.org/docs.html
+  home: https://c-ares.org/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: This is c-ares, an asynchronous resolver library
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 732bdca4-ed02-4eb1-bd7a-b402f4d3b5f8
+  recipe-maintainers:
+    - ocefpaf
+    - wesm
+    - xhochy
+  remote_url: git@github.com:AnacondaRecipes/c-ares-feedstock.git
+  sha: ad2761d18574c8f2dbc14f4e4c3c82bd5fe1d62a

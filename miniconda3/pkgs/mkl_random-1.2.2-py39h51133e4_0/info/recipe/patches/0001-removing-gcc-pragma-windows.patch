@@ -1,0 +1,22 @@
+There was an update in PR #18 that reworked how the pragma's were defined:
+https://github.com/IntelPython/mkl_random/pull/18/commits/0178e4441cdb9242a5dfbaa408e869d1bdabc88d
+
+That change moved from `#pragma ivdep` to a macro based `DIST_PRAGMA_VECTOR`. This patch is to 
+allow this update to be compatible with our MSVC compiler.
+
+Some more information can be found here:
+https://docs.microsoft.com/en-us/cpp/preprocessor/pragma-directives-and-the-pragma-keyword?view=msvc-160
+
+diff --git a/mkl_random/src/mkl_distributions.cpp b/mkl_random/src/mkl_distributions.cpp
+index c606beb..2ab0448 100644
+--- a/mkl_random/src/mkl_distributions.cpp
++++ b/mkl_random/src/mkl_distributions.cpp
+@@ -45,7 +45,7 @@
+ #define DIST_PRAGMA_NOVECTOR _Pragma("novector")
+ #define DIST_ASSUME_ALIGNED(p, b) __assume_aligned((p), (b));
+ #else
+-#define DIST_PRAGMA_VECTOR _Pragma("GCC ivdep")
++#define DIST_PRAGMA_VECTOR __pragma(ivdep)
+ #define DIST_PRAGMA_NOVECTOR
+ #define DIST_ASSUME_ALIGNED(p, b)
+ #endif

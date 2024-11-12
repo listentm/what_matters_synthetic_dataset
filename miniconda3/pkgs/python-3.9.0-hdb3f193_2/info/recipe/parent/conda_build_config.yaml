@@ -1,0 +1,190 @@
+pin_run_as_build:
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  r-base:
+    min_pin: x.x
+    max_pin: x.x
+  libboost:
+    max_pin: x.x.x
+extend_keys:
+- extend_keys
+- ignore_version
+- pin_run_as_build
+- ignore_build_only_deps
+ignore_build_only_deps:
+- python
+- numpy
+cyrus_sasl:
+- 2.1.26
+hdfeos2:
+- '2.20'
+lzo:
+- '2'
+pixman:
+- '0.34'
+mkl:
+- '2019'
+giflib:
+- '5'
+boost_cpp:
+- '1.73'
+gst_plugins_base:
+- '1.14'
+hdf5:
+- 1.10.6
+rust_compiler_version:
+- 1.46.0
+rust_compiler:
+- rust
+proj:
+- 6.2.1
+hdfeos5:
+- '5.1'
+libkml:
+- '1.3'
+libnetcdf:
+- '4.6'
+cpu_optimization_target:
+- nocona
+python_implementation:
+- cpython
+libprotobuf:
+- 3.11.2
+hdf4:
+- '4.2'
+xz:
+- '5'
+cairo:
+- '1.14'
+expat:
+- '2.2'
+freetype:
+- '2.10'
+apr:
+- 1.6.3
+mpfr:
+- '4'
+gmp:
+- '6.1'
+g2clib:
+- '1.6'
+gstreamer:
+- '1.14'
+libgdal:
+- '3.0'
+r_version:
+- 3.5.0
+fortran_compiler_version:
+- 7.3.0
+macos_machine:
+- x86_64-apple-darwin13.4.0
+jpeg:
+- '9'
+libgd:
+- 2.2.5
+openjpeg:
+- '2.3'
+dbus:
+- '1'
+glib:
+- '2'
+r_implementation:
+- r-base
+- mro-base
+bzip2:
+- '1.0'
+harfbuzz:
+- '2.4'
+cran_mirror:
+- https://mran.microsoft.com/snapshot/2018-01-01
+nodejs:
+- '8.12'
+libgsasl:
+- '1.8'
+r_base:
+- '3.5'
+openblas:
+- 0.3.3
+channel_targets:
+- defaults
+clang_variant:
+- clang
+libtiff:
+- '4.1'
+gnu:
+- 2.12.2
+noarch_python:
+- python
+qtwebkit:
+- 'true'
+target_platform:
+- linux-64
+lua:
+- '5'
+python:
+- '3.9'
+libxslt:
+- '1.1'
+numpy:
+- '1.16'
+libdap4:
+- '3.19'
+tk:
+- '8.6'
+VERBOSE_CM:
+- VERBOSE=1
+libffi:
+- '3.3'
+fortran_compiler:
+- gfortran
+boost:
+- '1.73'
+icu:
+- '58'
+macos_min_version:
+- '10.9'
+openssl:
+- 1.1.1
+VERBOSE_AT:
+- V=1
+zlib:
+- '1.2'
+llvm_variant:
+- llvm
+libpng:
+- '1.6'
+libwebp:
+- 1.0.0
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+cxx_compiler_version:
+- 7.3.0
+geos:
+- 3.8.0
+perl:
+- '5.26'
+blas_impl:
+- openblas
+- mkl
+c_compiler:
+- gcc
+cxx_compiler:
+- gxx
+fontconfig:
+- '2.13'
+proj4:
+- 5.2.0
+serf:
+- 1.3.9
+python_impl:
+- cpython
+readline:
+- '8.0'
+libxml2:
+- '2.9'
+c_compiler_version:
+- 7.3.0
+sqlite:
+- '3'
+zip_keys: []

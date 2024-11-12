@@ -1,0 +1,123 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Aug 13 16:46:23 2024
+# ------------------------------------------------
+
+package:
+  name: menuinst
+  version: 2.1.2
+source:
+  sha256: 6515a4e33cec8462cdb389c1c301ddbe0679c992c02e3ea42eea25225063b0e9
+  url: https://github.com/conda/menuinst/archive/2.1.2.tar.gz
+build:
+  missing_dso_whitelist: null
+  number: '0'
+  script:
+    - rm -f "/croot/menuinst_1723567589013/work/menuinst/data/osx_launcher_*"
+    - rm -f "/croot/menuinst_1723567589013/work/menuinst/data/appkit_launcher_*"
+    - /croot/menuinst_1723567589013/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/bin/python
+      -m pip install . -vv --no-build-isolation --no-deps
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION=2.1.2
+  string: py312h06a4308_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - expat 2.6.2 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.14 h5eee18b_0
+    - python 3.12.4 h5148396_1
+    - readline 8.2 h5eee18b_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.14 h39e8969_0
+    - tzdata 2024a h04d1e81_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - expat 2.6.2 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.14 h5eee18b_0
+    - packaging 24.1 py312h06a4308_0
+    - pip 24.2 py312h06a4308_0
+    - python 3.12.4 h5148396_1
+    - readline 8.2 h5eee18b_0
+    - setuptools 72.1.0 py312h06a4308_0
+    - setuptools-scm 8.1.0 py312h06a4308_0
+    - setuptools_scm 8.1.0 hd3eb1b0_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.14 h39e8969_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.43.0 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+    - pytest tests/ -vvv --ignore=tests/test_schema.py --ignore=tests/test_elevation.py
+  imports:
+    - menuinst
+    - menuinst.api
+  requires:
+    - conda
+    - pip
+    - pydantic
+    - pytest
+    - pytest-mock
+  source_files:
+    - tests
+about:
+  description: 'This package provides cross platform menu item installation for conda
+    packages.
+
+
+    If a conda package ships a menuinst JSON document under $PREFIX/Menu, conda will
+    invoke
+
+    menuinst to process the JSON file and install the menu items in your operating
+    system.
+
+    The menu items are removed when the package is uninstalled.
+
+    '
+  dev_url: https://github.com/conda/menuinst/
+  doc_url: https://conda.github.io/menuinst/
+  home: https://github.com/conda/menuinst/
+  license: BSD-3-Clause AND MIT
+  license_family: BSD
+  license_file:
+    - LICENSE.txt
+    - menuinst/_vendor/apipkg/LICENSE
+  summary: cross platform install of menu items
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: b340734c-0070-4b57-a6d0-febfed4ecd90
+  recipe-maintainers:
+    - carlodri
+    - goanpeca
+    - isuruf
+    - jaimergp
+    - jakirkham
+  remote_url: git@github.com:AnacondaRecipes/menuinst-feedstock.git
+  sha: acb55be7553b63dee2ed9d99b8ba144fa1ff4880

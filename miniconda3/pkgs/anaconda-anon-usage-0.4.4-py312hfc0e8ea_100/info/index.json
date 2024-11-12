@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "py312hfc0e8ea_100",
+  "build_number": 100,
+  "constrains": [
+    "conda >=23.7"
+  ],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "anaconda-anon-usage",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1710966196303,
+  "version": "0.4.4"
+}

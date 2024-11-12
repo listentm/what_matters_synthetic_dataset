@@ -1,0 +1,137 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606",
+      "size_in_bytes": 1110
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "ebe190401a27e4e9abd8e6d907185ccf8eeabdaf87018c9f9669629263c78faf",
+      "size_in_bytes": 4341
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "7ae2dde2924b975d068ce867b67a8e6694132de69716d37598a9c6d99083044e",
+      "size_in_bytes": 1510
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "89896fe5f5f7e7b3d0c914f6a3ab70d5b37e61c2851472aa07f2f01cee703fe8",
+      "size_in_bytes": 110
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "5e57da79456bd943e7b760dd0ef09f37b8ed5a61bd4b282c7f96e50cd42febce",
+      "size_in_bytes": 100
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "c4a4824616a2faff4c724bccb96a8dcf5e9cd6d6ec98e820a0c4b04e07296071",
+      "size_in_bytes": 7
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3f8e336d0e79f1e817b0603278a85664717e25e099f40771ea3ad76c010bd41",
+      "size_in_bytes": 489
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/__init__.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "3d9590295df52415ab53f514857aaffdfb10c32bca871d2d9404eb0dda188e57",
+      "size_in_bytes": 544
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_callers.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "c92c65f7bd601fb3b333d47ed12d8b2df32788e2dd6c704dc0862ff9b951604f",
+      "size_in_bytes": 2676
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_hooks.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "359361826d88282894992370f3c8e3a55e85ed555c8ea6f4f7d50946df2fad4c",
+      "size_in_bytes": 14944
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_manager.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "c54dc130a1dbf659a13c32fb8ebaa6c7850f4749e1c3c8a8769676c6f481ed80",
+      "size_in_bytes": 19923
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_result.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "7852ba41cbb97896c5baa99bef32b674789a50c555ebaef03ffa4e8b18ed731d",
+      "size_in_bytes": 2725
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_tracing.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "25827b6f3e963004820fa0260555ea76184efb913172b4d7b5e0da00f8c5debd",
+      "size_in_bytes": 3351
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/__pycache__/_version.cpython-312.pyc",
+      "path_type": "hardlink",
+      "sha256": "8fa616b1c5088c73b2b5ac529a5c152b78282cbe268b2607a364724c9b81e205",
+      "size_in_bytes": 209
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_callers.py",
+      "path_type": "hardlink",
+      "sha256": "96ad8a3576b384aafe285fc624fc38bec636107c10e4e376752899502b5a790c",
+      "size_in_bytes": 2097
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_hooks.py",
+      "path_type": "hardlink",
+      "sha256": "3903e7aafec9eee7cb6554122021e9370e006167570f04d57de6022ff644c113",
+      "size_in_bytes": 11496
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_manager.py",
+      "path_type": "hardlink",
+      "sha256": "98a42788daa3fcb3edb77e6be9d10b6d13eba84759fe23cbe95745cb1efdf3ba",
+      "size_in_bytes": 14752
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_result.py",
+      "path_type": "hardlink",
+      "sha256": "b0b4cbd37e1003749f91ef29b5a75492fa165b9890d4fbf3ca80bfec5d9e41f8",
+      "size_in_bytes": 1535
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_tracing.py",
+      "path_type": "hardlink",
+      "sha256": "c52bf8575a54fe293ca550a9a1b4c7f209e30770d0e228a7837b6ff9b0ee1ed0",
+      "size_in_bytes": 1541
+    },
+    {
+      "_path": "lib/python3.12/site-packages/pluggy/_version.py",
+      "path_type": "hardlink",
+      "sha256": "6038691405e0bf7edc998d69667f2440d71800ec23f3cdc185602da1ace2486e",
+      "size_in_bytes": 142
+    }
+  ],
+  "paths_version": 1
+}

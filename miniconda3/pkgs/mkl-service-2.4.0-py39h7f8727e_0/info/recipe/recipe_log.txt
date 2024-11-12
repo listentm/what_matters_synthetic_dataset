@@ -1,0 +1,236 @@
+commit bdc42d6c533f9809f2161117808a1914cdd67c5b
+Merge: f4f54bc 9afcbbf
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Tue Jul 13 09:42:32 2021 -0400
+
+    Merge remote-tracking branch 'conda-forge/master' into release-2.4.0
+
+commit 9afcbbf3aa927887d89819202fdcaa47cdd8b2fb
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Tue May 25 17:33:51 2021 -0500
+
+    Update 2.4.0 (#17)
+    
+    * MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.1, and conda-forge-pinning 2021.05.25.06.47.12
+    
+    * updating sources
+
+commit f4f54bc7b77b408bc3a65eaef4179fb1606affd2
+Merge: 4abe432 cbbeaba
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Thu Apr 22 19:54:27 2021 -0400
+
+    Merge pull request #1 from AnacondaRecipes/mkl-2021-rebuild
+    
+    Updating build number and tests for rebuild against MKL 2021.
+
+commit cbbeaba19612031306fc410ff06425a4214cce12
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Tue Apr 13 17:07:36 2021 -0400
+
+    Updating build number and tests for rebuild against MKL 2021.
+
+commit d4f6a5ee4c351fb175b5f585dd67411de33e5830
+Merge: a207f9c 0f86833
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Wed Oct 21 13:51:38 2020 -0300
+
+    Merge pull request #11 from h-vetinari/master
+
+commit 0f868330305d6463caa6e5ecdd474697b6a8a9d4
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Wed Oct 21 14:26:20 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.4, conda-smithy 3.8.2, and conda-forge-pinning 2020.10.21.13.25.30
+
+commit accf0ff7e4fcdf6a93a36d16020837efdbcb453f
+Author: H. Vetinari <h.vetinari@gmx.com>
+Date:   Wed Oct 21 16:22:43 2020 +0200
+
+    bump build number (left-over from #10)
+
+commit a207f9cbd102277a31434124c0fd60053e573fac
+Merge: 45b2d9a f7a7575
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Oct 13 11:01:31 2020 -0300
+
+    Merge pull request #10 from regro-cf-autotick-bot/rebuild-python39-0-2_hf8093e
+
+commit f7a75755b510339ce1f86d0a369302aec1201f0d
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Oct 13 13:38:32 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.3, conda-smithy 3.8.2, and conda-forge-pinning 2020.10.13.00.03.02
+
+commit a725f5be507bad8f984dde0ecf66e6dcfb4f9b10
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Oct 13 13:38:18 2020 +0000
+
+    Rebuild for python39
+
+commit 45b2d9a78d448e5b88c246c479201427249e5c09
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Mon Sep 14 11:17:26 2020 -0500
+
+    bump build number to rebuild with newer MKL (#9)
+    
+    * bump build number to rebuild with newer MKL
+    
+    * heeding the linter
+    
+    * MNT: Re-rendered with conda-build 3.20.2, conda-smithy 3.7.10, and conda-forge-pinning 2020.09.11.19.40.57
+
+commit 672ad40b5569720a9a4cf0c51dbb4ff7812bacb9
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat Aug 8 08:28:08 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit 53ee8ebe7863ecd6f9e213682d9c601bb265b815
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Mon May 18 07:55:27 2020 -0500
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit e886daa2411f910aaa1842d576b149a7e57dc533
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat May 16 21:48:42 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit c14dfb316ff0442bb8435433a06e69fde54b31d4
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 21:58:11 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit 4abe43241d5a8c0aacd0508567efccc8aa77d6ab
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Thu Nov 7 13:00:02 2019 -0600
+
+    ping mkl-devel according to mkl version
+
+commit aa131fb89767729f5852ea6d99caea8edf362e3b
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Thu Nov 7 12:59:49 2019 -0600
+
+    skip ppc64le
+
+commit d4fe0b4367d8a1a1fb053bb3cec0503d5fcd124b
+Merge: f2b3a1f 86fd84e
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Sun Nov 3 16:14:55 2019 -0500
+
+    Rebuild for python38 (#7)
+    
+    Rebuild for python38
+
+commit 86fd84e2afe3ff4630f149d674f7dee84064e65e
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Nov 2 15:31:41 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.1, and conda-forge-pinning 2019.11.01
+
+commit daaef9fb941c2ca5bd444b423f2ebba4eb9c82bd
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Nov 2 15:31:23 2019 +0000
+
+    bump build number
+
+commit f2b3a1facb841a1c1cd32041ed67d8c5e4d566e0
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Sep 6 20:18:57 2019 -0500
+
+    [ci skip] ***NO_CI*** Move from appveyor to azure.
+    
+    See https://github.com/conda-forge/conda-forge.github.io/issues/857
+
+commit 47c6c236da97716e2fa240506ceebde2de428fcf
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Aug 28 13:17:23 2019 -0400
+
+    updated v2.3.0 (#6)
+
+commit bc52a8962303b95d47d576b2fc0bc56b4b615d95
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Aug 20 10:15:32 2019 -0400
+
+    mkl-service v2.2.0 (#5)
+    
+    * updated v2.2.0
+    
+    * MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.1, and conda-forge-pinning 2019.08.19
+
+commit 7051f72a28b394c23f4419a7f2ed20e44b6622a9
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Wed Jun 5 13:29:15 2019 -0500
+
+    Update/2.1.0 (#4)
+    
+    * updated v2.1.0
+    
+    * Removing numpy from host/run
+    
+    Also ignore export of mkl-service coming from mkl-devel
+    
+    * build scripts set MKLROOT=
+
+commit a1f7abe3cc1e0ca97dfaf3ddbaa9a487ed29595a
+Merge: 9b49fb2 27c839c
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Sat May 25 14:16:32 2019 -0500
+
+    Merge pull request #2 from regro-cf-autotick-bot/2.0.2
+    
+    mkl-service v2.0.2
+
+commit 27c839c68bfe7233a2c08b3cf45af52262bacda2
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu May 23 15:28:54 2019 +0000
+
+    updated v2.0.2
+
+commit 9b49fb2546a940b9ab9f0012a325ec9ffe04c274
+Merge: 22cafbe 5fe153c
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu May 9 11:25:27 2019 -0700
+
+    Merge pull request #1 from regro-cf-autotick-bot/rebuildblas20
+    
+    Rebuild for new BLAS scheme
+
+commit 5fe153c095d1b7301b866f8f843de990a409290f
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Apr 25 23:14:12 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.3, and conda-forge-pinning 2019.04.25
+
+commit 6340cc55b86f173c280658eea6c9eee97a42d2b6
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Apr 25 18:03:21 2019 -0500
+
+    Ignore run_exports blas
+
+commit d89343ac8520c98b4921af9f85b0b19fd8108141
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Apr 22 19:33:45 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.3, and conda-forge-pinning 2019.04.18
+
+commit 467db048a0ad1967cd95e3193bfed388c9c93bdf
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Apr 22 19:33:32 2019 +0000
+
+    Rebuild for new BLAS scheme
+
+commit 22cafbe300d5d20510ac6acae818eea83ce1fce6
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Mon Apr 22 18:21:11 2019 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 6700fe2af212c4cbad7b43145afed3dc3bb14a67
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Mon Apr 22 18:18:32 2019 +0000
+
+    Initial feedstock commit with conda-smithy 3.3.3.

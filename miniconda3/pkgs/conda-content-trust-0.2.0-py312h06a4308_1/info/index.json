@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py312h06a4308_1",
+  "build_number": 1,
+  "depends": [
+    "cryptography >=41",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "conda-content-trust",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1714483209430,
+  "version": "0.2.0"
+}

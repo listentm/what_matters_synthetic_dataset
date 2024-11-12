@@ -1,0 +1,19 @@
+{
+  "build": "h5eee18b_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "zlib-1.2.13-h5eee18b_1.conda",
+  "license": "Zlib",
+  "md5": "92e42d8310108b0a440fb2e60b2b2a25",
+  "name": "zlib",
+  "sha256": "eb451d3dba56a77cfc3273c8124cd45a8c13329a16bf9a4954181d835c85677b",
+  "size": 113492,
+  "subdir": "linux-64",
+  "timestamp": 1714510716000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_1.conda",
+  "version": "1.2.13"
+}

@@ -1,0 +1,95 @@
+# This file created by conda-build 3.21.5
+# ------------------------------------------------
+
+package:
+  name: intel-openmp
+  version: 2021.4.0
+source:
+  - folder: mkl
+    url: https://anaconda.org/intel/mkl/2021.4.0/download/linux-64/mkl-2021.4.0-intel_640.tar.bz2
+  - folder: mkl-devel
+    url: https://anaconda.org/intel/mkl-devel/2021.4.0/download/linux-64/mkl-devel-2021.4.0-intel_640.tar.bz2
+  - folder: mkl-include
+    url: https://anaconda.org/intel/mkl-include/2021.4.0/download/linux-64/mkl-include-2021.4.0-intel_640.tar.bz2
+  - folder: intel-openmp
+    url: https://anaconda.org/intel/intel-openmp/2021.4.0/download/linux-64/intel-openmp-2021.4.0-intel_3561.tar.bz2
+  - folder: dal
+    url: https://anaconda.org/intel/dal/2021.4.0/download/linux-64/dal-2021.4.0-intel_729.tar.bz2
+  - folder: dal-include
+    url: https://anaconda.org/intel/dal-include/2021.4.0/download/linux-64/dal-include-2021.4.0-intel_729.tar.bz2
+  - folder: dal-static
+    url: https://anaconda.org/intel/dal-static/2021.4.0/download/linux-64/dal-static-2021.4.0-intel_729.tar.bz2
+  - folder: dal-devel
+    url: https://anaconda.org/intel/dal-devel/2021.4.0/download/linux-64/dal-devel-2021.4.0-intel_729.tar.bz2
+  - folder: daal
+    url: https://anaconda.org/intel/daal/2021.4.0/download/linux-64/daal-2021.4.0-intel_729.tar.bz2
+  - folder: daal-include
+    url: https://anaconda.org/intel/daal-include/2021.4.0/download/linux-64/daal-include-2021.4.0-intel_729.tar.bz2
+  - folder: daal-static
+    url: https://anaconda.org/intel/daal-static/2021.4.0/download/linux-64/daal-static-2021.4.0-intel_729.tar.bz2
+  - folder: daal-devel
+    url: https://anaconda.org/intel/daal-devel/2021.4.0/download/linux-64/daal-devel-2021.4.0-intel_729.tar.bz2
+build:
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - $RPATH/libOpenCL.so.1
+    - $RPATH/libffi.so.6
+    - $RPATH/libimf.so
+    - $RPATH/libintlc.so.5
+    - $RPATH/libiomp5.so
+    - $RPATH/libirng.so
+    - $RPATH/libsvml.so
+    - $RPATH/libtbb.2.so
+    - $RPATH/libtbb.so.12
+    - $RPATH/libtbbmalloc.so.1
+    - $RPATH/libze_loader.so.1
+    - '**/libelf.so.1'
+    - '**/librt.so.1'
+    - /lib*/ld-linux.so.2
+    - /lib*/libc.so.6
+    - /lib*/libdl.so.2
+    - /lib*/libgcc_s.so.1
+    - /lib*/libm.so.6
+    - /lib*/libpthread.so.0
+    - /lib*/libz.so.1
+    - /lib64/ld-linux-x86-64.so.2
+    - /lib64/libffi.so.6
+    - /lib64/libstdc++.so.6
+    - /usr/lib/libstdc++.so.6
+    - /usr/lib64/libstdc++.so.6
+    - C:\Windows\System32\WINTRUST.dll
+    - libcoi_device.so.0
+    - libiomp5.so
+  noarch: false
+  noarch_python: false
+  number: 3561
+  script: repack.sh
+  string: h06a4308_3561
+requirements:
+  build: []
+  run: []
+  run_constrained:
+    - __glibc >=2.17
+test:
+  commands:
+    - ls -A $PREFIX/lib/*
+about:
+  description: 'Intel openmp runtime implementation
+
+    This package is a repackaged set of binaries obtained directly from Intel\''s
+    anaconda.org channel.
+
+    '
+  doc_url: https://software.intel.com/en-us/node/522690
+  home: https://software.intel.com/en-us/node/522690
+  license: LicenseRef-ProprietaryIntel
+  license_family: Proprietary
+  license_file: mkl/info/licenses/license.txt
+  summary: Math library for Intel and compatible processors
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - beckermr
+    - isuruf

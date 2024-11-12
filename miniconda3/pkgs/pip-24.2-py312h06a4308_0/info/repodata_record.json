@@ -1,0 +1,21 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0",
+    "setuptools",
+    "wheel"
+  ],
+  "fn": "pip-24.2-py312h06a4308_0.conda",
+  "license": "MIT",
+  "md5": "798cbea8112672434d0cd7551f8fc4b9",
+  "name": "pip",
+  "sha256": "13d240521d529143e178136d4ed7f6b33b5d0e7e719829a7d760b458386d4377",
+  "size": 2908477,
+  "subdir": "linux-64",
+  "timestamp": 1723484728000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pip-24.2-py312h06a4308_0.conda",
+  "version": "24.2"
+}

@@ -1,0 +1,20 @@
+{
+  "build": "h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "ncurses >=6.4,<7.0a0"
+  ],
+  "fn": "libedit-3.1.20230828-h5eee18b_0.conda",
+  "license": "BSD-2-Clause",
+  "md5": "850eb5a9d2d7d3c66cce12e84406ca08",
+  "name": "libedit",
+  "sha256": "73ade0165c148c617287f2d910c6aa4e4162f86cd1993b84a95fa6eb2ba72582",
+  "size": 183510,
+  "subdir": "linux-64",
+  "timestamp": 1703006263000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libedit-3.1.20230828-h5eee18b_0.conda",
+  "version": "3.1.20230828"
+}

@@ -1,0 +1,145 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Aug 20 16:49:53 2024
+# ------------------------------------------------
+
+package:
+  name: libarchive
+  version: 3.7.4
+source:
+  patches:
+    - patches/0001-Add-lib-to-CMAKE_FIND_LIBRARY_PREFIXES-for-lzma.patch
+    - patches/0003-VC9-compatibility-test-for-BCryptDeriveKeyPBKDF2.patch
+    - patches/0004-VC9-compatibility-define-BCRYPT_SUCCESS.patch
+    - patches/0006-VC-openssl-define-inline-as-__inline.patch
+    - patches/0007-CMake-VC9-compatibility-ignore-some-warnings.patch
+    - patches/0008-VC9-compatibility-remove-C99.patch
+    - patches/0009-CMake-Force-Multi-threaded-DLL-runtime.patch
+  sha256: 7875d49596286055b52439ed42f044bd8ad426aa4cc5aabd96bfe7abb971d5e8
+  url: https://github.com/libarchive/libarchive/releases/download/v3.7.4/libarchive-3.7.4.tar.gz
+build:
+  number: '0'
+  run_exports:
+    - libarchive >=3.7.4,<3.8.0a0
+  string: hfab0078_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h5eee18b_6
+    - c-ares 1.19.1 h5eee18b_0
+    - ca-certificates 2024.7.2 h06a4308_0
+    - cmake 3.26.4 h96355d8_0
+    - expat 2.6.2 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - krb5 1.20.1 h143b758_1
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libcurl 8.7.1 h251f7ec_0
+    - libedit 3.1.20230828 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.57.0 h2d74bed_0
+    - libssh2 1.11.0 h251f7ec_0
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuv 1.48.0 h5eee18b_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.4 h6a678d5_0
+    - ninja-base 1.10.2 hd09550d_5
+    - openssl 3.0.14 h5eee18b_0
+    - patch 2.7.6 h7b6447c_1001
+    - rhash 1.4.3 hdbd6064_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+    - zstd 1.5.5 hc292b87_2
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - icu 73.1 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libxml2 2.13.1 hfdd30dd_2
+    - lz4-c 1.9.4 h6a678d5_1
+    - openssl 3.0.14 h5eee18b_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+    - zstd 1.5.2 ha4553b6_0
+  run:
+    - bzip2 >=1.0.8,<2.0a0
+    - libgcc-ng >=11.2.0
+    - libxml2 >=2.13.1,<2.14.0a0
+    - lz4-c >=1.9.4,<1.10.0a0
+    - openssl >=3.0.14,<4.0a0
+    - xz >=5.4.6,<6.0a0
+    - zlib >=1.2.13,<1.3.0a0
+    - zstd >=1.5.2,<1.6.0a0
+test:
+  commands:
+    - test -f "${PREFIX}/lib/pkgconfig/libarchive.pc"
+    - test -f "${PREFIX}/include/archive.h"
+    - test -f "${PREFIX}/include/archive_entry.h"
+    - test -f "${PREFIX}/lib/libarchive.a"
+    - test -f "${PREFIX}/lib/libarchive${SHLIB_EXT}"
+    - bsdcat --version
+    - bsdcpio --version
+    - bsdtar --version
+    - pushd test-archives
+    - bsdtar -vxf hello_world.xar 2>&1 | rg "x hello_world"
+    - bsdtar -vxf archive.7z 2>&1 | rg "x 7zip-archive"
+    - bsdtar -vxf hello_world.tar.zst 2>&1 | rg "greets"
+    - popd
+  files:
+    - test-archives/archive.7z
+    - test-archives/hello_world.tar.zst
+    - test-archives/hello_world.xar
+  requires:
+    - ripgrep
+about:
+  description: 'Libarchive is an open-source BSD-licensed C programming library that
+    provides streaming access
+
+    to a variety of different archive formats, including tar, cpio, pax, Zip, and
+    ISO9660 images.
+
+    The distribution also includes bsdtar and bsdcpio, full-featured implementations
+    of tar and cpio
+
+    that use libarchive.
+
+    When reading archives, libarchive uses a robust automatic format detector that
+    can automatically handle archives
+
+    that have been compressed with gzip, bzip2, xz, lzip, and several other popular
+    compression algorithms.
+
+    '
+  dev_url: https://github.com/libarchive/libarchive
+  doc_url: https://github.com/libarchive/libarchive/wiki
+  home: https://libarchive.org/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: COPYING
+  summary: Multi-format archive and compression library
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 7381bd6e-a776-46c8-883c-b59c0c08570c
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - ocefpaf
+  remote_url: git@github.com:AnacondaRecipes/libarchive-feedstock.git
+  sha: 5de12bc96cbcd340f637e34f108bfb90832157ef
+  skip-lints:
+    - host_section_needs_exact_pinnings
+    - missing_tests

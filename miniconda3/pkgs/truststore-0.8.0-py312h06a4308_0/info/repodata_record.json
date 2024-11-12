@@ -1,0 +1,19 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "truststore-0.8.0-py312h06a4308_0.conda",
+  "license": "MIT",
+  "md5": "ad93bd626fc17c1606394fe258b4ed18",
+  "name": "truststore",
+  "sha256": "d398f8bac0ac5c0d5d4bcdd1d03300e4a2f5e5244a731415327660f61470b769",
+  "size": 43694,
+  "subdir": "linux-64",
+  "timestamp": 1701735810000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/truststore-0.8.0-py312h06a4308_0.conda",
+  "version": "0.8.0"
+}

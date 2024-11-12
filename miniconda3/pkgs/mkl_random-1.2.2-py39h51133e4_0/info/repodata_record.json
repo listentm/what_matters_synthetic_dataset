@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "py39h51133e4_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "libgcc-ng >=7.5.0",
+    "libstdcxx-ng >=7.5.0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "blas * mkl",
+    "numpy >=1.16,<2.0a0",
+    "mkl >=2021.2.0,<2022.0a0"
+  ],
+  "fn": "mkl_random-1.2.2-py39h51133e4_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "c753c11783825f0e0ffd23106c2696d5",
+  "name": "mkl_random",
+  "platform": "linux",
+  "sha256": "8533eeb7f8dd4951f321fe6c252885d73ba4e7bea6c069b560fab557fc8eff23",
+  "size": 316903,
+  "subdir": "linux-64",
+  "timestamp": 1626186165000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl_random-1.2.2-py39h51133e4_0.conda",
+  "version": "1.2.2"
+}

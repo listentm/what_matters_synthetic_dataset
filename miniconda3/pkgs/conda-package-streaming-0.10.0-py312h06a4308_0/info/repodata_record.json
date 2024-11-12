@@ -1,0 +1,20 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0",
+    "zstandard >=0.15"
+  ],
+  "fn": "conda-package-streaming-0.10.0-py312h06a4308_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "4801fce7f441672d195966cf23a12186",
+  "name": "conda-package-streaming",
+  "sha256": "456d8f59611f5508de235ff5046cdddb67ccec79bc3733bf4535bcdaa2197b54",
+  "size": 33251,
+  "subdir": "linux-64",
+  "timestamp": 1718136168000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/conda-package-streaming-0.10.0-py312h06a4308_0.conda",
+  "version": "0.10.0"
+}

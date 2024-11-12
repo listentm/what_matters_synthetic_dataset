@@ -1,0 +1,58 @@
+{
+  "build": "h6a678d5_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1",
+  "files": [
+    "include/ffi.h",
+    "include/ffitarget.h",
+    "lib/libffi.7.so",
+    "lib/libffi.8.so",
+    "lib/libffi.a",
+    "lib/libffi.so",
+    "lib/libffi.so.7",
+    "lib/libffi.so.8",
+    "lib/libffi.so.8.1.2",
+    "lib/pkgconfig/libffi.pc",
+    "share/info/libffi.info",
+    "share/man/man3/ffi.3",
+    "share/man/man3/ffi_call.3",
+    "share/man/man3/ffi_prep_cif.3",
+    "share/man/man3/ffi_prep_cif_var.3"
+  ],
+  "fn": "libffi-3.4.4-h6a678d5_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1",
+    "type": 1
+  },
+  "md5": "70646cc713f0c43926cfdcfe9b695fe0",
+  "name": "libffi",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/libffi.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/libffi_1714483243560/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+        "sha256": "d42c74b8e17b72244a609b67b6f23d18da75e961f35ae11a8be0f205daee22b4",
+        "sha256_in_prefix": "f774f25a31962f0fef188e5a9529875fd4d5f582f28aa0bd9bb8b2d606943f0d",
+        "size_in_bytes": 756
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::libffi==3.4.4=h6a678d5_1[md5=70646cc713f0c43926cfdcfe9b695fe0]",
+  "sha256": "b0e7fe2e5d498bc5a2c57cf942701bba8f22ec55de55e092ffbffc40b816df88",
+  "size": 144691,
+  "subdir": "linux-64",
+  "timestamp": 1714483282000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_1.conda",
+  "version": "3.4.4"
+}

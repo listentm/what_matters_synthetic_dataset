@@ -1,0 +1,87 @@
+# This file created by conda-build 24.1.2
+# ------------------------------------------------
+
+package:
+  name: libcurl
+  version: 8.9.1
+source:
+  sha256: b57285d9e18bf12a5f2309fc45244f6cf9cb14734e7454121099dd0a83d669a3
+  url: https://curl.se/download/curl-8.9.1.tar.bz2
+build:
+  number: 0
+  run_exports:
+    - libcurl >=8.9.1,<9.0a0
+  string: h251f7ec_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - c-ares 1.19.1 h5eee18b_0
+    - ca-certificates 2024.7.2 h06a4308_0
+    - krb5 1.20.1 h143b758_1
+    - libedit 3.1.20230828 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.57.0 h2d74bed_0
+    - libssh2 1.10.0 hdbd6064_3
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.14 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - krb5 >=1.20.1,<1.21.0a0
+    - libgcc-ng >=11.2.0
+    - libnghttp2 >=1.57.0
+    - libnghttp2 >=1.57.0,<2.0a0
+    - libssh2 >=1.10.0
+    - libssh2 >=1.10.0,<2.0a0
+    - openssl >=3.0.14,<4.0a0
+    - zlib >=1.2.13,<1.3.0a0
+test:
+  commands:
+    - curl-config --features
+    - curl-config --protocols
+    - test -f ${PREFIX}/lib/libcurl${SHLIB_EXT}
+    - test ! -f ${PREFIX}/lib/libcurl.a
+about:
+  description: 'Curl is an open source command line tool and library for transferring
+    data
+
+    with URL syntax. It is used in command lines or scripts to transfer data.
+
+    '
+  dev_url: https://github.com/curl/curl
+  doc_url: https://curl.se/docs/
+  home: https://curl.se/
+  license: curl
+  license_family: MIT
+  license_url: https://curl.se/docs/copyright.html
+  summary: tool and library for transferring data with URL syntax
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: a3c1ce7b-bf1e-48a6-9fe9-2d5d465faeb7
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - xylar
+  remote_url: git@github.com:AnacondaRecipes/curl-feedstock.git
+  sha: f40ddc96ec4014b80f30200ff4ccd503b434e1f1

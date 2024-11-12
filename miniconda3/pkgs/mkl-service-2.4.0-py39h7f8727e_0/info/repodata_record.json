@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py39h7f8727e_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "six",
+    "python >=3.9,<3.10.0a0",
+    "libgcc-ng >=7.5.0",
+    "mkl >=2021.2.0,<2022.0a0"
+  ],
+  "fn": "mkl-service-2.4.0-py39h7f8727e_0.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "172ea5cc5cdc863201cdc4653f836bcb",
+  "name": "mkl-service",
+  "platform": "linux",
+  "sha256": "4308d6bda152a035cb0ffd372dce0149d65ae53f756dd1776b695b5306c6a846",
+  "size": 60406,
+  "subdir": "linux-64",
+  "timestamp": 1626176932000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl-service-2.4.0-py39h7f8727e_0.conda",
+  "version": "2.4.0"
+}

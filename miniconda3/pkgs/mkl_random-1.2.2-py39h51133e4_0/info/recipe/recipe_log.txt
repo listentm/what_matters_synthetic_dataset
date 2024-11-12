@@ -1,0 +1,462 @@
+commit ab7aa34b8442ab83f0f7b35fad0148eda7452955
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Tue Jul 13 10:18:51 2021 -0400
+
+    Moving pip usage to the build scripts.
+
+commit 4930316b5d4ae44f3f6e79907c6b88fc24cbf011
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Tue Jul 13 10:18:11 2021 -0400
+
+    Moving patches to a folder.
+
+commit 9e4bb79699438aebb3184ac7edfbc28202915697
+Merge: fb65f00 23c4d3d
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Tue Jul 13 10:17:26 2021 -0400
+
+    Merge remote-tracking branch 'conda-forge/master' into release-1.2.2
+
+commit 23c4d3d4c8c85f559be94a77c0e832a814f93a1d
+Merge: 5006c77 6d660e6
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Thu May 27 09:43:11 2021 -0500
+
+    Merge pull request #19 from oleksandr-pavlyk/update
+    
+    Update to 1.2.2
+
+commit 6d660e678e16ead33bc18aab0b2ae6f9c1f526f9
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Thu May 27 13:50:28 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.1, and conda-forge-pinning 2021.05.27.12.00.13
+
+commit 332f4aa549845452eb7a42202d11c1fe26cdd962
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed May 26 10:37:16 2021 -0500
+
+    use post1
+
+commit 27feb5e7cfd69f7eb4e87978fe8c83e182b1f8aa
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed May 26 08:46:20 2021 -0500
+
+    Use post0 tag
+
+commit 2ffd097871d6e093ffdcfd0c272c458db8196279
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed May 26 07:34:13 2021 -0500
+
+    set MKLROOT in bld.bat
+
+commit 728077b55a58da85f045e8c2bd78820f528a4803
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed May 26 07:33:29 2021 -0500
+
+    Set MKLROOT in build.sh
+
+commit 2bdf18cd33e4ac8b8d24d7917eb974f0437a61fc
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed May 26 07:05:09 2021 -0500
+
+    use remove numpy pinning with star
+
+commit 1af5ac187da75b05299904b731242660ee2de727
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Tue May 25 18:09:37 2021 -0500
+
+    reverted the change to numpy version pinning
+
+commit 12377ad8ec50f28d13e3fee06cbf8d6ede2ad186
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Tue May 25 17:12:57 2021 -0500
+
+    Updated recipe to use 1.2.2
+
+commit ae62b9f4e7cd12d805e0c631663debe897c19944
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Tue May 25 17:09:13 2021 -0500
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.1, and conda-forge-pinning 2021.05.25.06.47.12
+
+commit fb65f00dbcff45bfee90a4393feba7db6ee20c9a
+Author: Anthony DiPietro <51377278+adipietro18@users.noreply.github.com>
+Date:   Fri Apr 23 09:29:43 2021 -0400
+
+    Release 1.2.1 and MKL 2021 rebuild (#1)
+    
+    * Initial version bump for 1.2.1.
+    
+    * Skipping Python < 3.7 to align with Numpy.
+    
+    * Tweaking pragma for Windows compiler.
+    
+    * Fix assert in tests relating to deprecation count.
+    
+    * Reworked patch the better support multiple numpy versions.
+    
+    * Restoring Python 3.6 builds.
+    
+    * Adding more context to the pragma patch.
+
+commit 5006c7727bd110b62d3e3bbd545795e8c5d6c804
+Merge: 3b0f65a 121c00f
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Thu Apr 8 19:51:10 2021 -0500
+
+    Merge pull request #18 from regro-cf-autotick-bot/rebuild-python39-0-2_h6af5f5
+
+commit 121c00f932b0ebab5da0d15d032d390de3f9b154
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Nov 11 09:41:07 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.5, conda-smithy 3.8.5, and conda-forge-pinning 2020.11.10.21.31.03
+
+commit 70fd8d8e23f6fe8174354b9515690fe4ad0914df
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Nov 11 09:40:56 2020 +0000
+
+    Rebuild for python39
+
+commit 3b0f65ad3e37cf186da98832634440c1bf34a6e5
+Merge: f519960 07e70f2
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Tue Sep 22 14:04:37 2020 -0500
+
+    Merge pull request #16 from regro-cf-autotick-bot/1.2.0_hd1ff5b
+    
+    mkl_random v1.2.0
+
+commit 07e70f28628adc3e69d52cd43176945966967611
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Tue Sep 22 13:47:22 2020 -0500
+
+    use v1.2.0.post0 tag
+
+commit a21b3f9d0117453a6ec59b11efba8cf3aab9a265
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed Sep 16 08:23:40 2020 -0500
+
+    used SPDX identifier for license per linter
+
+commit 881a07a5627777d7d0363c65df00892266d8e05d
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Wed Sep 16 08:21:48 2020 -0500
+
+    added test-time dependency
+
+commit 3a8ac76f29280e37a09e9e0b7a9e87b811e14f60
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Sep 14 22:10:46 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.2, conda-smithy 3.7.10, and conda-forge-pinning 2020.09.14.18.14.00
+
+commit 49020ce05c3e61d0270bb65f8d6aef96673a3f68
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Sep 14 22:10:35 2020 +0000
+
+    updated v1.2.0
+
+commit f51996030541620dd427915c7d673352fe79d9e6
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat Aug 8 08:28:31 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit 181bcc15cb3c9bae384bb7ecfc326dd79353dd35
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Tue May 26 17:15:08 2020 -0500
+
+    build against numpy-base, require numpy
+
+commit 0a310214c85ff10ad03212e2b5bf8097c63a1d76
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Tue May 26 17:14:49 2020 -0500
+
+    remove selectors in pip install command
+
+commit 03ceb14454fe8fa0da7b5b31e9f5bfc75c68257c
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Tue May 26 16:58:58 2020 -0500
+
+    1.1.1
+
+commit 9bb409d3e7f54bd16b61c4edebe6b06aa4358ec8
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Tue May 26 16:42:41 2020 -0500
+
+    adjust indents
+
+commit 326cb51fd3edeabaee68e5ca515862812fc0a875
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Mon May 18 07:55:30 2020 -0500
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit 96782af82bd90dad550097944b6f5d3af2272ade
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat May 16 21:49:54 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit f4a5e74cca384d2b36ee6d187e992ca52369d47e
+Merge: f0e9454 21b71d3
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Fri Apr 17 14:15:53 2020 -0500
+
+    Merge pull request #15 from regro-cf-autotick-bot/1.1.1_hab2239
+    
+    mkl_random v1.1.1
+
+commit 21b71d3736c881ec67d37e964866e2e7d0c35044
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Apr 16 21:31:37 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.6.16, and conda-forge-pinning 2020.04.16.16.23.46
+
+commit 97bf534d6e898f882db440b111d25042d4d5f9ca
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Apr 16 21:31:13 2020 +0000
+
+    updated v1.1.1
+
+commit f0e945438a91abfd8fdadfcd7ae56b496cc2c5a5
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 21:58:19 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit 67935e5c2bd0b6fe72fe9c07ba934e24e726b9b4
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Thu Jan 16 12:32:42 2020 -0600
+
+    remove numpy bound in test
+
+commit c25614f391608a98794d88ac73b1d80324016bb9
+Merge: 6712755 f35ffee
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Nov 19 17:20:01 2019 -0300
+
+    Rebuild for python38 (#13)
+    
+    Rebuild for python38
+
+commit f35ffee3fb25815fbf78b1b91b1ae57a0ee0759a
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Tue Nov 19 16:30:50 2019 -0300
+
+    test
+
+commit 782728d07a3aa0ae683d147a079ba3e3d0d4412d
+Author: Jonathan Helmus <jjhelmus@gmail.com>
+Date:   Thu Nov 7 13:19:45 2019 -0600
+
+    install using pip
+
+commit 6d8f7b9d10aa937b92c9e731260d98ca2c467c62
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Nov 4 01:37:15 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.1, and conda-forge-pinning 2019.11.01
+
+commit f106a25cdb25b694eaf8586524bbc7031f2f6647
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Nov 4 01:36:57 2019 +0000
+
+    bump build number
+
+commit 67127558f2650aba6ebabcc98d164af08726d7a0
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Sep 6 19:31:24 2019 -0500
+
+    [ci skip] ***NO_CI*** Move from appveyor to azure.
+    
+    See https://github.com/conda-forge/conda-forge.github.io/issues/857
+
+commit 8a483dee1f46064450fe958c22f28745dda4243f
+Merge: 8a2c1be 5c2ca5f
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu Sep 5 18:02:30 2019 -0500
+
+    Merge pull request #12 from regro-cf-autotick-bot/1.1.0
+    
+    mkl_random v1.1.0
+
+commit 5c2ca5f9903f1416ee35e2046592da6dafb35088
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Sep 5 22:43:57 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.3, and conda-forge-pinning 2019.08.27
+
+commit 109e8e163b73e71f28d47d82308c4fb5979622b9
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Sep 5 22:43:32 2019 +0000
+
+    updated v1.1.0
+
+commit 8a2c1bed13f0a557ad5e99d043cc041446d473e9
+Merge: f606754 0f938f5
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Sat Apr 27 23:10:53 2019 -0500
+
+    Merge pull request #9 from oleksandr-pavlyk/ignore-run-blas-exports
+    
+    use ignore_run_exports: blas
+
+commit 0f938f5221be5b146f6c479d180dc8f063bb82d2
+Author: Oleksandr Pavlyk <pavlyk@wolfram.com>
+Date:   Sat Apr 27 15:50:59 2019 -0500
+
+    take 2
+
+commit 66275c7dac05b6117ec7f7f376f2d16c5418c5eb
+Author: Oleksandr Pavlyk <pavlyk@wolfram.com>
+Date:   Sat Apr 27 15:32:35 2019 -0500
+
+    bumped up version to 1.0.3
+
+commit c108cf761d6e88ab33f95a3a74887b5642847a69
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Apr 25 23:39:45 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.3, and conda-forge-pinning 2019.04.25
+
+commit bea31da7c00a224787c7c0f76a5c0c746da312d0
+Author: Oleksandr Pavlyk <oleksandr.pavlyk@intel.com>
+Date:   Thu Apr 25 18:36:53 2019 -0500
+
+    use ignore_run_exports: blas, since mkl_random is not implementing BLAS/LAPACK
+
+commit f6067544c4a1fbcf783da6239085e9261558edb5
+Merge: 723faeb fc8fecd
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu Jan 24 10:40:12 2019 -0600
+
+    Merge pull request #7 from jschueller/patch-1
+    
+    Bump build number to 2 and rerender
+
+commit fc8fecda956cd8281a2871e4ba40fb2062ad514c
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Jan 24 15:37:03 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.7, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.21
+
+commit 87307ad4fafe39c4107c9d513c712679426b1055
+Author: Julien Schueller <schueller@phimeca.com>
+Date:   Thu Jan 24 16:02:00 2019 +0100
+
+    Require numpy>=1.14 for suppress_warnings in test
+
+commit 9dbe1ce62f9659a4df39e2dddc4fa856764878bb
+Author: Julien Schueller <schueller@phimeca.com>
+Date:   Thu Jan 24 15:54:34 2019 +0100
+
+    Unpin numpy
+
+commit 0a0438f64cb89bc6b379cef7266a42f345eb9bcf
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Jan 24 14:37:18 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.7, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.21
+
+commit e7250352b8331459a34b19af4f7c051af4d08ff9
+Author: Julien Schueller <schueller@phimeca.com>
+Date:   Thu Jan 24 15:36:34 2019 +0100
+
+    Bump build number to 2 for rerender
+
+commit 723faeb21c0e2282cb63edec29581a9eef7169c2
+Merge: 3d63442 362d542
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Thu Jan 24 08:08:50 2019 -0600
+
+    Merge pull request #1 from regro-cf-autotick-bot/compiler_migration2
+    
+    Migrate to Jinja2 compiler syntax
+
+commit 362d542ba46e5001866459efaf910d46491955a7
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Mon Dec 31 03:57:34 2018 -0500
+
+    Readd NumPy 1.11 pinning
+
+commit 4f90911f3bc1fda2e0b17b259dcdbb12b042fbcb
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Mon Dec 31 03:45:19 2018 -0500
+
+    Bump build number to 1
+    
+    Rebuild the package now that it has been migrated to conda-build 3 and
+    the new compiler syntax.
+
+commit c2b2f7783252bfaeaecd2c70c881aa5928f6ea70
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Mon Dec 31 03:45:02 2018 -0500
+
+    Space out build number Jinja braces
+
+commit b443e1fd78d9d64fa2226ebfc0ec5b6c0f609dfd
+Merge: d206d51 3d63442
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Mon Dec 31 03:43:59 2018 -0500
+
+    Merge 'conda-forge/master' into 'regro-cf-autotick-bot:compiler_migration2'
+
+commit d206d514be16f0b567eceb3bd3d38a125d2f297e
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Mon Dec 31 08:37:29 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.28
+
+commit 3d63442f0907b3525a3cb3c8b7452d7666f33dcd
+Merge: 4ef237f 8d153c1
+Author: Oleksandr Pavlyk <oleksandr-pavlyk@users.noreply.github.com>
+Date:   Fri Nov 2 10:55:45 2018 -0500
+
+    Merge pull request #3 from regro-cf-autotick-bot/1.0.2
+    
+    mkl_random v1.0.2
+
+commit 8d153c1bc379d0094122c776d2033289f8a0711b
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Nov 2 15:16:30 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.10.31
+
+commit 81511ede5bc6bbf55053cab4bec97b0114de1c6e
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Nov 2 15:16:26 2018 +0000
+
+    updated v1.0.2
+
+commit 4ef237f707a4e5a78dc7b34abddd07c18921b958
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 19:40:02 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 5375277fac7127a57d6e79344e8da1a9d3d2b097
+Author: Travis CI User <travis@example.org>
+Date:   Mon Jun 25 04:03:17 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.6 and pinning 2018.06.19
+
+commit bea1d2f83fd6148e1b4619eac9b14952599c5b31
+Author: Travis CI User <travis@example.org>
+Date:   Mon Jun 25 04:03:11 2018 +0000
+
+    migrated to Jinja2 compiler syntax build
+
+commit 5a83aac2e2ab93183b4ec0992c6325a3c5dc568a
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Dec 29 05:24:14 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 636065fd9549f5d75ca88a2c323b0003648a5e97
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Dec 29 05:21:53 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.4.5.

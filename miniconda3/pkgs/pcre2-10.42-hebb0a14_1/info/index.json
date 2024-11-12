@@ -1,0 +1,17 @@
+{
+  "arch": "x86_64",
+  "build": "hebb0a14_1",
+  "build_number": 1,
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "libgcc-ng >=11.2.0",
+    "zlib >=1.2.13,<1.3.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "pcre2",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1714657706306,
+  "version": "10.42"
+}

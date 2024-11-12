@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "h5eee18b_0",
+  "build_number": 0,
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "c-ares",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1693902021950,
+  "version": "1.19.1"
+}

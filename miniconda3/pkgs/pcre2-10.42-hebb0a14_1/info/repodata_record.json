@@ -1,0 +1,21 @@
+{
+  "build": "hebb0a14_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "libgcc-ng >=11.2.0",
+    "zlib >=1.2.13,<1.3.0a0"
+  ],
+  "fn": "pcre2-10.42-hebb0a14_1.conda",
+  "license": "BSD-3-Clause",
+  "md5": "727e15c3cfa02b032da4eb0c1123e977",
+  "name": "pcre2",
+  "sha256": "6d006d7d607600585a4879553b6eaf4c97d6cfe10a9830b72654668c44a171ea",
+  "size": 1379156,
+  "subdir": "linux-64",
+  "timestamp": 1714657706000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pcre2-10.42-hebb0a14_1.conda",
+  "version": "10.42"
+}

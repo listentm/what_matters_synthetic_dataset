@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "py312he106c6f_0",
+  "build_number": 0,
+  "constrains": [
+    "ipywidgets >=6"
+  ],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "MPL-2.0 AND MIT",
+  "license_family": "MOZILLA",
+  "name": "tqdm",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1724853965810,
+  "version": "4.66.5"
+}

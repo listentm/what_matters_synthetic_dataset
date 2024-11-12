@@ -1,0 +1,115 @@
+{% set version='2018.0.3' %}
+{% set buildnum='1' %}
+
+# use this if our build script changes and we need to increment beyond intel's version
+# {% set dstbuildnum='4' %}
+{% set openmp_version='2018.0.3' %}
+{% set openmp_buildnum='0' %}
+
+package:
+  name: intel_repacks
+  version: {{ version }}
+
+build:
+  number: {{ buildnum }}
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  skip: True                                  # [ppc64le]
+  missing_dso_whitelist:
+    # just ignore tbb on mac.  We could add it as a dep when we have it.
+    - libtbb.dylib                   # [osx]
+    # this one should be here, probably needs fixup of RUNPATH/RPATH
+    - libiomp5.dylib                   # [osx]
+    # normal linux stuff that would go away if we had libgcc-ng in the run deps
+    - /lib/ld-linux.so.2
+    - /lib64/ld-linux-x86-64.so.2
+    - /lib/libpthread.so.0
+    - /lib/libdl.so.2
+    - /lib/libgcc_s.so.1
+    - /lib/libc.so.6
+    - /lib/libm.so.6
+    # these two really shouldn't be here.  See mkl_repack_and_patchelf.sh
+    - libiomp5.so
+    - libcoi_device.so.0
+
+source:
+  - url: https://anaconda.org/intel/mkl/{{ version }}/download/{{ target_platform }}/mkl-{{ version }}-intel_{{ buildnum }}.tar.bz2
+    folder: mkl
+  - url: https://anaconda.org/intel/mkl-include/{{ version }}/download/{{ target_platform }}/mkl-include-{{ version }}-intel_{{ buildnum }}.tar.bz2
+    folder: mkl-include
+  - url: https://anaconda.org/intel/openmp/{{ openmp_version }}/download/{{ target_platform }}/openmp-{{ openmp_version }}-intel_{{ openmp_buildnum }}.tar.bz2
+    folder: intel-openmp
+
+outputs:
+  - name: mkl
+    script: mkl_repack_and_patchelf.sh
+    provides_features:
+      blas: mkl
+    requirements:
+      host:
+        - intel-openmp
+      run:
+        - intel-openmp
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+
+  - name: mkl-include
+    script: repack.sh
+    requirements:
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: MKL headers for developing software that uses MKL
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+
+  - name: intel-openmp
+    script: repack.sh
+    provides_features:
+      openmp: intel
+    number: {{ openmp_buildnum }}
+    version: {{ openmp_version }}
+    about:
+      home: https://software.intel.com/en-us/node/522690
+      license: proprietary - Intel
+      license_family: Proprietary
+      license_file: LICENSE.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel openmp runtime implementation
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/node/522690
+
+  # mutex package to keep only one blas implementation in a given env
+  - name: blas
+    version: 1.0
+    build:
+      string: mkl
+
+  - name: mkl-devel
+    script: install-devel.sh
+    build:
+      # when stuff is built with MKL, ensure that constraint makes mkl runtime libs as new or
+      #     newer than build version
+      run_exports:
+        - {{ pin_subpackage('mkl', max_pin=None) }}
+        - {{ pin_subpackage('blas', exact=True) }}
+    requirements:
+      run:
+        - {{ pin_subpackage('mkl', exact=True) }}
+        - {{ pin_subpackage('mkl-include', exact=True) }}
+
+    about:
+      summary: Metapacakge of MKL headers and libraries for developing software that uses MKL

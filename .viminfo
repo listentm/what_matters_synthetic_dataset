@@ -1,0 +1,39 @@
+# 这个 viminfo 文件是由 Vim 8.1 所产生。
+# 如果要自行修改请特别小心！
+
+# Viminfo version
+|1,4
+
+# 此文件建立时 'encoding' 的值
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 命令行 历史记录 (从新到旧):
+:wq
+|2,0,1731228073,,"wq"
+
+# 查找字符串 历史记录 (从新到旧):
+
+# 表达式 历史记录 (从新到旧):
+
+# 输入行 历史记录 (从新到旧):
+
+# 输入行 历史记录 (从新到旧):
+
+# 寄存器:
+
+# 文件标记:
+'0  1  0  ~/yanglingfeng/test.py
+|4,48,1,0,1731228073,"~/yanglingfeng/test.py"
+
+# 跳转列表 (从新到旧):
+-'  1  0  ~/yanglingfeng/test.py
+|4,39,1,0,1731228073,"~/yanglingfeng/test.py"
+
+# 文件内的标记历史记录 (从新到旧):
+
+> ~/yanglingfeng/test.py
+	*	1731228072	0
+	"	1	0

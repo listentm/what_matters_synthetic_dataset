@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "py39hd3c417c_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.9,<3.10.0a0",
+    "libgcc-ng >=7.5.0",
+    "blas 1.0 mkl",
+    "libstdcxx-ng >=7.5.0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "numpy >=1.16,<2.0a0",
+    "mkl >=2021.3.0,<2022.0a0"
+  ],
+  "fn": "mkl_fft-1.3.1-py39hd3c417c_0.conda",
+  "license": "BSD 3-Clause",
+  "md5": "629b503bd4d1c5244f6dec56eb6b83fa",
+  "name": "mkl_fft",
+  "platform": "linux",
+  "sha256": "02adf9b03e7499b9cc0193ed29d5efb4ca65823db5b6b3fb1c509f8f0d7a93fd",
+  "size": 186291,
+  "subdir": "linux-64",
+  "timestamp": 1634566416000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mkl_fft-1.3.1-py39hd3c417c_0.conda",
+  "version": "1.3.1"
+}

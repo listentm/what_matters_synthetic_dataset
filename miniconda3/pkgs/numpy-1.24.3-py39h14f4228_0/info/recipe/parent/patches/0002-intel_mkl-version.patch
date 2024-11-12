@@ -1,0 +1,26 @@
+From d3f20a2c53026972da306d2ba9bc4a64b20ae4a9 Mon Sep 17 00:00:00 2001
+From: Mike Sarahan <msarahan@gmail.com>
+Date: Wed, 25 Sep 2019 12:50:24 -0500
+Subject: [PATCH 2/3] intel_mkl version
+
+---
+ numpy/__init__.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/numpy/__init__.py b/numpy/__init__.py
+index 70c336106..7d05fb3a0 100644
+--- a/numpy/__init__.py
++++ b/numpy/__init__.py
+@@ -227,6 +227,9 @@ else:
+     test = PytestTester(__name__)
+     del PytestTester
+
++    import mkl
++    __mkl_version__ = "{MajorVersion}.{MinorVersion}.{UpdateVersion}".format(**mkl.get_version())
++
+
+     def _sanity_check():
+         """
+--
+2.20.1
+

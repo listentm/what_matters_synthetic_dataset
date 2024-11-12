@@ -1,0 +1,21 @@
+{
+  "build": "py312he106c6f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [
+    "ipywidgets >=6"
+  ],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "tqdm-4.66.5-py312he106c6f_0.conda",
+  "license": "MPL-2.0 AND MIT",
+  "md5": "099959333950bef1a3d7d12133cbfafc",
+  "name": "tqdm",
+  "sha256": "b8515778077133db9d088210ddd2276dd6521cffaa242a239ef92870a6190970",
+  "size": 162431,
+  "subdir": "linux-64",
+  "timestamp": 1724853965000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/tqdm-4.66.5-py312he106c6f_0.conda",
+  "version": "4.66.5"
+}

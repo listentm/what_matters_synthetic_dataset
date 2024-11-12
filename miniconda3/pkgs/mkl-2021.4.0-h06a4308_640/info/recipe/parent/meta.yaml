@@ -1,0 +1,488 @@
+{% set version = "2021.4.0" %}
+{% set mkl_buildnum = "640" %}  # [linux]
+{% set mkl_buildnum = "637" %}  # [osx]
+{% set mkl_buildnum = "640" %}  # [win]
+
+# use this if our build script changes and we need to increment beyond intel's version
+{% set dstbuildnum = '0' %}
+{% set openmp_version = version %}
+# 117 was intel's base build number.  We're up 1 after making the license file not read-only
+# {% set openmp_buildnum = buildnum|int + dstbuildnum|int %}
+{% set openmp_buildnum = "3561" %}  # [linux]
+{% set openmp_buildnum = "3538" %}  # [osx]
+{% set openmp_buildnum = "3556" %}  # [win]
+
+{% set daal_version = "2021.4.0" %}
+{% set daal_buildnum = "729" %}  # [linux]
+{% set daal_buildnum = "689" %}  # [osx]
+{% set daal_buildnum = "729" %}  # [win]
+
+package:
+  name: intel_repack
+  version: {{ version }}
+
+source:
+  - url: https://anaconda.org/intel/mkl/{{ version }}/download/{{ target_platform }}/mkl-{{ version }}-intel_{{ mkl_buildnum }}.tar.bz2
+    folder: mkl
+  - url: https://anaconda.org/intel/mkl-devel/{{ version }}/download/{{ target_platform }}/mkl-devel-{{ version }}-intel_{{ mkl_buildnum }}.tar.bz2
+    folder: mkl-devel
+  - url: https://anaconda.org/intel/mkl-include/{{ version }}/download/{{ target_platform }}/mkl-include-{{ version }}-intel_{{ mkl_buildnum }}.tar.bz2
+    folder: mkl-include
+  - url: https://anaconda.org/intel/intel-openmp/{{ openmp_version }}/download/{{ target_platform }}/intel-openmp-{{ openmp_version }}-intel_{{ openmp_buildnum }}.tar.bz2
+    folder: intel-openmp
+  {% if not win32 %}
+  - url: https://anaconda.org/intel/dal/{{ daal_version }}/download/{{ target_platform }}/dal-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: dal
+  - url: https://anaconda.org/intel/dal-include/{{ daal_version }}/download/{{ target_platform }}/dal-include-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: dal-include
+  - url: https://anaconda.org/intel/dal-static/{{ daal_version }}/download/{{ target_platform }}/dal-static-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: dal-static
+  - url: https://anaconda.org/intel/dal-devel/{{ daal_version }}/download/{{ target_platform }}/dal-devel-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: dal-devel
+  - url: https://anaconda.org/intel/daal/{{ daal_version }}/download/{{ target_platform }}/daal-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: daal
+  - url: https://anaconda.org/intel/daal-include/{{ daal_version }}/download/{{ target_platform }}/daal-include-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: daal-include
+  - url: https://anaconda.org/intel/daal-static/{{ daal_version }}/download/{{ target_platform }}/daal-static-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: daal-static
+  - url: https://anaconda.org/intel/daal-devel/{{ daal_version }}/download/{{ target_platform }}/daal-devel-{{ daal_version }}-intel_{{ daal_buildnum }}.tar.bz2
+    folder: daal-devel
+  {% endif %}
+
+build:
+  # 117 was intel's base build number.  We're up 1 after making the license file not read-only
+  number: {{ mkl_buildnum|int + dstbuildnum|int }}
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  skip: True                                  # [ppc64le]
+  missing_dso_whitelist:
+    # just ignore tbb on mac.  We could add it as a dep when we have it.
+    - libtbb.dylib                   # [osx]
+    - "$RPATH/libtbb.dylib"          # [osx]
+    # this one should be here, probably needs fixup of RUNPATH/RPATH
+    - libiomp5.dylib                   # [osx]
+    - "$RPATH/libiomp5.dylib"          # [osx]
+    # normal linux stuff that would go away if we had libgcc-ng in the run deps
+    - /lib*/ld-linux.so.2
+    - /lib64/ld-linux-x86-64.so.2
+    - /lib*/libpthread.so.0
+    - /lib*/libdl.so.2
+    - /lib*/libgcc_s.so.1
+    - /lib*/libc.so.6
+    - /lib*/libm.so.6
+    - /lib*/libz.so.1
+    - "$RPATH/libtbb.2.so"
+    - "$RPATH/libtbbmalloc.so.1"
+    - /lib64/libstdc++.so.6         # [linux]
+    # these two really shouldn't be here.  See mkl_repack_and_patchelf.sh
+    - libiomp5.so
+    - libcoi_device.so.0
+    - /usr/lib/libstdc++.so.6       # [linux]
+    - /usr/lib64/libstdc++.so.6     # [linux]
+    - /usr/lib/libc++.1.dylib       # [osx]
+    # hooray, windows
+    - "C:\\Windows\\System32\\WINTRUST.dll"
+    # mostly things for optional runtime targets..
+    - $RPATH/libOpenCL.so.1       # [linux]
+    - $RPATH/libffi.so.6          # [linux]
+    - $RPATH/libimf.so            # [linux]
+    - $RPATH/libintlc.so.5        # [linux]
+    - $RPATH/libiomp5.so          # [linux]
+    - $RPATH/libirng.so           # [linux]
+    - $RPATH/libsvml.so           # [linux]
+    - $RPATH/libze_loader.so.1    # [linux]
+    - $RPATH/libtbb.so.12         # [linux]
+    - '**/librt.so.1'             # [linux]
+    - '**/libelf.so.1'            # [linux]
+    - $RPATH/libtbb.12.dylib      # [osx]
+    - $RPATH/ze_loader.dll        # [win]
+    - $RPATH/impi.dll             # [win]
+    - $RPATH/msmpi.dll            # [win]
+    - $RPATH/mpich2mpi.dll        # [win]
+    - $RPATH/pgc.dll              # [win]
+    - $RPATH/pgf90.dll            # [win]
+    - $RPATH/pgmath.dll           # [win]
+    - $RPATH/svml_dispmd.dll      # [win]
+    # We might want to look into this a bit and see if we should update intel-openmp's dependencies?
+    - /lib64/libffi.so.6          # [linux]
+
+outputs:
+  - name: mkl
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    requirements:
+      host:
+        - intel-openmp {{ version.split('.')[0] }}.*
+      run:
+        - intel-openmp {{ version.split('.')[0] }}.*
+      run_constrained:      # [linux or osx]
+        # intel-openmp 2021.1.1 and newer is built with a newer GLIBC
+        - __glibc >=2.17    # [linux]
+        - __osx >=10.13     # [osx]
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file: mkl/info/licenses/license.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  - name: mkl-include
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    about:
+      home: https://software.intel.com/en-us/mkl
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file: mkl/info/licenses/license.txt
+      summary: MKL headers for developing software that uses MKL
+      description: |
+        Intel Math Kernel Library is a BLAS implementation tuned for high performance on Intel CPUs.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/mkl/documentation
+    test:
+      commands:
+        - ls -A $PREFIX/include/*  # [unix]
+
+  - name: intel-openmp
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    number: {{ openmp_buildnum }}
+    version: {{ openmp_version }}
+    requirements:           # [linux]
+      run_constrained:      # [linux]
+        # intel-openmp 2021.1.1 and newer is built with a newer GLIBC
+        - __glibc >=2.17    # [linux]
+    about:
+      home: https://software.intel.com/en-us/node/522690
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file: mkl/info/licenses/license.txt
+      summary: Math library for Intel and compatible processors
+      description: |
+        Intel openmp runtime implementation
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      doc_url: https://software.intel.com/en-us/node/522690
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  # mutex package to keep only one blas implementation in a given env
+  - name: blas
+    version: 1.0
+    build:
+      string: mkl
+    test:
+      commands:
+        - echo 'works!'
+    about:
+      home: https://github.com/conda-forge/intel-repack-feedstock
+      license: BSD-3-Clause
+      license_file: ANACONDA_LICENSE
+      summary: 'BLAS mutex for MKL'
+
+  - name: mkl-devel
+    script: install-devel.sh   # [unix]
+    script: install-devel.bat  # [win]
+    build:
+      number: {{ mkl_buildnum|int + dstbuildnum|int }}
+      # when stuff is built with MKL, ensure that constraint makes mkl runtime libs as new or
+      #     newer than build version
+      run_exports:
+        - {{ pin_subpackage('mkl') }}
+        - {{ pin_subpackage('blas', exact=True) }}
+        # this was added to prior mkl-devel releases but not in the feedstock. This is used by
+        # various downstreams (mkl_fft, mkl_random) to include the mkl-service wrapper as a dependency.
+        - mkl-service >=2.3.0,<3.0a0
+    requirements:
+      run:
+        - {{ pin_subpackage('mkl', exact=True) }}
+        - {{ pin_subpackage('mkl-include', exact=True) }}
+        - blas * mkl
+    about:
+      home: https://software.intel.com/en-us/mkl
+      summary: Metapackage of MKL headers and libraries for developing software that uses MKL
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file: mkl/info/licenses/license.txt
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+        - ls -A $PREFIX/include/*  # [unix]
+
+  - name: dal
+    version: {{ daal_version }}
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      binary_relocation: false
+      detect_binary_files_with_prefix: false
+      skip: True                                  # [win32]
+      ignore_run_exports:   # [linux or win]
+        - tbb               # [linux or win]
+      missing_dso_whitelist:
+        # just ignore tbb on mac.  We could add it as a dep when we have it.
+        - libtbb.dylib                   # [osx]
+        - "$RPATH/libtbb.dylib"          # [osx]
+        # this one should be here, probably needs fixup of RUNPATH/RPATH
+        - libiomp5.dylib                   # [osx]
+        - "$RPATH/libiomp5.dylib"          # [osx]
+        # normal linux stuff that would go away if we had libgcc-ng in the run deps
+        - /lib*/ld-linux.so.2
+        - /lib64/ld-linux-x86-64.so.2
+        - /lib*/libpthread.so.0
+        - /lib*/libdl.so.2
+        - /lib*/libgcc_s.so.1
+        - /lib*/libc.so.6
+        - /lib*/libm.so.6
+        - lib/libgcc_s.so.1
+        - lib*/libz.so.1
+        - "$RPATH/libtbb.so.12"
+        - "$RPATH/libtbbmalloc.so.2"
+        - /lib64/libstdc++.so.6         # [linux]
+        # these are contained in Intel's optional common_cmplr_lib_rt (now intel-cmplr-lib-rt).
+        - "$RPATH/libsvml.so"
+        - "$RPATH/libirng.so"
+        - "$RPATH/libimf.so"
+        - "$RPATH/libintlc.so.5"
+        - $RPATH/libmmd.dll             # [win]
+        # # this comes from Intel's optional dpcpp_cpp_rt
+        - "$RPATH/libsycl.so.5"
+        # these two really shouldn't be here.  See mkl_repack_and_patchelf.sh
+        - libiomp5.so
+        - libcoi_device.so.0
+        - /usr/lib/libstdc++.so.6       # [linux]
+        - /usr/lib64/libstdc++.so.6     # [linux]
+        - /usr/lib/libc++.1.dylib       # [osx]
+        # hooray, windows
+        - "C:\\Windows\\System32\\WINTRUST.dll"
+        # optional dpcpp runtime that we do not yet provide.
+        - $RPATH/sycl.dll               # [win]
+        - $RPATH/svml_dispmd.dll        # [win]
+    requirements:
+      host:
+        - tbb {{ daal_version.split('.')[0] }}.*
+      run:
+        - tbb {{ daal_version.split('.')[0] }}.*
+    about:
+      home: https://software.intel.com/content/www/us/en/develop/tools.html
+      summary: Intel® oneDAL runtime libraries
+      description: |
+        Intel® Data Analytics Acceleration Library (Intel® oneDAL) is the library of Intel® architecture
+        optimized building blocks covering all stages of data analytics: data acquisition from a data
+        source, preprocessing, transformation, data mining, modeling, validation, and decision making.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      license: Intel Simplified Software License
+      license_family: Proprietary
+      license_file:
+         - dal/info/licenses/license.txt
+         - dal/info/licenses/tpp.txt
+      license_url: https://software.intel.com/content/www/us/en/develop/articles/end-user-license-agreement.html
+      doc_url: https://software.intel.com/content/www/us/en/develop/tools.html
+      dev_url: https://github.com/oneapi-src/oneDAL
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  - name: dal-include
+    version: {{ daal_version }}
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+    about:
+      home: https://software.intel.com/content/www/us/en/develop/tools.html
+      summary: Headers for building against Intel® oneDAL libraries
+      description: |
+        Intel® Data Analytics Acceleration Library (Intel® oneDAL) is the library of Intel® architecture
+        optimized building blocks covering all stages of data analytics: data acquisition from a data
+        source, preprocessing, transformation, data mining, modeling, validation, and decision making.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      license: Intel Simplified Software License
+      license_family: Proprietary
+      license_file:
+         - dal-include/info/licenses/license.txt
+         - dal-include/info/licenses/tpp.txt
+      license_url: https://software.intel.com/content/www/us/en/develop/articles/end-user-license-agreement.html
+      doc_url: https://software.intel.com/content/www/us/en/develop/tools.html
+      dev_url: https://github.com/oneapi-src/oneDAL
+    test:
+      commands:
+        - ls -A $PREFIX/include/*  # [unix]
+
+  - name: dal-static
+    version: {{ daal_version }}
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+      missing_dso_whitelist:
+        - $RPATH/sycld.dll            # [win]
+        - $RPATH/libmmdd.dll          # [win]
+        - "*\\tbb12.dll"              # [win]
+        - "*\\tbbmalloc.dll"          # [win]
+        - $RPATH/tbb12_debug.dll      # [win]
+        - $RPATH/tbbmalloc_debug.dll  # [win]
+        - $RPATH/svml_dispmd.dll      # [win]
+    requirements:
+      run:
+        - {{ pin_subpackage('dal-include', exact=True) }}
+        - tbb {{ daal_version.split('.')[0] }}.*
+    about:
+      home: https://software.intel.com/content/www/us/en/develop/tools.html
+      summary: Static libraries for Intel® oneDAL
+      description: |
+        Intel® Data Analytics Acceleration Library (Intel® oneDAL) is the library of Intel® architecture
+        optimized building blocks covering all stages of data analytics: data acquisition from a data
+        source, preprocessing, transformation, data mining, modeling, validation, and decision making.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      license: Intel Simplified Software License
+      license_family: Proprietary
+      license_file:
+         - dal-static/info/licenses/license.txt
+         - dal-static/info/licenses/tpp.txt
+      license_url: https://software.intel.com/content/www/us/en/develop/articles/end-user-license-agreement.html
+      doc_url: https://software.intel.com/content/www/us/en/develop/tools.html
+      dev_url: https://github.com/oneapi-src/oneDAL
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  - name: dal-devel
+    version: {{ daal_version }}
+    script: repack.sh   # [unix]
+    script: repack.bat  # [win]
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+      run_exports:
+        - {{ pin_subpackage('dal') }}
+    requirements:
+      run:
+        - {{ pin_subpackage('dal-include', exact=True) }}
+        - {{ pin_subpackage('dal', exact=True) }}
+    about:
+      home: https://software.intel.com/content/www/us/en/develop/tools.html
+      summary: Devel package for building things linked against Intel® oneDAL shared libraries
+      description: |
+        Intel® Data Analytics Acceleration Library (Intel® oneDAL) is the library of Intel® architecture
+        optimized building blocks covering all stages of data analytics: data acquisition from a data
+        source, preprocessing, transformation, data mining, modeling, validation, and decision making.
+        This package is a repackaged set of binaries obtained directly from Intel\'s anaconda.org channel.
+      license: Intel Simplified Software License
+      license_family: Proprietary
+      license_file:
+         - dal-devel/licenses/license.txt       # [osx]
+         - dal-devel/licenses/tpp.txt           # [osx]
+         - dal-devel/info/licenses/license.txt  # [not osx]
+         - dal-devel/info/licenses/tpp.txt      # [not osx]
+      license_url: https://software.intel.com/content/www/us/en/develop/articles/end-user-license-agreement.html
+      doc_url: https://software.intel.com/content/www/us/en/develop/tools.html
+      dev_url: https://github.com/oneapi-src/oneDAL
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+        - ls -A $PREFIX/include/*  # [unix]
+
+  - name: daal
+    version: {{ daal_version }}
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+    requirements:
+      run:
+        - {{ pin_subpackage('dal', max_pin='x') }}
+    about:
+      home: https://software.intel.com/en-us/daal
+      summary: DAAL runtime libraries
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file:
+         - dal/info/licenses/license.txt
+         - dal/info/licenses/tpp.txt
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  - name: daal-include
+    version: {{ daal_version }}
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+    requirements:
+      run:
+        - {{ pin_subpackage('dal-include', max_pin='x') }}
+    about:
+      home: https://software.intel.com/en-us/daal
+      summary: Headers for building against DAAL libraries
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file:
+         - dal-include/info/licenses/license.txt
+         - dal-include/info/licenses/tpp.txt
+    test:
+      commands:
+        - ls -A $PREFIX/include/*  # [unix]
+
+  - name: daal-static
+    version: {{ daal_version }}
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+    requirements:
+      run:
+        - {{ pin_subpackage('dal-static', max_pin='x') }}
+    about:
+      home: https://software.intel.com/en-us/daal
+      summary: Static libraries for DAAL
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file:
+         - dal-static/info/licenses/license.txt
+         - dal-static/info/licenses/tpp.txt
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+
+  - name: daal-devel
+    version: {{ daal_version }}
+    build:
+      number: {{ daal_buildnum|int + dstbuildnum|int }}
+      skip: True                                  # [win32]
+    requirements:
+      run:
+        - {{ pin_subpackage('dal-devel', max_pin='x') }}
+    about:
+      home: https://software.intel.com/en-us/daal
+      summary: Devel package for building things linked against DAAL shared libraries
+      license: LicenseRef-ProprietaryIntel
+      license_family: Proprietary
+      license_file:
+         - dal-devel/licenses/license.txt       # [osx]
+         - dal-devel/licenses/tpp.txt           # [osx]
+         - dal-devel/info/licenses/license.txt  # [not osx]
+         - dal-devel/info/licenses/tpp.txt      # [not osx]
+    test:
+      commands:
+        - ls -A $PREFIX/lib/*  # [unix]
+        - ls -A $PREFIX/include/*  # [unix]
+
+# please the linter
+about:
+  home: https://github.com/conda-forge/intel-repack-feedstock
+  license: LicenseRef-ProprietaryIntel
+  summary: 'repackaged intel libraries'
+
+extra:
+  recipe-maintainers:
+    - isuruf
+    - beckermr

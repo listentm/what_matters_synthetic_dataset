@@ -1,0 +1,9 @@
+{
+  "channel_targets": "defaults",
+  "c_compiler_version": "7.5.0",
+  "cxx_compiler_version": "7.5.0",
+  "c_compiler": "gcc",
+  "numpy": "1.16",
+  "cxx_compiler": "gxx",
+  "target_platform": "linux-64"
+}

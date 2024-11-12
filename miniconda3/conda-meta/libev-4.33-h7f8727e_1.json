@@ -1,0 +1,38 @@
+{
+  "build": "h7f8727e_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=7.5.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/libev-4.33-h7f8727e_1",
+  "files": [
+    "include/ev++.h",
+    "include/ev.h",
+    "lib/libev.so",
+    "lib/libev.so.4",
+    "lib/libev.so.4.0.0",
+    "share/man/man3/ev.3"
+  ],
+  "fn": "libev-4.33-h7f8727e_1.conda",
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/libev-4.33-h7f8727e_1",
+    "type": 1
+  },
+  "md5": "5065620db4393fb549f30114a33897d1",
+  "name": "libev",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/libev-4.33-h7f8727e_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::libev==4.33=h7f8727e_1[md5=5065620db4393fb549f30114a33897d1]",
+  "sha256": "75f04cf201848d58df127caf9f316f71e1103b28e00b5add9b0c8025e52d7569",
+  "size": 114011,
+  "subdir": "linux-64",
+  "timestamp": 1632891483000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libev-4.33-h7f8727e_1.conda",
+  "version": "4.33"
+}

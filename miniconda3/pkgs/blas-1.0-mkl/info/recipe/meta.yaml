@@ -1,0 +1,19 @@
+# This file created by conda-build 3.10.7
+# ------------------------------------------------
+
+package:
+    name: blas
+    version: 1.0
+source:
+    -   folder: mkl
+        url: https://anaconda.org/intel/mkl/2018.0.3/download/linux-64/mkl-2018.0.3-intel_1.tar.bz2
+    -   folder: mkl-include
+        url: https://anaconda.org/intel/mkl-include/2018.0.3/download/linux-64/mkl-include-2018.0.3-intel_1.tar.bz2
+    -   folder: intel-openmp
+        url: https://anaconda.org/intel/openmp/2018.0.3/download/linux-64/openmp-2018.0.3-intel_0.tar.bz2
+build:
+    number: 1
+    string: mkl
+extra:
+    copy_test_source_files: true
+    final: true

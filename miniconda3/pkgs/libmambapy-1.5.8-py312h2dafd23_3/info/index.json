@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "py312h2dafd23_3",
+  "build_number": 3,
+  "depends": [
+    "fmt >=9.1.0,<10.0a0",
+    "libgcc-ng >=11.2.0",
+    "libmamba 1.5.8 hfe524e5_3",
+    "libstdcxx-ng >=11.2.0",
+    "openssl >=3.0.15,<4.0a0",
+    "pybind11-abi 5",
+    "python >=3.12,<3.13.0a0",
+    "yaml-cpp >=0.8.0,<0.9.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "libmambapy",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1725563938528,
+  "version": "1.5.8"
+}

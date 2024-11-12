@@ -1,0 +1,20 @@
+{
+  "build": "h6a678d5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "fn": "icu-73.1-h6a678d5_0.conda",
+  "license": "MIT",
+  "md5": "6d09df641fc23f7d277a04dc7ea32dd4",
+  "name": "icu",
+  "sha256": "f60e8a4b965ba50214f5a7a24308c060860fa5062d9d69d581287a520006abba",
+  "size": 27195861,
+  "subdir": "linux-64",
+  "timestamp": 1692293243000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/icu-73.1-h6a678d5_0.conda",
+  "version": "73.1"
+}

@@ -1,0 +1,98 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Thu Sep  5 14:08:21 2024
+# ------------------------------------------------
+
+package:
+  name: openssl
+  version: 3.0.15
+source:
+  sha256: 23c666d0edf20f14249b3d8f0368acaee9ab585b09e1de82107c66e1f3ec9533
+  url: https://github.com/openssl/openssl/releases/download/openssl-3.0.15/openssl-3.0.15.tar.gz
+build:
+  binary_has_prefix_files:
+    - lib/libcrypto.a
+    - lib/libcrypto.so.3.0
+  detect_binary_files_with_prefix: true
+  has_prefix_files:
+    - bin/c_rehash
+    - lib/pkgconfig/libcrypto.pc
+    - lib/pkgconfig/libssl.pc
+    - lib/pkgconfig/openssl.pc
+  no_link: lib/libcrypto.so.3.0
+  number: '0'
+  run_exports:
+    - openssl >=3.0.15,<4.0a0
+  string: h5eee18b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gdbm 1.18 hd4cb3f1_4
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - make 4.2.1 h1bed415_1
+    - ncurses 6.4 h6a678d5_0
+    - perl 5.34.0 h5eee18b_2
+    - readline 8.2 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+  run:
+    - ca-certificates
+    - libgcc-ng >=11.2.0
+test:
+  commands:
+    - touch checksum.txt
+    - openssl sha256 checksum.txt
+    - openssl ecparam -name prime256v1
+    - python -c "import urllib.request; urllib.request.urlopen('https://pypi.org')"
+    - pkg-config --print-errors --exact-version "3.0.15" openssl
+  requires:
+    - pkg-config
+    - python 3.8.*
+about:
+  description: 'OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit
+
+    for the Transport Layer Security (TLS) protocol formerly known as the
+
+    Secure Sockets Layer (SSL) protocol. The protocol implementation is based
+
+    on a full-strength general purpose cryptographic library, which can also
+
+    be used stand-alone.
+
+    '
+  dev_url: https://github.com/openssl/openssl
+  doc_url: https://www.openssl.org/docs/man3.0/
+  home: https://www.openssl.org/
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE.txt
+  summary: OpenSSL is an open-source implementation of the SSL and TLS protocols
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 58c2cb96-f0b7-4df8-969f-b523eac04ca7
+  recipe-maintainers:
+    - carlodri
+    - chenghlee
+    - jakirkham
+    - jjhelmus
+    - msarahan
+    - ocefpaf
+    - pelson
+  remote_url: git@github.com:AnacondaRecipes/openssl-feedstock.git
+  sha: 772162b63626df93b2b6260cb4c3938d1add1eeb

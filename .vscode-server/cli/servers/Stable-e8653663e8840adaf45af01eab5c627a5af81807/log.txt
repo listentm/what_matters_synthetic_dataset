@@ -1,0 +1,78 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to /tmp/code-ec8675b5-5f7b-4dfb-a239-56d100fdfcf3
+Extension host agent listening on /tmp/code-ec8675b5-5f7b-4dfb-a239-56d100fdfcf3
+
+[12:58:43] 
+
+
+
+
+[12:58:43] Extension host agent started.
+[12:58:43] [<unknown>][d9a70c6c][ExtensionHostConnection] New connection established.
+[12:58:43] [<unknown>][adf31e74][ManagementConnection] New connection established.
+Generating translation files failed. Error: ENOENT: no such file or directory, open '/home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/nls.keys.json'
+    at async open (node:internal/fs/promises:639:25)
+    at async Object.readFile (node:internal/fs/promises:1242:14)
+    at async Nv (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/server-main.js:3:16834)
+    at async o8 (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/server-main.js:67:36530)
+    at async jh.start (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/server-main.js:67:39696) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/nls.keys.json'
+}
+[12:58:43] [<unknown>][d9a70c6c][ExtensionHostConnection] <1971753> Launched Extension Host Process.
+[12:58:44] [network] #1: https://az764295.vo.msecnd.net/extensions/marketplace.json - error GET read ECONNRESET
+[12:58:53] [<unknown>][adf31e74][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[12:58:53] [<unknown>][d9a70c6c][ExtensionHostConnection] <1971753> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[12:58:53] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[12:58:53] Last EH closed, waiting before shutting down
+[12:59:00] [<unknown>][c6e653d5][ExtensionHostConnection] New connection established.
+[12:59:00] [<unknown>][4c6dc123][ManagementConnection] New connection established.
+[12:59:00] [<unknown>][c6e653d5][ExtensionHostConnection] <1972046> Launched Extension Host Process.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty 8 on pty host
+stack trace: CodeExpectedError: Could not find pty 8 on pty host
+    at I.W (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:12233)
+    at I.updateIcon (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:7772)
+    at N.s.<computed> (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:2962)
+    at Object.call (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:31:4203)
+    at Jc.s (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78968)
+    at Jc.q (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78491)
+    at hs.value (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:77893)
+    at C.B (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:746)
+    at C.fire (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:964)
+    at process.w (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:24:29137)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[12:59:03] Error [CodeExpectedError]: Could not find pty 8 on pty host
+    at I.W (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:12233)
+    at I.updateIcon (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:7772)
+    at N.s.<computed> (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:48:2962)
+    at Object.call (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:31:4203)
+    at Jc.s (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78968)
+    at Jc.q (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:78491)
+    at hs.value (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:77893)
+    at C.B (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:746)
+    at C.fire (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:29:964)
+    at process.w (file:///home/liyisen/.vscode-server/cli/servers/Stable-e8653663e8840adaf45af01eab5c627a5af81807/server/out/vs/platform/terminal/node/ptyHostMain.js:24:29137)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[12:59:43] [<unknown>][4c6dc123][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[12:59:43] [<unknown>][c6e653d5][ExtensionHostConnection] <1972046> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[12:59:43] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[12:59:43] Last EH closed, waiting before shutting down
+[12:59:50] [<unknown>][9bcf4469][ManagementConnection] New connection established.
+[12:59:50] [<unknown>][14310fd3][ExtensionHostConnection] New connection established.
+[12:59:50] [<unknown>][14310fd3][ExtensionHostConnection] <1972571> Launched Extension Host Process.

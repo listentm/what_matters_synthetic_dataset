@@ -1,0 +1,30 @@
+{
+  "build": "hfe524e5_3",
+  "build_number": 3,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "fmt >=9.1.0,<10.0a0",
+    "libarchive >=3.7.4,<3.8.0a0",
+    "libcurl >=8.1.1,<9.0a0",
+    "libgcc-ng >=11.2.0",
+    "libsolv >=0.7.24,<0.8.0a0",
+    "libstdcxx-ng >=11.2.0",
+    "openssl >=3.0.15,<4.0a0",
+    "reproc >=14.2,<15.0a0",
+    "reproc-cpp >=14.2,<15.0a0",
+    "yaml-cpp >=0.8.0,<0.9.0a0",
+    "zstd >=1.5.2,<1.6.0a0"
+  ],
+  "fn": "libmamba-1.5.8-hfe524e5_3.conda",
+  "license": "BSD-3-Clause",
+  "md5": "cf9c3aa352a0d48f9dc0b5a0222f3065",
+  "name": "libmamba",
+  "sha256": "172da1189a5866cc0fa378281ac96a547c5bfd4555f8510c7e6a4e5b1d87e229",
+  "size": 1921519,
+  "subdir": "linux-64",
+  "timestamp": 1725563770000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libmamba-1.5.8-hfe524e5_3.conda",
+  "version": "1.5.8"
+}

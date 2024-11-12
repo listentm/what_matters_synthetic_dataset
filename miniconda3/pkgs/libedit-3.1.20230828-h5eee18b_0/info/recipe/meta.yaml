@@ -1,0 +1,84 @@
+# This file created by conda-build 3.24.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Dec 19 17:16:42 2023
+# ------------------------------------------------
+
+package:
+  name: libedit
+  version: 3.1.20230828
+source:
+  fn: libedit-20230828-3.1.tar.gz
+  patches:
+    - 0001-prefer-tinfo-over-curses-and-termcap.patch
+  sha256: 4ee8182b6e569290e7d1f44f0f78dac8716b35f656b76528f699c69c98814dad
+  url: https://thrysoee.dk/editline/libedit-20230828-3.1.tar.gz
+build:
+  number: '0'
+  run_exports:
+    - libedit >=3.1.20230828,<3.2.0a0
+  string: h5eee18b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - autoconf 2.71 pl5340h5eee18b_0
+    - automake 1.16.5 pl5340h06a4308_1
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gdbm 1.18 hd4cb3f1_4
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - m4 1.4.18 h4e445db_0
+    - make 4.2.1 h1bed415_1
+    - ncurses 6.4 h6a678d5_0
+    - patch 2.7.6 h7b6447c_1001
+    - perl 5.34.0 h5eee18b_2
+    - pkg-config 0.29.2 h1bed415_8
+    - readline 8.2 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - ncurses 6.4 h6a678d5_0
+  run:
+    - libgcc-ng >=11.2.0
+    - ncurses >=6.4,<7.0a0
+test:
+  commands:
+    - test -f $PREFIX/lib/pkgconfig/libedit.pc
+    - test -f $PREFIX/lib/libedit.so
+about:
+  description: 'This is an autotool- and libtoolized port of the NetBSD Editline library
+
+    (libedit). This Berkeley-style licensed command line editor library provides
+
+    generic line editing, history, and tokenization functions, similar to those
+
+    found in GNU Readline
+
+    '
+  doc_url: https://thrysoee.dk/editline/
+  home: https://thrysoee.dk/editline/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: COPYING
+  summary: Editline Library (libedit)
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 781bc751-a0e0-4d35-84c8-aab59f67f4a7
+  recipe-maintainers:
+    - djsutherland
+    - mingwandroid
+    - scopatz
+  remote_url: git@github.com:AnacondaRecipes/libedit-feedstock.git
+  sha: 7a7d7fa76795c754a54ef5b256c4766d665f6034

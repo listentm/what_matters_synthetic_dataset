@@ -1,0 +1,102 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Fri Sep 20 18:20:36 2024
+# ------------------------------------------------
+
+package:
+  name: cffi
+  version: 1.17.1
+source:
+  patches:
+    - 0001-Link-to-dl-library.patch
+    - setup-linux.patch
+  sha256: 1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824
+  url: https://pypi.io/packages/source/c/cffi/cffi-1.17.1.tar.gz
+build:
+  missing_dso_whitelist: null
+  number: '0'
+  script: /croot/cffi_1726856441404/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: py312h1fdaa30_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - patch 2.7.6 h7b6447c_1001
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - expat 2.6.3 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.15 h5eee18b_0
+    - pip 24.2 py312h06a4308_0
+    - python 3.12.5 h5148396_1
+    - readline 8.2 h5eee18b_0
+    - setuptools 75.1.0 py312h06a4308_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.14 h39e8969_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.44.0 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - libffi >=3.4,<4.0a0
+    - libgcc-ng >=11.2.0
+    - pycparser
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+    - python -X faulthandler -c "from cffi import FFI; print(FFI().dlopen(None))"
+  imports:
+    - _cffi_backend
+    - cffi
+  requires:
+    - pip
+about:
+  description: 'Cffi aims to allow users to call C code from Python without having
+    to
+
+    learn a 3rd language. It provides a convenient and reliable way to call
+
+    compiled C code from Python using interface declarations written in C.
+
+    '
+  dev_url: https://github.com/python-cffi/cffi
+  doc_url: https://cffi.readthedocs.io
+  home: https://cffi.readthedocs.io
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Foreign Function Interface for Python calling C code.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: fc7b5caa-2b5f-4104-95a4-24f9191c2452
+  recipe-maintainers:
+    - goanpeca
+    - inducer
+    - mingwandroid
+    - ocefpaf
+  remote_url: git@github.com:AnacondaRecipes/cffi-feedstock.git
+  sha: 475163be1c36498b921d8ac62856024d0d9063ce

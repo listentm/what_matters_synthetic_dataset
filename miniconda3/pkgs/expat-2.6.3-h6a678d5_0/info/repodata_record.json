@@ -1,0 +1,20 @@
+{
+  "build": "h6a678d5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "fn": "expat-2.6.3-h6a678d5_0.conda",
+  "license": "MIT",
+  "md5": "5e184279ccb8b85331093305cb548f5c",
+  "name": "expat",
+  "sha256": "3bc7f188468105be778882439e5878aaa7ce9375df3c6c3cd3e33b9996b212db",
+  "size": 180584,
+  "subdir": "linux-64",
+  "timestamp": 1725543341000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/expat-2.6.3-h6a678d5_0.conda",
+  "version": "2.6.3"
+}

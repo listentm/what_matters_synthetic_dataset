@@ -1,0 +1,190 @@
+commit 14c0c6ce090dcb430febbd13cffa6a66f067fc40
+Merge: 4ea8cba 8d92331
+Author: Wolf Vollprecht <w.vollprecht@gmail.com>
+Date:   Mon Aug 31 11:54:35 2020 +0200
+
+    Merge pull request #11 from chrisburr/split-libevent-wrapper
+
+commit 8d923318a3417d3ec35683e9c90835a4d74b14c7
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Aug 29 21:06:00 2020 +0200
+
+    Fix libev-libevent dependencies
+
+commit 70a3bb8d1c20142a4e3d4b28b4d794c78484a8d2
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Aug 29 20:52:43 2020 +0200
+
+    Bump build number
+
+commit b1bbda03efebb57da4bd7f7fd5aa11d0113f4e55
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Aug 29 20:51:52 2020 +0200
+
+    Add run_constrained against libevent
+
+commit bbdc136add150845cc133f97db01d1afbe850289
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Aug 29 20:47:20 2020 +0200
+
+    MNT: Re-rendered with conda-build 3.20.0, conda-smithy 3.7.10, and conda-forge-pinning 2020.08.27.19.07.14
+
+commit e535d05372be9e65d7c780ca59dedf5983846a49
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Aug 29 20:47:02 2020 +0200
+
+    Split libevent compatability header into a separate package (libev-libevent)
+
+commit 4ea8cba5028ac82ed725c7d0bacb12278ea5973b
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Aug 17 09:30:21 2020 -0500
+
+    ARM OSX Migrator (#10)
+    
+    * migration: OSXArm
+    
+    * MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.10, and conda-forge-pinning 2020.08.15.14.59.48
+    
+    Co-authored-by: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+
+commit c91353245d04452002d6516be7b1cdd2d452db90
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat Aug 8 06:38:14 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit ba57e61e17428cb07856df97ddd94d9c54286f14
+Merge: fad06b7 21e1dce
+Author: Wolf Vollprecht <w.vollprecht@gmail.com>
+Date:   Tue Jul 28 15:11:38 2020 +0200
+
+    Merge pull request #8 from regro-cf-autotick-bot/bot-pr_arch_hf5a981
+    
+    Arch Migrator
+
+commit 21e1dce181186c6e7c528a20294efbbd83ae1dad
+Author: Wolf Vollprecht <w.vollprecht@gmail.com>
+Date:   Tue Jul 28 15:02:12 2020 +0200
+
+    use old URL
+
+commit 2db8a25f5a65f7d0a6a68149c3e8d03dceccde7d
+Author: Wolf Vollprecht <w.vollprecht@gmail.com>
+Date:   Tue Jul 28 15:01:38 2020 +0200
+
+    reset build number
+
+commit 65c0ec2af09df0eec71805b59d484c9580eaaef2
+Author: Wolf Vollprecht <w.vollprecht@gmail.com>
+Date:   Tue Jul 28 14:51:35 2020 +0200
+
+    ..
+
+commit 6d441853597e06288c97ab6510570bc5fca9813d
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Jul 20 23:20:26 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.7.4, and conda-forge-pinning 2020.07.20.22.41.22
+    
+    add make, and some other fixes (run_exports, static split)
+
+commit 83543dc70ed3c7ac2e2e04ab6ea5d158b2597814
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Mon Jul 20 23:20:14 2020 +0000
+
+    migration: ArchRebuild
+
+commit fad06b79938181e503b3a930582164afc41c4181
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Mon May 18 07:46:16 2020 -0500
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit b33b97bad9bd0a7c2e76f59fb052834f3665b35f
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat May 16 17:16:02 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit 2f25f29f38a0675db79580bdb1b87aa12ba37642
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 21:28:28 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit e6e48bd9fb46da92d7e7df3ba301f7177cf3f66e
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Dec 21 03:35:21 2018 -0500
+
+    libev v4.25 (#7)
+    
+    * updated v4.25
+    
+    * MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.18
+
+commit ba02ef575e9bf034f6dd6aec732120476c529887
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Oct 13 12:38:33 2018 -0400
+
+    Rebuild for Python 3.7, GCC 7, R 3.5.1, openBLAS 0.3.2 (#2)
+    
+    * bump build number
+    
+    * MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.09.11
+
+commit 086bdf305ee2b073f575c1c22cbf522835fd9969
+Author: Pete Cable <petercable@gmail.com>
+Date:   Fri Oct 12 21:45:19 2018 -0700
+
+    Add maintainer (#4)
+    
+    * Add maintainer
+    
+    * MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.10.11
+    
+    * remove .la file, see https://github.com/conda-forge/conda-forge.github.io/issues/621
+
+commit 3df8ca9cad46600c04f28389b0056df36300e9cb
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 18:46:16 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 78038ee3c2112c0b3bdb3a1e0a63646b98997e67
+Merge: 38d22e6 bb1e193
+Author: Björn Grüning <bjoern@gruenings.eu>
+Date:   Fri Jul 6 00:23:50 2018 +0200
+
+    Merge pull request #1 from regro-cf-autotick-bot/compiler_migration2
+    
+    Migrate to Jinja2 compiler syntax
+
+commit bb1e193cbd41ca46396a91a1030efe966986f286
+Author: Travis CI User <travis@example.org>
+Date:   Sun Jun 24 05:09:57 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.6 and pinning 2018.06.19
+
+commit bf937a2f6ad72e5dca3caa734edd0c227f467b69
+Author: Travis CI User <travis@example.org>
+Date:   Sun Jun 24 05:09:52 2018 +0000
+
+    migrated to Jinja2 compiler syntax build
+
+commit 38d22e69438ce0bafe5a4b6fe3d45cfa17a5cb74
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Sat Aug 26 21:43:09 2017 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 12a7d7188664cba65998509c0830b50a08f013e0
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Mon Apr 3 03:18:46 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 5e9c129d46ec36a43304737f11ef6abb5c72cb9f
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Mon Apr 3 03:16:15 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.2.2.

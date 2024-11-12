@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "name": "distro",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1714488343937,
+  "version": "1.9.0"
+}

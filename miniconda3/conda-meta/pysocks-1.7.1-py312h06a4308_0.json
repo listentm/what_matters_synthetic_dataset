@@ -1,0 +1,44 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0",
+  "files": [
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/LICENSE",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/METADATA",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/RECORD",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/WHEEL",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/PySocks-1.7.1.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/__pycache__/socks.cpython-312.pyc",
+    "lib/python3.12/site-packages/__pycache__/sockshandler.cpython-312.pyc",
+    "lib/python3.12/site-packages/socks.py",
+    "lib/python3.12/site-packages/sockshandler.py"
+  ],
+  "fn": "pysocks-1.7.1-py312h06a4308_0.conda",
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0",
+    "type": 1
+  },
+  "md5": "8efb8494277b7f0faedf9d437b23cbe1",
+  "name": "pysocks",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::pysocks==1.7.1=py312h06a4308_0[md5=8efb8494277b7f0faedf9d437b23cbe1]",
+  "sha256": "2a01a85ac686afef41cfd4881b0a5b3df117dc357a6fa11d28161739d700ffe2",
+  "size": 35357,
+  "subdir": "linux-64",
+  "timestamp": 1698845495000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pysocks-1.7.1-py312h06a4308_0.conda",
+  "version": "1.7.1"
+}

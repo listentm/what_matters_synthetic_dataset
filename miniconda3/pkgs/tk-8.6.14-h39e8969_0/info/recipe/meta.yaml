@@ -1,0 +1,122 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Fri May  3 21:09:04 2024
+# ------------------------------------------------
+
+package:
+  name: tk
+  version: 8.6.14
+source:
+  - folder: tcl8.6.14
+    sha256: 5880225babf7954c58d4fb0f5cf6279104ce1cd6aa9b71e9a6322540e1c4de66
+    url: https://altushost-swe.dl.sourceforge.net/project/tcl/Tcl/8.6.14/tcl8.6.14-src.tar.gz
+  - folder: tk8.6.14
+    sha256: 8ffdb720f47a6ca6107eac2dd877e30b0ef7fac14f3a84ebbd0b3612cee41a94
+    url: https://altushost-swe.dl.sourceforge.net/project/tcl/Tcl/8.6.14/tk8.6.14-src.tar.gz
+build:
+  detect_binary_files_with_prefix: true
+  missing_dso_whitelist:
+    - $RPATH/lib*
+  number: '0'
+  run_exports:
+    - tk >=8.6.14,<8.7.0a0
+  string: h39e8969_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libx11-common-cos6-x86_64 1.6.4 4
+    - libx11-cos6-x86_64 1.6.4 4
+    - libx11-devel-cos6-x86_64 1.6.4 4
+    - libxau-cos6-x86_64 1.0.6 4
+    - libxcb-cos6-x86_64 1.12 4
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - xorg-x11-proto-devel-cos6-x86_64 7.7 4
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - libgcc-ng >=11.2.0
+    - zlib >=1.2.13,<1.3.0a0
+test:
+  commands:
+    - test -f "${PREFIX}/bin/tclsh"
+    - test -f "${PREFIX}/bin/wish"
+    - test -f "${PREFIX}/bin/tclsh8.6"
+    - test -f "${PREFIX}/bin/wish8.6"
+    - test -f "${PREFIX}/include/tcl.h"
+    - test -f "${PREFIX}/include/tclDecls.h"
+    - test -f "${PREFIX}/include/tclPlatDecls.h"
+    - test -f "${PREFIX}/include/tclPlatDecls.h"
+    - test -f "${PREFIX}/include/tclTomMathDecls.h"
+    - test -f "${PREFIX}/include/tclTomMath.h"
+    - test -f "${PREFIX}/include/tk.h"
+    - test -f "${PREFIX}/include/tkDecls.h"
+    - test -f "${PREFIX}/include/tkPlatDecls.h"
+    - test -f "${PREFIX}/lib/libtcl8.6.so"
+    - test -f "${PREFIX}/lib/libtclstub8.6.a"
+    - test -f "${PREFIX}/lib/libtk8.6.so"
+    - test -f "${PREFIX}/lib/libtkstub8.6.a"
+    - tclsh hello.tcl
+    - tclsh8.6 hello.tcl
+    - wish hello.tcl
+    - wish8.6 hello.tcl
+  files:
+    - hello.tcl
+about:
+  description: 'Tcl (Tool Command Language) is a very powerful but easy to learn dynamic
+    programming language,
+
+    suitable for a very wide range of uses, including web and desktop applications,
+    networking,
+
+    administration, testing and many more. Open source and business-friendly,
+
+    Tcl is a mature yet evolving language that is truly cross platform, easily deployed
+    and highly extensible.
+
+    Tk is a graphical user interface toolkit that takes developing desktop applications
+    to a higher level than
+
+    conventional approaches. Tk is the standard GUI not only for Tcl, but for many
+    other dynamic languages,
+
+    and can produce rich, native applications that run unchanged across Windows, Mac
+    OS X, Linux and more.
+
+    '
+  dev_url: https://core.tcl-lang.org/tk/home
+  doc_url: https://www.tcl.tk/man/tcl8.6/index.html
+  home: https://www.tcl.tk/
+  license: TCL
+  license_family: BSD
+  license_file: tcl8.6.14/license.terms
+  summary: A dynamic programming language with GUI support. Bundles Tcl and Tk.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 32b1e6b5-7ee6-41ed-b251-e1af93cd8ef1
+  recipe-maintainers:
+    - jakirkham
+    - jjhelmus
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - pelson
+  remote_url: git@github.com:AnacondaRecipes/tk-feedstock.git
+  sha: 7e6bf85c7160a89134e176b5ddd1ead57e12cade

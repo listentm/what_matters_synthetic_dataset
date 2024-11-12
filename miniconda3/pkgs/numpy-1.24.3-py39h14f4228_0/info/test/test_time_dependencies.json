@@ -1,0 +1,1 @@
+["setuptools <60.0.0", "pytest-cov", "gxx_linux-64 11.2.0.*", "gfortran_linux-64 11.2.0.*", "gcc_linux-64 11.2.0.*", "typing-extensions >=4.2.0", "pip", "hypothesis >=6.29.3", "pytz >=2021.3", "mypy >=0.981", "pytest", "pytest-xdist"]

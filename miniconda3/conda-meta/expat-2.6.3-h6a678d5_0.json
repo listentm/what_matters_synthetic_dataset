@@ -1,0 +1,59 @@
+{
+  "build": "h6a678d5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/expat-2.6.3-h6a678d5_0",
+  "files": [
+    "bin/xmlwf",
+    "include/expat.h",
+    "include/expat_config.h",
+    "include/expat_external.h",
+    "lib/cmake/expat-2.6.3/expat-config-version.cmake",
+    "lib/cmake/expat-2.6.3/expat-config.cmake",
+    "lib/cmake/expat-2.6.3/expat-noconfig.cmake",
+    "lib/cmake/expat-2.6.3/expat.cmake",
+    "lib/libexpat.a",
+    "lib/libexpat.so",
+    "lib/libexpat.so.1",
+    "lib/libexpat.so.1.9.3",
+    "lib/pkgconfig/expat.pc",
+    "share/doc/expat/AUTHORS",
+    "share/doc/expat/changelog",
+    "share/man/man1/xmlwf.1"
+  ],
+  "fn": "expat-2.6.3-h6a678d5_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/expat-2.6.3-h6a678d5_0",
+    "type": 1
+  },
+  "md5": "5e184279ccb8b85331093305cb548f5c",
+  "name": "expat",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/expat-2.6.3-h6a678d5_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/expat.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/expat_1725543297482/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "e337627fdaa79a408ce7ae77f2c44386eb6b9cc0cf62eb935a340a10a086efd2",
+        "sha256_in_prefix": "55451f045cc930ee1bbc8204acb7a094942eddf1ea73b98a2e83e93867569b1a",
+        "size_in_bytes": 528
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::expat==2.6.3=h6a678d5_0[md5=5e184279ccb8b85331093305cb548f5c]",
+  "sha256": "3bc7f188468105be778882439e5878aaa7ce9375df3c6c3cd3e33b9996b212db",
+  "size": 180584,
+  "subdir": "linux-64",
+  "timestamp": 1725543341000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/expat-2.6.3-h6a678d5_0.conda",
+  "version": "2.6.3"
+}

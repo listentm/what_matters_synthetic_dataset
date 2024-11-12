@@ -1,0 +1,77 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "conda-package-streaming >=0.9.0",
+    "python >=3.12,<3.13.0a0",
+    "zstandard >=0.15"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/conda-package-handling-2.3.0-py312h06a4308_0",
+  "files": [
+    "bin/cph",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/AUTHORS.md",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/LICENSE",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/METADATA",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/RECORD",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/WHEEL",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/entry_points.txt",
+    "lib/python3.12/site-packages/conda_package_handling-2.3.0.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/conda_package_handling/__init__.py",
+    "lib/python3.12/site-packages/conda_package_handling/__main__.py",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/__main__.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/api.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/cli.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/conda_fmt.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/exceptions.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/interface.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/streaming.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/tarball.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/utils.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/__pycache__/validate.cpython-312.pyc",
+    "lib/python3.12/site-packages/conda_package_handling/api.py",
+    "lib/python3.12/site-packages/conda_package_handling/cli.py",
+    "lib/python3.12/site-packages/conda_package_handling/conda_fmt.py",
+    "lib/python3.12/site-packages/conda_package_handling/exceptions.py",
+    "lib/python3.12/site-packages/conda_package_handling/interface.py",
+    "lib/python3.12/site-packages/conda_package_handling/streaming.py",
+    "lib/python3.12/site-packages/conda_package_handling/tarball.py",
+    "lib/python3.12/site-packages/conda_package_handling/utils.py",
+    "lib/python3.12/site-packages/conda_package_handling/validate.py"
+  ],
+  "fn": "conda-package-handling-2.3.0-py312h06a4308_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/conda-package-handling-2.3.0-py312h06a4308_0",
+    "type": 1
+  },
+  "md5": "230372bd2a09fbe75dc99c655f671e04",
+  "name": "conda-package-handling",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/conda-package-handling-2.3.0-py312h06a4308_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/cph",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/conda-package-handling_1718138267740/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2085440867ed047d02b19aa678ca30d8d262060078471394dfafd973c6a8bc6f",
+        "sha256_in_prefix": "be0c0c4a751d357e4a7983605c66a5ed6f15325b558d9fac46b388fc051c4818",
+        "size_in_bytes": 479
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::conda-package-handling==2.3.0=py312h06a4308_0[md5=230372bd2a09fbe75dc99c655f671e04]",
+  "sha256": "33322ac6bbe370d8fc8089e30d71f9fb4612710ed45d90ba089b2bea7da5c32f",
+  "size": 285636,
+  "subdir": "linux-64",
+  "timestamp": 1718138415000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/conda-package-handling-2.3.0-py312h06a4308_0.conda",
+  "version": "2.3.0"
+}

@@ -1,0 +1,21 @@
+{
+  "build": "h251f7ec_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "openssl >=3.0.13,<4.0a0",
+    "zlib >=1.2.13,<1.3.0a0"
+  ],
+  "fn": "libssh2-1.11.0-h251f7ec_0.conda",
+  "license": "BSD-3-Clause",
+  "md5": "ce46cf257d73fe85c18c78597196f0d8",
+  "name": "libssh2",
+  "sha256": "b4b1558307da733cb097f9581793535a0f70821c412d12904f5a3354c7f6c1d2",
+  "size": 288925,
+  "subdir": "linux-64",
+  "timestamp": 1715261489000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libssh2-1.11.0-h251f7ec_0.conda",
+  "version": "1.11.0"
+}

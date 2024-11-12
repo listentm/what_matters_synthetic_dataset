@@ -1,0 +1,19 @@
+{
+  "build": "h5eee18b_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "c-ares-1.19.1-h5eee18b_0.conda",
+  "license": "MIT",
+  "md5": "6cfbce52273a1cb888821f18ceaa83c4",
+  "name": "c-ares",
+  "sha256": "4d1eab39e366dc7b3016664ab1f6f24a61731fa7d420fd28fa24bb9bbbae03ed",
+  "size": 120666,
+  "subdir": "linux-64",
+  "timestamp": 1693902021000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/c-ares-1.19.1-h5eee18b_0.conda",
+  "version": "1.19.1"
+}

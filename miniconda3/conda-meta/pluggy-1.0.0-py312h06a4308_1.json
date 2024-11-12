@@ -1,0 +1,54 @@
+{
+  "build": "py312h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1",
+  "files": [
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/LICENSE",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/METADATA",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/RECORD",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/WHEEL",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/pluggy-1.0.0.dist-info/top_level.txt",
+    "lib/python3.12/site-packages/pluggy/__init__.py",
+    "lib/python3.12/site-packages/pluggy/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_callers.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_hooks.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_manager.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_result.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_tracing.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/__pycache__/_version.cpython-312.pyc",
+    "lib/python3.12/site-packages/pluggy/_callers.py",
+    "lib/python3.12/site-packages/pluggy/_hooks.py",
+    "lib/python3.12/site-packages/pluggy/_manager.py",
+    "lib/python3.12/site-packages/pluggy/_result.py",
+    "lib/python3.12/site-packages/pluggy/_tracing.py",
+    "lib/python3.12/site-packages/pluggy/_version.py"
+  ],
+  "fn": "pluggy-1.0.0-py312h06a4308_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1",
+    "type": 1
+  },
+  "md5": "65e3925b7c284b6a111d8971cac0d0c7",
+  "name": "pluggy",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::pluggy==1.0.0=py312h06a4308_1[md5=65e3925b7c284b6a111d8971cac0d0c7]",
+  "sha256": "ad31193be6df50b1d6eab007513f9c52c1881c58b5167053776d3a515a1dba0f",
+  "size": 31768,
+  "subdir": "linux-64",
+  "timestamp": 1698805515000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pluggy-1.0.0-py312h06a4308_1.conda",
+  "version": "1.0.0"
+}

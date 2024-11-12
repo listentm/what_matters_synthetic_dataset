@@ -1,0 +1,108 @@
+# This file created by conda-build 3.24.0
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Thu Aug 17 17:23:30 2023
+# ------------------------------------------------
+
+package:
+  name: icu
+  version: '73.1'
+source:
+  - patches:
+      - icu-22356.patch
+    sha256: a457431de164b4aa7eca00ed134d00dfbf88a77c6986a10ae7774fc076bb8c45
+    url: https://github.com/unicode-org/icu/releases/download/release-73-1/icu4c-73_1-src.tgz
+  - folder: source/data
+    sha256: 07d7557efb30fc2e9b74652f1525603b3209a4539d2d345d704e3df3bf9b957e
+    url: https://github.com/unicode-org/icu/releases/download/release-73-1/icu4c-73_1-data.zip
+build:
+  number: '0'
+  run_exports:
+    - icu >=73.1,<74.0a0
+  string: h6a678d5_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libtool 2.4.6 h6a678d5_1009
+    - make 4.2.1 h1bed415_1
+    - patch 2.7.6 h7b6447c_1001
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+  run:
+    - libgcc-ng >=11.2.0
+    - libstdcxx-ng >=11.2.0
+test:
+  commands:
+    - test -f $PREFIX/lib/libicudata.a
+    - test -f $PREFIX/lib/libicudata.so.73.1
+    - test -f $PREFIX/lib/libicui18n.a
+    - test -f $PREFIX/lib/libicui18n.so.73.1
+    - test -f $PREFIX/lib/libicuio.a
+    - test -f $PREFIX/lib/libicuio.so.73.1
+    - test -f $PREFIX/lib/libicutest.a
+    - test -f $PREFIX/lib/libicutest.so.73.1
+    - test -f $PREFIX/lib/libicutu.a
+    - test -f $PREFIX/lib/libicutu.so.73.1
+    - test -f $PREFIX/lib/libicuuc.a
+    - test -f $PREFIX/lib/libicuuc.so.73.1
+    - genbrk --help
+    - gencfu --help
+    - gencnval --help
+    - gendict --help
+    - icuinfo --help
+    - icu-config --help
+    - makeconv gb-18030-2000.ucm
+    - genrb de.txt
+    - echo "de.res" > list.txt
+    - pkgdata -p mybundle list.txt
+  files:
+    - de.txt
+    - gb-18030-2000.ucm
+about:
+  description: 'ICU is a mature, widely used set of C/C++ and Java libraries providing
+
+    Unicode and Globalization support for software applications. ICU is
+
+    widely portable and gives applications the same results on all platforms
+
+    and between C/C++ and Java software.
+
+    '
+  dev_url: https://github.com/unicode-org/icu
+  doc_url: https://unicode-org.github.io/icu/
+  home: https://icu.unicode.org/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: International Components for Unicode.
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 00c92d55-6d5b-4555-991b-95e701c7a567
+  recipe-maintainers:
+    - ccordoba12
+    - jakirkham
+    - msarahan
+    - ocefpaf
+    - xhochy
+  remote_url: git@github.com:AnacondaRecipes/icu-feedstock.git
+  sha: be820b07c5e0bff9e01e173920897db1b55e815a

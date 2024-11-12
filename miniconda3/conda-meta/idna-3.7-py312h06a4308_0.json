@@ -1,0 +1,56 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/idna-3.7-py312h06a4308_0",
+  "files": [
+    "lib/python3.12/site-packages/idna-3.7.dist-info/INSTALLER",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/LICENSE.md",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/METADATA",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/RECORD",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/REQUESTED",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/WHEEL",
+    "lib/python3.12/site-packages/idna-3.7.dist-info/direct_url.json",
+    "lib/python3.12/site-packages/idna/__init__.py",
+    "lib/python3.12/site-packages/idna/__pycache__/__init__.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/codec.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/compat.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/core.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/idnadata.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/intranges.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/package_data.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/__pycache__/uts46data.cpython-312.pyc",
+    "lib/python3.12/site-packages/idna/codec.py",
+    "lib/python3.12/site-packages/idna/compat.py",
+    "lib/python3.12/site-packages/idna/core.py",
+    "lib/python3.12/site-packages/idna/idnadata.py",
+    "lib/python3.12/site-packages/idna/intranges.py",
+    "lib/python3.12/site-packages/idna/package_data.py",
+    "lib/python3.12/site-packages/idna/py.typed",
+    "lib/python3.12/site-packages/idna/uts46data.py"
+  ],
+  "fn": "idna-3.7-py312h06a4308_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/idna-3.7-py312h06a4308_0",
+    "type": 1
+  },
+  "md5": "03cc59cdabff44c47be0fadffcef003c",
+  "name": "idna",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/idna-3.7-py312h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::idna==3.7=py312h06a4308_0[md5=03cc59cdabff44c47be0fadffcef003c]",
+  "sha256": "d1d0d18cd94aed0a64d1cf480721c97024024783254657b3c54cc23edb7deab6",
+  "size": 134338,
+  "subdir": "linux-64",
+  "timestamp": 1714398961000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/idna-3.7-py312h06a4308_0.conda",
+  "version": "3.7"
+}

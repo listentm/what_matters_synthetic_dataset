@@ -1,0 +1,59 @@
+{
+  "build": "h6a678d5_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1",
+  "files": [
+    "bin/lz4",
+    "bin/lz4c",
+    "bin/lz4cat",
+    "bin/unlz4",
+    "include/lz4.h",
+    "include/lz4frame.h",
+    "include/lz4frame_static.h",
+    "include/lz4hc.h",
+    "lib/liblz4.so",
+    "lib/liblz4.so.1",
+    "lib/liblz4.so.1.9.4",
+    "lib/pkgconfig/liblz4.pc",
+    "share/man/man1/lz4.1",
+    "share/man/man1/lz4c.1",
+    "share/man/man1/lz4cat.1",
+    "share/man/man1/unlz4.1"
+  ],
+  "fn": "lz4-c-1.9.4-h6a678d5_1.conda",
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1",
+    "type": 1
+  },
+  "md5": "2ee58861f2b92b868ce761abb831819d",
+  "name": "lz4-c",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/liblz4.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/lz4-c_1714510556686/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+        "sha256": "d38cd99a75a077ab3a655f28db056093a0f195eb46beef1ea3f81484583e60cd",
+        "sha256_in_prefix": "edced528055e7071eeabc8aa34cabb9e56b78b907c2ca52d0ee2e5ae304340b6",
+        "size_in_bytes": 640
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::lz4-c==1.9.4=h6a678d5_1[md5=2ee58861f2b92b868ce761abb831819d]",
+  "sha256": "cc19d62a7f2c0af8e1f0e5bf643cf34475a35d5dc82733d679e575daa7b863aa",
+  "size": 159495,
+  "subdir": "linux-64",
+  "timestamp": 1714510587000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lz4-c-1.9.4-h6a678d5_1.conda",
+  "version": "1.9.4"
+}

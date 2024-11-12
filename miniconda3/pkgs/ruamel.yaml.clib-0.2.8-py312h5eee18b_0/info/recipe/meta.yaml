@@ -1,0 +1,97 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Oct  1 08:03:31 2024
+# ------------------------------------------------
+
+package:
+  name: ruamel.yaml.clib
+  version: 0.2.8
+source:
+  sha256: beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512
+  url: https://pypi.io/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-0.2.8.tar.gz
+build:
+  ignore_run_exports:
+    - python
+  number: '0'
+  script: /croot/ruamel.yaml.clib_1727769819935/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  string: py312h5eee18b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - sysroot_linux-64 2.17 h57e8cba_10
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2024.7.2 h06a4308_0
+    - expat 2.6.3 h6a678d5_0
+    - ld_impl_linux-64 2.40 h12ee557_0
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.15 h5eee18b_0
+    - pip 24.2 py312h06a4308_0
+    - python 3.12.5 h5148396_1
+    - readline 8.2 h5eee18b_0
+    - setuptools 75.1.0 py312h06a4308_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.14 h39e8969_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.44.0 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_1
+    - zlib 1.2.13 h5eee18b_1
+  run:
+    - libgcc-ng >=11.2.0
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+  imports:
+    - _ruamel_yaml
+  requires:
+    - pip
+    - ruamel.yaml
+about:
+  description: 'This package was split of from ruamel.yaml, so that ruamel.yaml can
+    be build as a universal wheel.
+
+    Apart from the C code seldom changing, and taking a long time to compile for all
+    platforms, this allows
+
+    installation of the .so on Linux systems under /usr/lib64/pythonX.Y (without a
+    .pth file or a ruamel
+
+    directory) and the Python code for ruamel.yaml under /usr/lib/pythonX.Y.
+
+    '
+  dev_url: https://sourceforge.net/projects/ruamel-yaml-clib/
+  doc_url: https://yaml.readthedocs.io
+  home: https://sourceforge.net/projects/ruamel-yaml-clib/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: C version of reader, parser and emitter for ruamel.yaml derived from libyaml
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 0b784c44-d690-4378-8462-7dbad523b3cb
+  recipe-maintainers:
+    - ocefpaf
+  remote_url: git@github.com:AnacondaRecipes/ruamel.yaml.clib-feedstock.git
+  sha: 6862766faff03d0b82de9727412ec02a410f3a88

@@ -1,0 +1,124 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /feedstock/recipe, last modified Tue Apr 30 20:56:54 2024
+# ------------------------------------------------
+
+package:
+  name: pycosat
+  version: 0.6.6
+source:
+  sha256: b0014986321e77a36d8fe24827698aae076500c817133a700608bd677b77a998
+  url: https://github.com/conda/pycosat/archive/0.6.6.tar.gz
+build:
+  number: '1'
+  script: /croot/pycosat_1714510623388/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin/python
+    -m pip install . --no-deps -vv
+  string: py312h5eee18b_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - _sysroot_linux-64_curr_repodata_hack 3 haa98f57_10
+    - binutils_impl_linux-64 2.38 h2a08ee3_1
+    - binutils_linux-64 2.38.0 hc2dff05_0
+    - bzip2 1.0.8 h5eee18b_5
+    - ca-certificates 2024.3.11 h06a4308_0
+    - expat 2.6.2 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_0
+    - kernel-headers_linux-64 3.10.0 h57e8cba_10
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.13 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.2.2 py312h06a4308_0
+    - sqlite 3.45.3 h5eee18b_0
+    - sysroot_linux-64 2.17 h57e8cba_10
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_5
+    - ca-certificates 2024.3.11 h06a4308_0
+    - expat 2.6.2 h6a678d5_0
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.13 h7f8727e_0
+    - pip 23.3.1 py312h06a4308_0
+    - python 3.12.3 h996f2a0_0
+    - readline 8.2 h5eee18b_0
+    - setuptools 68.2.2 py312h06a4308_0
+    - sqlite 3.45.3 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2024a h04d1e81_0
+    - wheel 0.41.2 py312h06a4308_0
+    - xz 5.4.6 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+  run:
+    - libgcc-ng >=11.2.0
+    - python >=3.12,<3.13.0a0
+test:
+  commands:
+    - pip check
+    - python test_package.py "0.6.6"
+  files:
+    - qg3-08.cnf
+    - sudoku.py
+    - test_package.py
+    - uf20-098.cnf
+  imports:
+    - pycosat
+  requires:
+    - pip
+about:
+  description: 'PicoSAT is a popular SAT solver written by Armin Biere in pure C.
+    This
+
+    package provides efficient Python bindings to picosat on the C level, i.e.
+
+    when importing pycosat, the picosat solver becomes part of the Python
+
+    process itself.
+
+    '
+  dev_url: https://github.com/conda/pycosat
+  doc_source_url: https://github.com/conda/pycosat/blob/master/README.rst
+  doc_url: https://pypi.org/project/pycosat/
+  home: https://github.com/conda/pycosat
+  license: MIT
+  license_family: MIT
+  license_file:
+    - LICENSE
+  license_url: https://github.com/conda/pycosat/blob/0.6.6/LICENSE
+  summary: Bindings to picosat (a SAT solver)
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: 80ec2858-038e-4754-bb99-9a901f653d57
+  recipe-maintainers:
+    - jakirkham
+    - kalefranz
+    - mcg1969
+    - mingwandroid
+    - msarahan
+    - nehaljwani
+    - pelson
+  remote_url: git@github.com:AnacondaRecipes/pycosat-feedstock.git
+  sha: dc25cc6e60242b93fedcbf494807e03cf55910f7

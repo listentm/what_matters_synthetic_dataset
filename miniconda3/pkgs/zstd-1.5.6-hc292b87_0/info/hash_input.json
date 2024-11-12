@@ -1,0 +1,10 @@
+{
+  "cxx_compiler": "gxx",
+  "c_compiler_version": "11.2.0",
+  "cxx_compiler_version": "11.2.0",
+  "c_compiler": "gcc",
+  "target_platform": "linux-64",
+  "xz": "5",
+  "zlib": "1.2",
+  "channel_targets": "defaults"
+}

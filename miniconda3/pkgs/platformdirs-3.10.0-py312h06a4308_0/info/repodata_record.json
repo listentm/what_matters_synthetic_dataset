@@ -1,0 +1,19 @@
+{
+  "build": "py312h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "fn": "platformdirs-3.10.0-py312h06a4308_0.conda",
+  "license": "MIT",
+  "md5": "39dc9eb538e73250dadcdec7a8ed6595",
+  "name": "platformdirs",
+  "sha256": "60b9f2dd52e8d08921a8c1b1dc149e48132c9faf4cd55a0876feb7752f9331b1",
+  "size": 37282,
+  "subdir": "linux-64",
+  "timestamp": 1701732612000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/platformdirs-3.10.0-py312h06a4308_0.conda",
+  "version": "3.10.0"
+}

@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "py312h1fdaa30_0",
+  "build_number": 0,
+  "depends": [
+    "libffi >=3.4,<4.0a0",
+    "libgcc-ng >=11.2.0",
+    "pycparser",
+    "python >=3.12,<3.13.0a0"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "cffi",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1726856556412,
+  "version": "1.17.1"
+}

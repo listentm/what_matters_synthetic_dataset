@@ -1,0 +1,49 @@
+{
+  "build": "h5eee18b_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1",
+  "files": [
+    "include/zconf.h",
+    "include/zlib.h",
+    "lib/libz.a",
+    "lib/libz.so",
+    "lib/libz.so.1",
+    "lib/libz.so.1.2.13",
+    "lib/pkgconfig/zlib.pc"
+  ],
+  "fn": "zlib-1.2.13-h5eee18b_1.conda",
+  "license": "Zlib",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1",
+    "type": 1
+  },
+  "md5": "92e42d8310108b0a440fb2e60b2b2a25",
+  "name": "zlib",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/zlib.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/croot/zlib_1714510689655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "ba5e30a1d9ec0d7104c68a8017603c7a0802afa18970c117eda9b3ab098fa0d5",
+        "sha256_in_prefix": "6c1e7086362d79589bedffae7dec30f9b4b4549d4686dda102746fa0d4a48009",
+        "size_in_bytes": 1487
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::zlib==1.2.13=h5eee18b_1[md5=92e42d8310108b0a440fb2e60b2b2a25]",
+  "sha256": "eb451d3dba56a77cfc3273c8124cd45a8c13329a16bf9a4954181d835c85677b",
+  "size": 113492,
+  "subdir": "linux-64",
+  "timestamp": 1714510716000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_1.conda",
+  "version": "1.2.13"
+}

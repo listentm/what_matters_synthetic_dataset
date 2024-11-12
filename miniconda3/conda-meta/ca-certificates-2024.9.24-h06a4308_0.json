@@ -1,0 +1,32 @@
+{
+  "build": "h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/liyisen/miniconda3/pkgs/ca-certificates-2024.9.24-h06a4308_0",
+  "files": [
+    "ssl/cacert.pem",
+    "ssl/cert.pem"
+  ],
+  "fn": "ca-certificates-2024.9.24-h06a4308_0.conda",
+  "license": "MPL-2.0",
+  "link": {
+    "source": "/home/liyisen/miniconda3/pkgs/ca-certificates-2024.9.24-h06a4308_0",
+    "type": 1
+  },
+  "md5": "e4369d7b4b0707ee0765794d14710e2e",
+  "name": "ca-certificates",
+  "package_tarball_full_path": "/home/liyisen/miniconda3/pkgs/ca-certificates-2024.9.24-h06a4308_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "defaults/linux-64::ca-certificates==2024.9.24=h06a4308_0[md5=e4369d7b4b0707ee0765794d14710e2e]",
+  "sha256": "06c35e2de906669e72e35c7aa7eec0ef9b5b181c4881bdd18aa15308575893b9",
+  "size": 132950,
+  "subdir": "linux-64",
+  "timestamp": 1727794854000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2024.9.24-h06a4308_0.conda",
+  "version": "2024.9.24"
+}

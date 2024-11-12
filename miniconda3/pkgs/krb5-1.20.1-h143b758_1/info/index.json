@@ -1,0 +1,18 @@
+{
+  "arch": "x86_64",
+  "build": "h143b758_1",
+  "build_number": 1,
+  "depends": [
+    "libedit >=3.1.20221030,<3.2.0a0",
+    "libedit >=3.1.20221030,<4.0a0",
+    "libgcc-ng >=11.2.0",
+    "openssl >=3.0.8,<4.0a0"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "krb5",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1686931095252,
+  "version": "1.20.1"
+}

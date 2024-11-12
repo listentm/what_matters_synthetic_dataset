@@ -1,0 +1,13 @@
+diff --git a/numpy/distutils/ccompiler_opt.py b/numpy/distutils/ccompiler_opt.py
+index ea944bd180..c1b36f7b63 100644
+--- a/numpy/distutils/ccompiler_opt.py
++++ b/numpy/distutils/ccompiler_opt.py
+@@ -231,7 +231,7 @@ class _Config:
+         SSE3   = dict(interest=3, implies="SSE2", headers="pmmintrin.h"),
+         SSSE3  = dict(interest=4, implies="SSE3", headers="tmmintrin.h"),
+         SSE41  = dict(interest=5, implies="SSSE3", headers="smmintrin.h"),
+-        POPCNT = dict(interest=6, implies="SSE41", headers="popcntintrin.h"),
++        POPCNT = dict(interest=6, implies="SSE41", headers="nmmintrin.h"),
+         SSE42  = dict(interest=7, implies="POPCNT"),
+         AVX    = dict(
+             interest=8, implies="SSE42", headers="immintrin.h",
